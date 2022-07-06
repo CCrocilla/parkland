@@ -1,13 +1,39 @@
 from django.contrib import admin
-from .models import Car, Parking
+from .models import Car, Parking, Area, Booking, Feedback
 
 
 # admin.site.register(Car)
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
+    """ Cars """
     list_display = ('user_id', 'is_electric', 'registration_number')
 
 
 @admin.register(Parking)
 class ParkingAdmin(admin.ModelAdmin):
-    list_display = ('name', 'is_electric', 'location_x', 'location_y', 'price', 'area_parking_id')
+    """ Parking Slots """
+    list_display = (
+        'name', 'is_electric', 'location_x', 'location_y', 'price', 'area_id')
+
+
+@admin.register(Area)
+class AreaAdmin(admin.ModelAdmin):
+    """ Parking Area """
+    list_display = ('name', 'description')
+
+
+@admin.register(Booking)
+class BookingAdmin(admin.ModelAdmin):
+    """ Booking """
+    list_display = (
+        'created_by', 'car_id', 'parking_id', 'create_date', 'price')
+    list_filter = (
+        'create_date', 'start_date', 'end_date')
+    search_fields = (
+        'created_by', 'car_id', 'create_date', 'start_date', 'end_date')
+
+
+@admin.register(Feedback)
+class FeedbackAdmin(admin.ModelAdmin):
+    """ Users' Feedback """
+    list_display = ('booking_id', 'rating_stars', 'comment', 'create_date')

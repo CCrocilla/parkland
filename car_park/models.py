@@ -61,4 +61,4 @@ class Feedback(models.Model):
         ordering = ['create_date']
 
     def __str__(self):
-        return f"Feedback: {self.comment}. Date: {self.create_date}"
+        return f"Feedback: {self.comment}."

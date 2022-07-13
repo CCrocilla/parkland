@@ -157,8 +157,9 @@
 
 
 <!-- ============================================-->
-<!--               Empty Section                 -->
+<!--               Booking Section               -->
 <!-- ============================================-->
+{% if user.is_authenticated %}
 <section class="py-6 py-lg-8">
     <div class="container">
         <div class="row g-xl-0 align-items-center">
@@ -182,6 +183,7 @@
         </div>
     </div>
 </section>
+{% endif %}
 
 
 
@@ -217,8 +219,8 @@
                                             class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user-1.png"
                                             width="100" alt="" />
                                         <div class="w-md-25 my-3">
-                                            <h5 class="mb-0 fw-medium text-white">Edward Newgate</h5>
-                                            <p class="fw-normal mb-0">Founder Circle</p>
+                                            <h5 class="mb-0 fw-medium text-white">Claudio Crocilla</h5>
+                                            <p class="fw-normal mb-0">Founder</p>
                                             <p class="fw-normal mb-0"> {{ feedback.create_date }}</p>
                                         </div>
                                         <div class="w-md-75">

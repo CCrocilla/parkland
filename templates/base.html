@@ -11,7 +11,7 @@
     <meta name="description" content="Parkland! The Car Parking that you have always dreamed of!">
     <meta name="keywords" content="parkland, parking airport, car parking, car, parking, booking parking, car service">
 
-    <title>Parkland</title>
+    <title>Parkland{% block extra_title %}{% endblock %}</title>
 
     <link rel="shortcut icon" href="{%  static 'favicon/favicon.ico' %}">
     <!-- <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}" type="text/css"> -->
@@ -44,11 +44,29 @@
                         <li class="nav-item"><a class="nav-link" href="#">Contact Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
                         {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li>
+                        <!-- Drop-Down Menu for logged users -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                Hi, {{ user }}!
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="#">Manage Bookings</a></li>
+                                <li><a class="dropdown-item" href="#">Profile</a></li>
+                                <li>
+                                    <hr class="dropdown-divider">
+                                </li>
+                                <li><a class="dropdown-item" href="{% url 'account_logout' %}">Logout</a></li>
+                            </ul>
+                        </li>
+                        <!-- Single Logout
+                        <li class="nav-item"><a class="nav-link" href="{% url 'account_logout' %}">Logout</a></li> -->
                         {% else %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'account_signup' %}">Sign Up</a></li>
                         <li class="nav-item"><a class="nav-link" href="{% url 'account_login' %}">Sign In</a></li>
                         {% endif %}
+
+
                     </ul>
                 </div>
             </div>

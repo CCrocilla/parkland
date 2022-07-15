@@ -6,34 +6,37 @@ from .models import Car, Parking, Area, Booking, Feedback
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
     """ Cars """
-    list_display = ('user_id', 'is_electric', 'registration_number')
+    list_display = (
+        'user', 'is_electric', 'registration_number')
 
 
 @admin.register(Parking)
 class ParkingAdmin(admin.ModelAdmin):
     """ Parking Slots """
     list_display = (
-        'name', 'is_electric', 'location_x', 'location_y', 'price', 'area_id')
+        'name', 'is_electric', 'location_x', 'location_y', 'price', 'area')
 
 
 @admin.register(Area)
 class AreaAdmin(admin.ModelAdmin):
     """ Parking Area """
-    list_display = ('name', 'description')
+    list_display = (
+        'name', 'description')
 
 
 @admin.register(Booking)
 class BookingAdmin(admin.ModelAdmin):
     """ Booking """
     list_display = (
-        'created_by', 'car_id', 'parking_id', 'create_date', 'price')
+        'created_by', 'car', 'parking', 'created_date', 'price')
     list_filter = (
-        'create_date', 'start_date', 'end_date')
+        'created_date', 'start_date', 'end_date')
     search_fields = (
-        'created_by', 'car_id', 'create_date', 'start_date', 'end_date')
+        'created_by', 'car', 'created_date', 'start_date', 'end_date')
 
 
 @admin.register(Feedback)
 class FeedbackAdmin(admin.ModelAdmin):
     """ Users' Feedback """
-    list_display = ('booking_id', 'rating_stars', 'comment', 'create_date')
+    list_display = (
+        'created_by', 'created_date', 'booking', 'rating_stars', 'comment')

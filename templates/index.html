@@ -6,11 +6,6 @@
 <!--                Main Content                    -->
 <!-- ===============================================-->
 <section class="py-0">
-    <!-- <div class="bg-holder"
-        style="background-image:url(assets/img/illustrations/dot.png);background-position:left;background-size:auto;margin-top:-105px;">
-    </div> -->
-    <!--/.bg-holder-->
-
     <div class="container position-relative">
         <div class="row align-items-center">
             <div class="col-md-5 col-lg-6 order-md-1 pt-8"><img class="img-fluid"
@@ -27,16 +22,7 @@
     </div>
 </section>
 <section class="py-8">
-    <!-- <div class="bg-holder"
-        style="background-image:url(assets/img/illustrations/services-bg.png);background-position:center left;background-size:auto;">
-    </div> -->
-    <!--/.bg-holder-->
-
-    <!-- <div class="bg-holder"
-        style="background-image:url(assets/img/illustrations/dot-2.png);background-position:center right;background-size:auto;margin-left:-180px;margin-top:20px;">
-    </div> -->
-    <!--/.bg-holder-->
-
+    <!-- Add Image in Backgroud -->
     <div class="container-lg">
         <div class="row justify-content-center">
             <div class="col-3 text-center">
@@ -132,11 +118,6 @@
     </div>
 </section>
 <section class="py-6 py-lg-8" id="about">
-    <!-- <div class="bg-holder"
-        style="background-image:url(assets/img/illustrations/dot.png);background-position:right bottom;background-size:auto;margin-top:50px;">
-    </div> -->
-    <!--/.bg-holder-->
-
     <div class="container">
         <div class="row g-xl-0 align-items-center">
             <div class="col-md-6"><img class="img-fluid mb-5 mb-md-0" src="assets/img/illustrations/about-1.png"
@@ -194,100 +175,42 @@
 
 <section class="py-8" id="feedback">
     <div class="container">
-        <!-- <div class="bg-holder z-index-1"
-            style="background-image:url(assets/img/illustrations/dot.png);background-position:right top;background-size:auto;margin-left:-30px;margin-top:10px;filter:contrast(1.5);">
-        </div> -->
-        <!--/.bg-holder-->
-
-        <!-- <div class="bg-holder z-index-1"
-            style="background-image:url(assets/img/illustrations/dot-2.png);background-position:left bottom;background-size:auto;margin-left:-35px;margin-top:-65px;filter:contrast(1.5);">
-        </div> -->
-        <!--/.bg-holder-->
-
         <div class="carousel slide" id="carouselExampleDark" data-bs-ride="carousel">
             <div class="carousel-inner">
-                <div class="carousel-item active" data-bs-interval="10000">
+                {% for feedback in feedback_list %}
+                <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" data-bs-interval="10000">
                     <div class="row h-100">
                         <div class="col-12">
                             <div class="card text-white bg-primary-gradient">
-                                {% for feedback in feedback_list %}
+
                                 <div class="card-body p-4 p-md-4 p-lg-7">
 
                                     <h2 class="fw-bold text-white text-center">What our customer are saying</h2>
                                     <hr class="mx-auto" style="height:2px;width:50px" />
                                     <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start"><img
-                                            class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user-1.png"
-                                            width="100" alt="" />
+                                            class="img-fluid me-4 me-md-3 me-lg-4 rounded-circle"
+                                            src="{% static 'images/kamala.webp' %}" width="200" alt="user Image" />
                                         <div class="w-md-25 my-3">
-                                            <h5 class="mb-0 fw-medium text-white">Claudio Crocilla</h5>
+                                            <h5 class="mb-0 fw-medium text-white">{{ feedback.rating_stars }}</h5>
+                                            <h5 class="mb-0 fw-medium text-white">{{ feedback.created_by }}</h5>
                                             <p class="fw-normal mb-0">Founder</p>
                                             <p class="fw-normal mb-0"> {{ feedback.create_date }}</p>
                                         </div>
-                                        <div class="w-md-75">
+                                        <div class="w-md-100">
                                             <p class="card-text ms-md-5">“{{ feedback.comment }}”
                                             </p>
                                         </div>
                                     </div>
 
                                 </div>
-                                {% endfor %}
+
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="carousel-item" data-bs-interval="2000">
-                    <div class="row h-100">
-                        <div class="col-12">
-                            <div class="card text-white bg-primary-gradient">
-                                <div class="card-body p-4 p-md-4 p-lg-7">
-                                    <h2 class="fw-bold text-white text-center">Our dear customers said about us</h2>
-                                    <hr class="mx-auto" style="height:2px;width:50px" />
-                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start"><img
-                                            class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user-2.png"
-                                            width="100" alt="" />
-                                        <div class="w-md-25 my-3">
-                                            <h5 class="mb-0 fw-medium text-white">Jhon Doe</h5>
-                                            <p class="fw-normal mb-0">UI/UX Designer</p>
-                                        </div>
-                                        <div class="w-md-75">
-                                            <p class="card-text ms-md-5">“Our dedicated patient engagement app and
-                                                web portal allow you to access information instantaneously (no
-                                                tedeous form, long calls, or administrative hassle) and securely”
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="carousel-item">
-                    <div class="row h-100">
-                        <div class="col-12">
-                            <div class="card text-white bg-primary-gradient">
-                                <div class="card-body p-4 p-md-4 p-lg-7">
-                                    <h2 class="fw-bold text-white text-center">Our dear customers said about us</h2>
-                                    <hr class="mx-auto" style="height:2px;width:50px" />
-                                    <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start"><img
-                                            class="img-fluid me-4 me-md-3 me-lg-4" src="assets/img/gallery/user-3.png"
-                                            width="100" alt="" />
-                                        <div class="w-md-25 my-3">
-                                            <h5 class="mb-0 fw-medium text-white">Jeny Doe</h5>
-                                            <p class="fw-normal mb-0">Web Designer</p>
-                                        </div>
-                                        <div class="w-md-75">
-                                            <p class="card-text ms-md-5">“Our dedicated patient engagement app and
-                                                web portal allow you to access information instantaneously (no
-                                                tedeous form, long calls, or administrative hassle) and securely”
-                                            </p>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% endfor %}
             </div>
+
             <div class="row mt-4 flex-center">
                 <div class="col-4 col-sm-5 text-end position-relative z-index-2"><a
                         class="carousel-control-prev carousel-icon z-index-2" href="#carouselExampleDark" role="button"
@@ -315,17 +238,7 @@
 <!-- ============================================-->
 
 <section>
-    <!-- <div class="bg-holder"
-        style="background-image:url(assets/img/illustrations/article-bg.png);background-position:right center;background-size:auto;">
-    </div> -->
-    <!--/.bg-holder-->
-
     <div class="container-lg">
-        <!-- <div class="bg-holder"
-            style="background-image:url(assets/img/illustrations/dot-2.png);background-position:left top;background-size:initial;margin-top:120px;margin-left:-35px;">
-        </div> -->
-        <!--/.bg-holder-->
-
         <div class="row flex-center">
             <div class="col-auto text-center">
                 <h2 class="fw-bold">Check out our latest updates</h2>
@@ -388,6 +301,6 @@
 </section>
 
 <!-- ===============================================-->
-<!--    End of Main Content-->
+<!--              End of Main Content               -->
 <!-- ===============================================-->
 {% endblock %}

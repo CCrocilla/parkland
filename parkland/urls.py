@@ -16,17 +16,17 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path, include
 from django.views.generic.base import RedirectView
-from car_park.views import signin_view, signup_view, reset_password_view, HomeView
+from django.conf import settings
+from django.conf.urls.static import static
+from car_park.views import HomeView
 
 
 urlpatterns = [
     # path('', home_view, name='homepage'),
-    path('', HomeView.as_view(), name='homepage'),
-    path('favicon.ico', RedirectView.as_view(
-        url='/static/favicon/favicon.ico')),
-    path('signin.html/', signin_view, name='signin'),
-    path('signup.html/', signup_view, name='signup'),
-    path('reset-password.html/', reset_password_view, name='resetpassword'),
     path('admin/', admin.site.urls),
     path('accounts/', include('allauth.urls')),
-]
+    path('', HomeView.as_view(), name='homepage'),
+    path('contact', include('contact.urls')),
+    path('favicon.ico', RedirectView.as_view(
+        url='/static/favicon/favicon.ico')),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

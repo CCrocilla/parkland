@@ -18,10 +18,17 @@ if os.path.isfile('env.py'):
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-BASE_DIR = Path(__file__).resolve().parent.parent
+# BASE_DIR = Path(__file__).resolve().parent.parent
 # Heroku Website
-# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-# TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+
+# Templates Directory
+TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
+TEMPLATES_DIR_ALLAUTH = os.path.join(BASE_DIR, 'templates/', 'allauth/')
+TEMPLATES_DIR_CONTACT = os.path.join(BASE_DIR, 'templates/', 'contact/')
+TEMPLATES_DIR_BOOKING = os.path.join(BASE_DIR, 'templates/', 'booking/')
+TEMPLATES_DIR_DASHBOARD = os.path.join(BASE_DIR, 'templates/', 'dashboard/')
+
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.0/howto/deployment/checklist/
@@ -56,6 +63,7 @@ INSTALLED_APPS = [
     'car_park',
     'contact',
     'booking',
+    'dashboard',
 ]
 
 # Need to Add Site ID for allauth so django can handle multiple website
@@ -90,9 +98,11 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            os.path.join(BASE_DIR, 'templates'),
-            os.path.join(BASE_DIR, 'templates', 'allauth'),
-            os.path.join(BASE_DIR, 'templates', 'contact'),
+            TEMPLATES_DIR,
+            TEMPLATES_DIR_ALLAUTH,
+            TEMPLATES_DIR_CONTACT,
+            TEMPLATES_DIR_BOOKING,
+            TEMPLATES_DIR_DASHBOARD,
             ],
         'APP_DIRS': True,
         'OPTIONS': {

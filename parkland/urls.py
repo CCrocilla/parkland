@@ -22,11 +22,12 @@ from car_park.views import HomeView
 
 
 urlpatterns = [
-    # path('', home_view, name='homepage'),
     path('admin/', admin.site.urls),
-    path('accounts/', include('allauth.urls')),
     path('', HomeView.as_view(), name='homepage'),
-    path('contact', include('contact.urls')),
+    path('accounts/', include('allauth.urls')),
+    path('contact/', include('contact.urls')),
+    path('booking/', include('booking.urls')),
+    path('dashboard/', include('dashboard.urls')),
     path('favicon.ico', RedirectView.as_view(
         url='/static/favicon/favicon.ico')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

@@ -24,10 +24,10 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Templates Directory
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
-TEMPLATES_DIR_ALLAUTH = os.path.join(BASE_DIR, 'templates/', 'allauth/')
-TEMPLATES_DIR_CONTACT = os.path.join(BASE_DIR, 'templates/', 'contact/')
-TEMPLATES_DIR_BOOKING = os.path.join(BASE_DIR, 'templates/', 'booking/')
-TEMPLATES_DIR_DASHBOARD = os.path.join(BASE_DIR, 'templates/', 'dashboard/')
+TEMPLATES_DIR_ALLAUTH = os.path.join(BASE_DIR, 'allauth/')
+TEMPLATES_DIR_CONTACT = os.path.join(BASE_DIR, 'contact/')
+TEMPLATES_DIR_BOOKING = os.path.join(BASE_DIR, 'booking/')
+TEMPLATES_DIR_DASHBOARD = os.path.join(BASE_DIR, 'dashboard/')
 
 
 # Quick-start development settings - unsuitable for production
@@ -37,7 +37,7 @@ TEMPLATES_DIR_DASHBOARD = os.path.join(BASE_DIR, 'templates/', 'dashboard/')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 

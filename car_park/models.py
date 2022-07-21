@@ -1,7 +1,7 @@
 from django.db import models
 # https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
 from django.contrib.auth.models import User
-# from cloudinary.models import CloudinaryField
+from cloudinary.models import CloudinaryField
 
 
 class Car(models.Model):
@@ -11,11 +11,21 @@ class Car(models.Model):
     is_electric = models.BooleanField(default=False)
     registration_number = models.CharField(max_length=10)
 
+    def __str__(self):
+        return f"Car: {self.registration_number}"
+
 
 class Area(models.Model):
     """ Model for the Parking Area """
     name = models.CharField(max_length=100)
     description = models.TextField(blank=True, null=True)
+    
+    class Meta:
+        """ Sorting by Create Date """
+        ordering = ['name']
+
+    def __str__(self):
+        return f"Area: {self.name}"
 
 
 class Parking(models.Model):
@@ -27,6 +37,9 @@ class Parking(models.Model):
     location_x = models.CharField(max_length=5)
     location_y = models.IntegerField()
     price = models.DecimalField(max_digits=50, decimal_places=2)
+
+    def __str__(self):
+        return f"Parking: {self.name}"
 
 
 class Booking(models.Model):
@@ -47,6 +60,9 @@ class Booking(models.Model):
     class Meta:
         """ Sorting by Create Date """
         ordering = ['created_date']
+        
+    def __str__(self):
+        return str(self.id)
 
 
 class Feedback(models.Model):

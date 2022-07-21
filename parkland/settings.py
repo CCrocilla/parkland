@@ -37,7 +37,9 @@ TEMPLATES_DIR_DASHBOARD = os.path.join(BASE_DIR, 'templates/', 'dashboard/')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = [
     'parkland.herokuapp.com',

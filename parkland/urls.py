@@ -28,6 +28,7 @@ urlpatterns = [
     path('contact/', include('contact.urls')),
     path('booking/', include('booking.urls')),
     path('dashboard/', include('dashboard.urls')),
+    # path('dashboard/add-feedback', include('dashboard.urls')),
     path('favicon.ico', RedirectView.as_view(
         url='/static/favicon/favicon.ico')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

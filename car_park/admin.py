@@ -39,4 +39,4 @@ class BookingAdmin(admin.ModelAdmin):
 class FeedbackAdmin(admin.ModelAdmin):
     """ Users' Feedback """
     list_display = (
-        'created_by', 'created_date', 'booking', 'rating_stars', 'comment')
+        'created_by', 'title', 'created_date', 'booking', 'rating_stars', 'comment')

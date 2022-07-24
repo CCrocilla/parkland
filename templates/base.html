@@ -53,12 +53,19 @@
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
                         {% if user.is_authenticated %}
+
                         <!-- Drop-Down Menu for logged users -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
                                 data-bs-toggle="dropdown" aria-expanded="false">
+                                {% if not user.first_name %}
+                                Hi, {{ user }}!
+                                {% else %}
                                 Hi, {{ user.first_name }}!
+                                {%endif%}
                             </a>
+
+
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'dashboard' %}">Manage Bookings</a></li>
                                 <li><a class="dropdown-item" href="{% url 'dashboard' %}">Profile</a></li>

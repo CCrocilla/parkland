@@ -1,6 +1,7 @@
 from django.db import models
 # https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
 from django.contrib.auth.models import User
+from django.urls import reverse
 from cloudinary.models import CloudinaryField
 
 
@@ -69,17 +70,23 @@ class Feedback(models.Model):
     """ Model for Users' Feedback """
     created_by = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.CASCADE,
-        related_name="feedback")
+        related_name="feedback", default=User)
     created_date = models.DateTimeField(auto_now_add=True)
     booking = models.ForeignKey(
-        Booking, on_delete=models.CASCADE, related_name="book")
-    rating_stars = models.IntegerField()
+        Booking, null=True, on_delete=models.CASCADE, related_name="book")
+    title = models.CharField(max_length=100)
+    rating_stars = models.IntegerField(null=True)
     comment = models.TextField(
-        blank=False, null=False, default="Leave your Feedback here!")
+        blank=False, null=False)
 
     class Meta:
         """ Sorting by Create Date """
         ordering = ['created_date']
 
     def __str__(self):
-        return f"Feedback: {self.comment}."
+        """ Return Title and Comment """
+        return str(self.title)
+    
+    def get_absolute_url(self):
+        """ Redirect to List of Feedback """
+        return reverse('list-feedback')

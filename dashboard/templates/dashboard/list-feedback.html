@@ -1,0 +1,35 @@
+{% extends 'dashboard/base.html' %}
+
+{% block extra_title %} - Dashboard{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+<div class="text-dark">
+    <h1 class="mt-4">Feedback Manager</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Here you can update or delete your feedback!</li>
+    </ol>
+
+    <div class="row d-flex ">
+        <div class="col-12 alert alert-light">
+
+            {% for feedback in feedback_list %}
+            <div class="p-3 mb-2 mt-2 alert alert-dark">
+                Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> |
+                Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} <br />
+                Rating: {{ feedback.rating_stars }} <br />
+                Comment: {{ feedback.comment }}
+
+                <a class="btn btn-success" href="{% url 'edit-feedback' feedback.pk %}">Edit</a>
+                <a class="btn btn-warning" href="{% url 'delete-feedback' feedback.pk %}">Delete</a>
+
+            </div>
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% endblock %}

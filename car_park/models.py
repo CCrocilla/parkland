@@ -90,3 +90,22 @@ class Feedback(models.Model):
     def get_absolute_url(self):
         """ Redirect to List of Feedback """
         return reverse('list-feedback')
+
+
+class Contact(models.Model):
+    """ Model for Users' Feedback """
+    created_date = models.DateTimeField(auto_now_add=True)
+    first_name = models.CharField(max_length=100)
+    last_name = models.CharField(max_length=100)
+    email = models.EmailField(max_length=254)
+    newsletter = models.BooleanField(default=False)
+    terms = models.BooleanField(default=False)
+    body = models.TextField(blank=False, null=False)
+
+    class Meta:
+        """ Sorting by Create Date """
+        ordering = ['created_date']
+        
+    def __str__(self):
+        """ Return First and Last Name """
+        return self.first_name, self.last_name

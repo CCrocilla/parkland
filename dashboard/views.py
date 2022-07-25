@@ -1,25 +1,31 @@
 """ Imports """
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.contrib.auth.forms import User, UserChangeForm
 from django.urls import reverse_lazy
 from car_park.models import Booking, Feedback
 from .forms import FeedbackForm
 
 
-
+################################
+#       Dashboard View         #
+################################
 class DashboardView(ListView):
-    """ Rendering Booking Page """
+    """ Class to display Users' Dashboard """
     model = Booking
     queryset = Booking.objects.filter().order_by('-created_date')
     template_name = 'dashboard/dashboard.html'
-    
 
 
+################################
+#        Feedback Views        #
+################################
 class AddFeedbackView(CreateView):
     """ Class to create Users' Feedback """
     model = Feedback
     form_class = FeedbackForm
     template_name = 'dashboard/add-feedback.html'
-    # fields = ('title', 'rating_stars', 'comment')  Not necessary as it is included in the Forms.
+    # fields = ('title', 'rating_stars', 'comment')  
+    # Not necessary as it is included in the Forms.
 
 
 class ListFeedbackView(ListView):
@@ -54,6 +60,21 @@ class EditFeedbackView(UpdateView):
 
 
 class DeleteFeedbackView(DeleteView):
+    """ Class to delete Feedback """
     model = Feedback
     template_name = 'dashboard/delete-feedback.html'
     success_url = reverse_lazy('list-feedback')
+
+
+################################
+#         Profile Views        #
+################################
+class EditUserView(UpdateView):
+    """ Class to Edit Profile Information """
+    model = User
+    form_class = UserChangeForm
+    template_name = 'dashboard/edit-profile.html'
+    success_url = reverse_lazy('dashboard')
+
+    def get_object(self):
+        return self.request.user

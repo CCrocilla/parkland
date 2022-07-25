@@ -1,65 +1,106 @@
 {% extends 'base.html' %}
+
 {% load static %}
 
 {% block extra_title %} - Contact Us{% endblock %}
 
 {% block content %}
 
+<!-- ============================================-->
+<!--                 Custom Form                 -->
+<!-- ============================================-->
+<section class="py-4 mb-4">
+    <div class="container position-relative">
+        <div class="row align-items-center">
+            <div class="col-md-7 col-lg-8 text-center text-md-start pt-5 pt-md-9">
+                <div class="form-group">
+                    <h1>My Custom Form!</h1>
+                    <form onsubmit="alert('Success!!!');" class="row g-3 needs-validation">
+                        <div class="col-md-4">
+                            <label for="validationCustom01" class="form-label">First name</label>
+                            <input type="text" class="form-control" id="validationCustom01" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label for="validationCustom02" class="form-label">Last name</label>
+                            <input type="text" class="form-control" id="validationCustom02" value="" required>
+                            <div class="valid-feedback">
+                                Looks good!
+                            </div>
+                        </div>
+                        <div class="col-md-8">
+                            <label for="validationCustomEmail" class="form-label">Email</label>
+                            <div class="input-group has-validation">
+                                <input type="text" class="form-control" id="validationCustomEmail" required>
+                                <div class="invalid-feedback">
+                                    Please choose an email.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
+                                <label class="form-check-label" for="termsCheck">
+                                    Agree to terms and conditions
+                                </label>
+                                <div class="invalid-feedback">
+                                    You must agree before submitting.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="newsletterCheck">
+                                <label class="form-check-label" for="newsletterCheck">
+                                    I want subscribe to the Newsletter
+                                </label>
+                            </div>
+                        </div>
+                        <div class="col-12">
+                            <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+</section>
 
-<form onsubmit="alert('Success!!!');" class="row g-3 needs-validation">
-    <div class="col-md-4">
-        <label for="validationCustom01" class="form-label">First name</label>
-        <input type="text" class="form-control" id="validationCustom01" value="" required>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-    <div class="col-md-4">
-        <label for="validationCustom02" class="form-label">Last name</label>
-        <input type="text" class="form-control" id="validationCustom02" value="" required>
-        <div class="valid-feedback">
-            Looks good!
-        </div>
-    </div>
-    <div class="col-md-8">
-        <label for="validationCustomEmail" class="form-label">Email</label>
-        <div class="input-group has-validation">
-            <input type="text" class="form-control" id="validationCustomEmail" required>
-            <div class="invalid-feedback">
-                Please choose an email.
+<!-- ============================================-->
+<!--                 Django Form                 -->
+<!-- ============================================-->
+<section class="container">
+    <h1>My Django Form!</h1>
+    <div class="row">
+        <div class="col-6">
+            <div class="form-group">
+                <form method="POST" class="post-form">
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
+                </form>
             </div>
         </div>
     </div>
-    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="termsCheck" required>
-            <label class="form-check-label" for="termsCheck">
-                Agree to terms and conditions
-            </label>
-            <div class="invalid-feedback">
-                You must agree before submitting.
-            </div>
+</section>
+
+
+<!-- ============================================-->
+<!--                 Company Details             -->
+<!-- ============================================-->
+
+<Section class="container">
+    <div class="row d-flex justify-content-center align-items-center">
+        <div class="col-12">
+            <h1>Company Details</h1>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2377.2356077256463!2d-6.230253284035749!3d53.42849547625566!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4867104c8615e397%3A0x669648aa9b769582!2sCloghran%2C%20Co.%20Dublin!5e0!3m2!1sen!2sie!4v1658709924078!5m2!1sen!2sie"
+                width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+            </iframe>
         </div>
     </div>
-    <div class="col-12">
-        <div class="form-check">
-            <input class="form-check-input" type="checkbox" value="" id="newsletterCheck">
-            <label class="form-check-label" for="newsletterCheck">
-                I want subscribe to the Newsletter
-            </label>
-        </div>
-    </div>
-    <div class="col-12">
-        <button class="btn btn-primary" type="submit">Submit</button>
-    </div>
-</form>
------------------------------------------------------------------------
------------------------------------------------------------------------
------------------------------------------------------------------------
-<form method="POST" class="post-form">
-    {% csrf_token %}
-    {{ form.as_p }}
-    <button type="submit" class="save btn btn-default">Save</button>
-</form>
+</Section>
 
 {% endblock %}

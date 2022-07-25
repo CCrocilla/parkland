@@ -6,6 +6,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <div class="text-dark">
     <h1 class="mt-4">Feedback Manager</h1>
     <ol class="breadcrumb mb-4">
@@ -20,10 +22,12 @@
                 Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> |
                 Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} <br />
                 Rating: {{ feedback.rating_stars }} <br />
-                Comment: {{ feedback.comment }}
+                Comment: {{ feedback.comment|slice:":200" }}
 
-                <a class="btn btn-success" href="{% url 'edit-feedback' feedback.pk %}">Edit</a>
-                <a class="btn btn-warning" href="{% url 'delete-feedback' feedback.pk %}">Delete</a>
+                <a class="btn btn-lg btn-outline-primary rounded-pill"
+                    href="{% url 'edit-feedback' feedback.pk %}">Edit</a>
+                <a class="btn btn-lg btn-outline-danger rounded-pill"
+                    href="{% url 'delete-feedback' feedback.pk %}">Delete</a>
 
             </div>
             {% endfor %}
@@ -31,5 +35,18 @@
         </div>
     </div>
 </div>
+
+{% else %}
+
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+
+{% endif %}
 
 {% endblock %}

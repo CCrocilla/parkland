@@ -1,5 +1,5 @@
 from django.urls import path
-from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView
+from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditUserView
 
 urlpatterns = [
     path('', DashboardView.as_view(), name='dashboard'),
@@ -8,4 +8,5 @@ urlpatterns = [
     path('feedback/<int:pk>/details', DetailsFeedbackView.as_view(), name='details-feedback'),
     path('feedback/<int:pk>/edit', EditFeedbackView.as_view(), name='edit-feedback'),
     path('feedback/<int:pk>/delete', DeleteFeedbackView.as_view(), name='delete-feedback'),
+    path('profile/edit', EditUserView.as_view(), name='edit-profile'),
 ]

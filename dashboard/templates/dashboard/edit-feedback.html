@@ -6,6 +6,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <div class="text-dark">
     <h1 class="mt-4">Edit: {{ feedback.title }}</h1>
     <ol class="breadcrumb mb-4">
@@ -45,7 +47,8 @@
                                         </div>
                                     </div>
 
-                                    <button type="submit" class="btn btn-primary">Update</button>
+                                    <button type="submit"
+                                        class="btn btn-lg btn-outline-primary rounded-pill">Update</button>
                                 </form>
                             </div>
                         </div>
@@ -53,6 +56,19 @@
                 </div>
             </div>
         </div>
+    </div>
+</div>
 
+{% else %}
 
-        {% endblock %}
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+
+{% endif %}
+{% endblock %}

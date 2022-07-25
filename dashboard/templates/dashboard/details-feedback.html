@@ -6,10 +6,24 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <h1> {{ feedback.created_by }}</h1>
 <p>{{ feedback.comment }}</p>
 
-<a class="btn btn-info" href="{% url 'list-feedback' %}">Back</a>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'list-feedback' %}">Back</a>
 
+{% else %}
+
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+
+{% endif %}
 
 {% endblock %}

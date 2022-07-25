@@ -15,7 +15,7 @@
 
     <title>Parkland {% block extra_title %}{% endblock %}</title>
 
-    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon/favicon.ico' %}">
 
     {% block corecss %}
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
@@ -52,8 +52,8 @@
                         {% endif %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
-                        {% if user.is_authenticated %}
 
+                        {% if user.is_authenticated %}
                         <!-- Drop-Down Menu for logged users -->
                         <li class="nav-item dropdown">
                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
@@ -67,7 +67,9 @@
 
 
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="{% url 'dashboard' %}">Dashboard</a></li>
                                 <li><a class="dropdown-item" href="{% url 'dashboard' %}">Manage Bookings</a></li>
+                                <li><a class="dropdown-item" href="{% url 'list-feedback' %}">Manage Feedbacks</a></li>
                                 <li><a class="dropdown-item" href="{% url 'dashboard' %}">Profile</a></li>
                                 <li>
                                     <hr class="dropdown-divider">

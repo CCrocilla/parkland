@@ -15,7 +15,7 @@
 
     <title>Parkland {% block extra_title %}{% endblock %}</title>
 
-    <link rel="shortcut icon" href="{% static 'favicon/favicon.ico' %}">
+    <link rel="shortcut icon" href="{% static 'images/favicon/favicon.ico' %}">
 
     {% block corecss %}
     <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
@@ -52,10 +52,8 @@
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                             Contact Us
                         </a>
-                        <a class="nav-link" href="{% url 'booking' %}">
-                            <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
-                            Booking
-                        </a>
+
+                        {% if user.is_authenticated %}
 
                         <!-------------------------->
                         <!--    Dashboard Core    -->
@@ -75,34 +73,32 @@
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav">
-                                <a class="nav-link" href="#">Edit Profile</a>
+                                <a class="nav-link" href="{% url 'edit-profile' %}">Edit Profile</a>
                                 <a class="nav-link" href="#">Upload Avatar</a>
                             </nav>
                         </div>
+
                         <!-------------------------->
                         <!--      Management      -->
                         <!-------------------------->
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                             aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
-                            Manage
+                            Management
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseAuth" aria-expanded="false"
-                                    aria-controls="pagesCollapseAuth">
+                                <a class="nav-link" href="">
+                                    Manage Book
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
+                                <a class="nav-link" href="{% url 'booking' %}">
+                                    <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                     Booking
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
-                                <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
-                                    data-bs-target="#pagesCollapseError" aria-expanded="false"
-                                    aria-controls="pagesCollapseError">
-                                    New Booking
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
+
                             </nav>
                         </div>
 
@@ -140,6 +136,7 @@
                             Tables [WIP]
                         </a>
                         <br />
+                        <br />
 
                         <!-------------------------->
                         <!--        Logout        -->
@@ -148,6 +145,9 @@
                         <a class="nav-link" href="{% url 'account_logout' %}">
                             Logout
                         </a>
+
+                        {% endif %}
+
                     </div>
                 </div>
                 <div class="sb-sidenav-footer">

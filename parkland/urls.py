@@ -24,11 +24,14 @@ from car_park.views import HomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='homepage'),
+    path('', HomeView.as_view(), name='homepage'),
     path('accounts/', include('allauth.urls')),
     path('contact/', include('contact.urls')),
     path('booking/', include('booking.urls')),
     path('dashboard/', include('dashboard.urls')),
-    # path('dashboard/add-feedback', include('dashboard.urls')),
     path('favicon.ico', RedirectView.as_view(
         url='/static/favicon/favicon.ico')),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+
+
+handler404 = 'car_park.views.Error404View'

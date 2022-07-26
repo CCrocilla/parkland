@@ -11,3 +11,8 @@ class HomeView(ListView):
     model = Feedback
     queryset = Feedback.objects.filter().order_by('-created_date')[:3]
     template_name = 'index.html'
+
+
+def Error404View(request, exception):
+    """ Error Page 404 - Page Not Found """
+    return render(request, "404.html")

@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="container header-container">
+    <div class="row">
+        <div class="col"></div>
+    </div>
+</div>
+<div class="container h-100">
+    <div class="row h-100 justify-content-center align-items-center">
+        <div class="col-7 col-md-6 my-auto">
+            <h1 class="justify-content-center">
+                Oopsss...Error 404! <i class="far fa-sad-tear"></i>
+            </h1>
+            <p>This page doesn't exist yet! Please go back to the Home page clicking on the button below!</p>
+            <div class="my-5">
+                <h4>
+                    <a href="{% url 'homepage' %}" class="btn btn-lg btn-primary rounded-pill hover-top">
+                        Back to Homepage
+                    </a>
+                </h4>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -2,6 +2,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block extra_title %} - Contact Us{% endblock %}
 
 {% block content %}
@@ -71,7 +73,7 @@
 <!-- ============================================-->
 <!--                 Django Form                 -->
 <!-- ============================================-->
-<section class="container">
+<section class="container py-4 mb-4">
     <h1>My Django Form!</h1>
     <div class="row">
         <div class="col-6">
@@ -79,7 +81,7 @@
                 <form method="POST" class="post-form"
                     onsubmit="Toastify({text: 'This is a toast', duration: 3000 }).showToast();">
                     {% csrf_token %}
-                    {{ form.as_p }}
+                    {{ form|crispy }}
                     <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
                 </form>
             </div>
@@ -92,8 +94,8 @@
 <!--                 Company Details             -->
 <!-- ============================================-->
 
-<Section class="container">
-    <div class="row d-flex justify-content-center align-items-center">
+<Section class="container py-4 mb-4 d-flex justify-content-center align-items-center">
+    <div class="row">
         <div class="col-12">
             <h1>Company Details</h1>
             <iframe

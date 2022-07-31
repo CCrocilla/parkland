@@ -1,11 +1,11 @@
 """ Imports """
 from django.shortcuts import render
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
-from django.contrib.auth.forms import User
+from django.contrib.auth.forms import User, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from car_park.models import Booking, Feedback
-from .forms import FeedbackForm, EditProfileForm, PasswordChangeForm
+from car_park.models import Booking, Feedback, ProfileAvatar
+from .forms import FeedbackForm, EditProfileForm, ProfileAvatarForm
 
 
 ################################
@@ -26,8 +26,6 @@ class AddFeedbackView(CreateView):
     model = Feedback
     form_class = FeedbackForm
     template_name = 'dashboard/add-feedback.html'
-    # fields = ('title', 'rating_stars', 'comment')
-    # Not necessary as it is included in the Forms.
 
     def get_initial(self):
         return {'created_by': self.request.user}
@@ -85,10 +83,21 @@ class EditProfileView(UpdateView):
         return self.request.user
 
 
+class ProfileAvatarView(CreateView):
+    """ Class to Create Profile Avatar """
+    model = ProfileAvatar
+    form_class = ProfileAvatarForm
+    template_name = 'dashboard/profile-avatar.html'
+    success_url = reverse_lazy('profile-avatar')
+
+    def get_initial(self):
+        return {'user': self.request.user}
+
+
 class PasswordChangeProfileView(PasswordChangeView):
     form_class = PasswordChangeForm
     success_url = reverse_lazy('password-success')
 
 
 def PasswordSuccess(request):
-    return render(request, 'dashboard/change-password-success.html', {})   
+    return render(request, 'dashboard/change-password-success.html', {})

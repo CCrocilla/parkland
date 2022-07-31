@@ -4,14 +4,16 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 {% if user.is_authenticated %}
 
 <div class="text-dark">
-    <h1 class="mt-4">Edit: {{ user }} Profile</h1>
+    <h1 class="mt-4">Avatar: {{ user }} Profile</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Update your Profile!</li>
+        <li class="breadcrumb-item active">Upload your image here!</li>
     </ol>
 
     <div class="row d-flex">
@@ -19,14 +21,22 @@
             <div class="card">
                 <div class="card-body p-4">
                     <div class="d-flex flex-start w-100">
-                        <form method="POST">
+                        <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Update</button>
+                            {{ form|crispy }}
+                            <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Upload</button>
                         </form>
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <img src="{{ profileavatar.profile_avatar.url }}" alt="Avatar">
         </div>
     </div>
 </div>

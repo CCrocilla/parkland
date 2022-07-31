@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.contrib.auth import views
-from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, PasswordChangeProfileView, PasswordSuccess
+from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, ProfileAvatarView, PasswordChangeProfileView, PasswordSuccess
 
 
 urlpatterns = [
@@ -12,6 +12,7 @@ urlpatterns = [
     path('feedback/<int:pk>/edit', EditFeedbackView.as_view(), name='edit-feedback'),
     path('feedback/<int:pk>/delete', DeleteFeedbackView.as_view(), name='delete-feedback'),
     path('profile/edit', EditProfileView.as_view(), name='edit-profile'),
+    path('profile/avatar', ProfileAvatarView.as_view(), name='profile-avatar'),
     path('password/', PasswordChangeProfileView.as_view(template_name='dashboard/change-password.html'), name='password'),
     path('password-success', PasswordSuccess, name='password-success'),
     

@@ -109,3 +109,11 @@ class Contact(models.Model):
     def __str__(self):
         """ Return First and Last Name """
         return self.first_name, self.last_name
+
+
+class ProfileAvatar(models.Model):
+    """ Model for Profile's Avatar """
+    user = models.ForeignKey(
+        User, on_delete=models.CASCADE, related_name="profile")
+    profile_avatar = models.ImageField(null=True, blank=True, upload_to="avatars/")
+

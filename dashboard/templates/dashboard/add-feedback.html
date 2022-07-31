@@ -4,6 +4,8 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 {% if user.is_authenticated %}
@@ -25,27 +27,28 @@
                             <div class="w-100">
 
                                 <form method="POST">
-                                    {% csrf_token%}
-                                    {{ form.as_p }}
-
+                                    <div class="form-radio-hidden">
+                                        {% csrf_token%}
+                                        {{ form|crispy }}
+                                    </div>
                                     <h5>How much did you rate us?</h5>
                                     <div class="row">
                                         <div class="col">
                                             <div class="rating">
-                                                <input type="radio" id="star5" name="rating" value="5" required><label
-                                                    for="star5" title="Excellent">5 stars</label>
-                                                <input type="radio" id="star4" name="rating" value="4" required><label
-                                                    for="star4" title="Good">4 stars</label>
-                                                <input type="radio" id="star3" name="rating" value="3" required><label
-                                                    for="star3" title="OK">3 stars</label>
-                                                <input type="radio" id="star2" name="rating" value="2" required><label
-                                                    for="star2" title="Poor">2 stars</label>
-                                                <input type="radio" id="star1" name="rating" value="1" required><label
-                                                    for="star1" title="Bad">1 star</label>
+                                                <input type="radio" id="id_rating_stars_4" name="rating_stars" value="5"
+                                                    required><label for="id_rating_stars_4" title="Excellent">5
+                                                    stars</label>
+                                                <input type="radio" id="id_rating_stars_3" name="rating_stars" value="4"
+                                                    required><label for="id_rating_stars_3" title="Good">4 stars</label>
+                                                <input type="radio" id="id_rating_stars_2" name="rating_stars" value="3"
+                                                    required><label for="id_rating_stars_2" title="OK">3 stars</label>
+                                                <input type="radio" id="id_rating_stars_1" name="rating_stars" value="2"
+                                                    required><label for="id_rating_stars_1" title="Poor">2 stars</label>
+                                                <input type="radio" id="id_rating_stars_0" name="rating_stars" value="1"
+                                                    required><label for="id_rating_stars_0" title="Bad">1 star</label>
                                             </div>
                                         </div>
                                     </div>
-
                                     <button type="submit"
                                         class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
                                 </form>

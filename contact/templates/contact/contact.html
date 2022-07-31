@@ -15,7 +15,8 @@
             <div class="col-md-7 col-lg-8 text-center text-md-start pt-5 pt-md-9">
                 <div class="form-group">
                     <h1>My Custom Form!</h1>
-                    <form onsubmit="alert('Success!!!');" class="row g-3 needs-validation">
+                    <form onsubmit="Toastify({text: 'This is a toast', duration: 3000 }).showToast();"
+                        class=" row g-3 needs-validation">
                         <div class="col-md-4">
                             <label for="validationCustom01" class="form-label">First name</label>
                             <input type="text" class="form-control" id="validationCustom01" value="" required>
@@ -75,7 +76,8 @@
     <div class="row">
         <div class="col-6">
             <div class="form-group">
-                <form method="POST" class="post-form">
+                <form method="POST" class="post-form"
+                    onsubmit="Toastify({text: 'This is a toast', duration: 3000 }).showToast();">
                     {% csrf_token %}
                     {{ form.as_p }}
                     <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>

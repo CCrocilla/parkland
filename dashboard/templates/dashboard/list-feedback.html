@@ -18,10 +18,13 @@
         <div class="col-12 alert alert-light">
 
             {% for feedback in feedback_list %}
+
+            {% if feedback.created_by.id == user.id %}
+
             <div class="p-3 mb-2 mt-2 alert alert-dark">
-                Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> |
-                Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} <br />
-                Rating: {{ feedback.rating_stars }} <br />
+                Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> <br />|
+                Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} | Rating:
+                {{ feedback.rating_stars }}/5 <br />
                 Comment: {{ feedback.comment|slice:":200" }}
 
                 <a class="btn btn-lg btn-outline-primary rounded-pill"
@@ -30,6 +33,9 @@
                     href="{% url 'delete-feedback' feedback.pk %}">Delete</a>
 
             </div>
+
+            {% endif %}
+
             {% endfor %}
 
         </div>

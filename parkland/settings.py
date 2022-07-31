@@ -62,6 +62,8 @@ INSTALLED_APPS = [
     'cloudinary_storage',
     'django.contrib.staticfiles',
     'cloudinary',
+    "crispy_forms",
+    "crispy_bootstrap5",
     'car_park',
     'contact',
     'booking',
@@ -70,6 +72,11 @@ INSTALLED_APPS = [
 
 # Need to Add Site ID for allauth so django can handle multiple website
 SITE_ID = 1
+
+
+# Crespy Forms
+CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
+CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
 # Code Institute Project - Boutique Ado 

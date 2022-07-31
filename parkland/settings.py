@@ -9,12 +9,18 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-
+# Cloudinary Config
+import cloudinary                   # NOQA
+import cloudinary.uploader          # NOQA
+import cloudinary.api               # NOQA
+# Settings Config
 from pathlib import Path
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
-    import env      # NOQA
+    import env                      # NOQA
+
+
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.

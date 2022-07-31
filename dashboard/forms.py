@@ -2,8 +2,8 @@
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserChangeForm, PasswordChangeForm
-from car_park.models import Feedback
+from django.contrib.auth.forms import UserChangeForm
+from car_park.models import Feedback, ProfileAvatar
 
 
 CHOICES = [
@@ -40,11 +40,11 @@ class EditProfileForm(UserChangeForm):
         model = User
         fields = ('username', 'first_name', 'last_name', 'email', 'date_joined', 'last_login')
         labels = {
-            'username': 'Username',
-            'first_name': 'Title',
-            'last_name': 'Comment',
-            'email': 'Email',
-            'date_joined': 'Date Joined',
+            'username': 'Username*',
+            'first_name': 'First Name*',
+            'last_name': 'Last Name*',
+            'email': 'Email*',
+            'date_joined': 'Date Account Creation',
             'last_login': 'Last Login',
         }
 
@@ -53,6 +53,22 @@ class EditProfileForm(UserChangeForm):
             'first_name': forms.TextInput(attrs={'class': 'form-control'}),
             'last_name': forms.TextInput(attrs={'class': 'form-control'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
-            'date_joined': forms.TextInput(attrs={'class': 'form-control', 'disabled': True}),
-            'last_login': forms.TextInput(attrs={'class': 'form-control', 'disabled': True}),
+            'date_joined': forms.DateTimeInput(attrs={'readonly':'readonly', 'class': 'form-control', 'required': 'false'}),
+            'last_login': forms.DateTimeInput(attrs={'readonly':'readonly', 'class': 'form-control', 'required': 'false'}),
         }
+
+
+class ProfileAvatarForm(ModelForm):
+    """ Form for Users' Avatar """
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['user'].disabled = True
+
+    class Meta:
+        model = ProfileAvatar
+        fields = ('user', 'profile_avatar')
+        labels = {
+            'user': '',
+            'profile_avatar': 'Upload your Avatar!',
+        }
+

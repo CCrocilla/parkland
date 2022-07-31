@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Car, Parking, Area, Booking, Feedback, Contact
+from .models import Car, Parking, Area, Booking, Feedback, Contact, ProfileAvatar
 
 
 # admin.site.register(Car)
@@ -39,7 +39,7 @@ class BookingAdmin(admin.ModelAdmin):
 class FeedbackAdmin(admin.ModelAdmin):
     """ Users' Feedback """
     list_display = (
-        'created_by', 'title', 'created_date', 'booking', 'rating_stars', 'comment')
+        'created_by', 'title', 'created_date', 'booking', 'rating_stars')
 
 
 @admin.register(Contact)
@@ -47,3 +47,10 @@ class ContactAdmin(admin.ModelAdmin):
     """ Contact Us """
     list_display = (
         'first_name', 'last_name', 'created_date', 'newsletter', 'terms')
+
+
+@admin.register(ProfileAvatar)
+class ProfileAvatarAdmin(admin.ModelAdmin):
+    """ Contact Us """
+    list_display = (
+        'user', 'profile_avatar')

@@ -21,8 +21,6 @@ if os.path.isfile('env.py'):
     import env                      # NOQA
 
 
-
-
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 # BASE_DIR = Path(__file__).resolve().parent.parent
 # Heroku Website
@@ -43,7 +41,7 @@ TEMPLATES_DIR_DASHBOARD = os.path.join(BASE_DIR, 'dashboard/')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 

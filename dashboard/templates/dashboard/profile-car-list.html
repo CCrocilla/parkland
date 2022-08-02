@@ -9,29 +9,25 @@
 {% if user.is_authenticated %}
 
 <div class="text-dark">
-    <h1 class="mt-4">Feedback Manager</h1>
+    <h1 class="mt-4">Car List of {{ user.first_name }} {{ user.last_name }}</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Here you can update or delete your feedback!</li>
+        <li class="breadcrumb-item active">Manage your Car List Here!!!</li>
     </ol>
+
 
     <div class="row d-flex ">
         <div class="col-12 alert alert-light">
+            {% for car in car_list %}
 
-            {% for feedback in feedback_list %}
-
-            {% if feedback.created_by.id == user.id %}
+            {% if car.user.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark">
-                Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> <br />|
-                Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} | Rating:
-                {{ feedback.rating_stars }}/5 <br />
-                Comment: {{ feedback.comment|slice:":200" }} <br />
+                Registration Number: <a href="">{{ car.registration_number }}</a> <br />
+                Electric Car: {{ car.is_electric }} <br />|
+                Owner: {{ car.user.username }} <br />
 
-                <a class="btn btn-lg btn-outline-primary rounded-pill mt-4"
-                    href="{% url 'edit-feedback' feedback.pk %}">Edit</a>
                 <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
-                    href="{% url 'delete-feedback' feedback.pk %}">Delete</a>
-
+                    href="{% url 'profile-car-delete' car.pk %}">Delete</a>
             </div>
 
             {% endif %}

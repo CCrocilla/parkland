@@ -4,35 +4,29 @@
 
 {% load static %}
 
+{% load crispy_forms_tags %}
+
 {% block content %}
 
 {% if user.is_authenticated %}
-
 <div class="text-dark">
-    <h1 class="mt-4">Edit: {{ user }} Profile</h1>
+    <h1 class="mt-4">Welcome to Car Registration Section!</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Update your Profile!</li>
+        <li class="breadcrumb-item active">Please enter the details of your car!</li>
     </ol>
-
-    <div class="row d-flex">
-        <div class="col-12">
-            <img src="{{ user.profileavatar.avatar.url }}" alt="Avatar">
-            This is: {{ user.profileavatar.user }}
-            This is URL: {{ user.profileavatar.avatar.url }}
-            This is URL2: {{ profileavatar.avatar.url }}
-            This is URL3: {{ profileavatar.avatar }}
-        </div>
-    </div>
 
     <div class="row d-flex">
         <div class="col-12">
             <div class="card">
                 <div class="card-body p-4">
                     <div class="d-flex flex-start w-100">
+
                         <form method="POST">
-                            {% csrf_token %}
-                            {{ form.as_p }}
-                            <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Update</button>
+
+                            {% csrf_token%}
+                            {{ form|crispy }}
+
+                            <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Register</button>
                         </form>
                     </div>
                 </div>
@@ -40,6 +34,7 @@
         </div>
     </div>
 </div>
+
 
 {% else %}
 

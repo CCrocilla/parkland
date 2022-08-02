@@ -1,6 +1,6 @@
 from django.urls import path, include
 from django.contrib.auth import views
-from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, ProfileAvatarView, PasswordChangeProfileView, PasswordSuccess
+from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, ProfileCarView, ProfileCarListView, ProfileCarDeleteView, ProfileAvatarView, PasswordChangeProfileView, PasswordSuccess
 
 
 urlpatterns = [
@@ -13,7 +13,9 @@ urlpatterns = [
     path('feedback/<int:pk>/delete', DeleteFeedbackView.as_view(), name='delete-feedback'),
     path('profile/edit', EditProfileView.as_view(), name='edit-profile'),
     path('profile/avatar', ProfileAvatarView.as_view(), name='profile-avatar'),
+    path('profile/car', ProfileCarView.as_view(), name='profile-car'),
+    path('profile/car/list', ProfileCarListView.as_view(), name='profile-car-list'),
+    path('profile/<int:pk>/delete',  ProfileCarDeleteView.as_view(), name='profile-car-delete'),
     path('password/', PasswordChangeProfileView.as_view(template_name='dashboard/change-password.html'), name='password'),
     path('password-success', PasswordSuccess, name='password-success'),
-    
 ]

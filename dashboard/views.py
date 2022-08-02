@@ -4,15 +4,17 @@ from django.views.generic import ListView, DetailView, CreateView, UpdateView, D
 from django.contrib.auth.forms import User, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from car_park.models import Booking, Feedback, ProfileAvatar
-from .forms import FeedbackForm, EditProfileForm, ProfileAvatarForm
+from car_park.models import Booking, Feedback, Car, ProfileAvatar
+from .forms import FeedbackForm, EditProfileForm, ProfileCarForm, ProfileAvatarForm
 
 
 ################################
 #       Dashboard View         #
 ################################
 class DashboardView(ListView):
-    """ Class to display Users' Dashboard """
+    """
+    Class to display Users' Dashboard
+    """
     model = Booking
     queryset = Booking.objects.filter().order_by('-created_date')
     template_name = 'dashboard/dashboard.html'
@@ -22,7 +24,9 @@ class DashboardView(ListView):
 #        Feedback Views        #
 ################################
 class AddFeedbackView(CreateView):
-    """ Class to create Users' Feedback """
+    """
+    Class to create Users' Feedback
+    """
     model = Feedback
     form_class = FeedbackForm
     template_name = 'dashboard/add-feedback.html'
@@ -32,7 +36,9 @@ class AddFeedbackView(CreateView):
 
 
 class ListFeedbackView(ListView):
-    """ Class to display all the User's Feedback """
+    """
+    Class to display all the User's Feedback
+    """
     model = Feedback
     template_name = 'dashboard/list-feedback.html'
     ordering = ['-created_date']
@@ -48,7 +54,9 @@ class ListFeedbackView(ListView):
 
 
 class DetailsFeedbackView(DetailView):
-    """ Class to display single User's Feedback """
+    """
+    Class to display single User's Feedback
+    """
     model = Feedback
     queryset = Feedback.objects.filter().order_by('-created_date')
     template_name = 'dashboard/details-feedback.html'
@@ -56,14 +64,18 @@ class DetailsFeedbackView(DetailView):
 
 
 class EditFeedbackView(UpdateView):
-    """ Class to display single User's Feedback """
+    """
+    Class to display single User's Feedback
+    """
     model = Feedback
     template_name = 'dashboard/edit-feedback.html'
     fields = ['title', 'comment']
 
 
 class DeleteFeedbackView(DeleteView):
-    """ Class to delete Feedback """
+    """
+    Class to delete Feedback
+    """
     model = Feedback
     template_name = 'dashboard/delete-feedback.html'
     success_url = reverse_lazy('list-feedback')
@@ -73,7 +85,9 @@ class DeleteFeedbackView(DeleteView):
 #         Profile Views        #
 ################################
 class EditProfileView(UpdateView):
-    """ Class to Edit Profile Information """
+    """
+    Class to Edit Profile Information
+    """
     model = User
     form_class = EditProfileForm
     template_name = 'dashboard/edit-profile.html'
@@ -84,14 +98,64 @@ class EditProfileView(UpdateView):
 
 
 class ProfileAvatarView(CreateView):
-    """ Class to Create Profile Avatar """
+    """
+    Class to Upload Profile Avatar
+    """
     model = ProfileAvatar
     form_class = ProfileAvatarForm
     template_name = 'dashboard/profile-avatar.html'
-    success_url = reverse_lazy('profile-avatar')
+    queryset = ProfileAvatar.objects.all()
+    success_url = reverse_lazy('edit-profile')
 
     def get_initial(self):
         return {'user': self.request.user}
+    
+    def get_avatar_user(self):
+        """
+        This should return a list of all the avatar
+        for the authenticated user.
+        """
+        avatar = self.request.user.profileavatar.avatar.url
+        return ProfileAvatar.objects.all()
+
+
+class ProfileCarView(CreateView):
+    """
+    Class to create Users' Cars
+    """
+    model = Car
+    form_class = ProfileCarForm
+    template_name = 'dashboard/profile-car.html'
+    queryset = Car.objects.all()
+
+    def get_initial(self):
+        return {'user': self.request.user}
+
+
+class ProfileCarListView(ListView):
+    """
+    Class to display all the User's Cars
+    """
+    model = Car
+    template_name = 'dashboard/profile-car-list.html'
+    fields = '__all__'
+
+    def get_car_user(self):
+        """
+        This should return a list of all the feedback
+        for the authenticated user.
+        """
+        user = self.request.user
+        return Car.objects.filter(user=user)
+
+
+class ProfileCarDeleteView(DeleteView):
+    """
+    Class to delete Feedback
+    """
+    model = Car
+    template_name = 'dashboard/profile-car-delete.html'
+    success_url = reverse_lazy('profile-car-list')
 
 
 class PasswordChangeProfileView(PasswordChangeView):

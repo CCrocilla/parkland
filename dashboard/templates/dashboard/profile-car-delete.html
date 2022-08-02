@@ -9,22 +9,22 @@
 {% if user.is_authenticated %}
 
 <div class="text-dark">
-    <h1 class="mt-4">Delete: {{ feedback.title }}</h1>
+    <h1 class="mt-4">Delete Car: {{ car.registration_number }}</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Delete your feedback!</li>
+        <li class="breadcrumb-item active">Delete your Car!</li>
     </ol>
 
     <div class="row d-flex justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-6">
             <div class="card text-center">
                 <div class="card-header">
-                    {{ feedback.title }}
+                    {{ car.registration_number }}
                 </div>
                 <div class="card-body">
                     <form method="POST">
                         {% csrf_token%}
                         <h3 class="card-title">Are you sure?</h3>
-                        <p class="card-text">Click on the Delete Button below to delete your Feedback.</p>
+                        <p class="card-text">Click on the Delete Button below to delete your Car.</p>
                         <button type="submit" class="btn btn-lg btn-outline-danger rounded-pill">Delete</button>
                     </form>
 
@@ -36,7 +36,6 @@
         </div>
     </div>
 </div>
-<!-- </section> -->
 
 {% else %}
 

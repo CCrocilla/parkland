@@ -33,13 +33,26 @@
     </div>
 </div>
 
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <img src="{{ profileavatar.profile_avatar.url }}" alt="Avatar">
-        </div>
-    </div>
+
+
+{% if media.images.avatars.url %}
+<div class="d-md-flex align-items-md-center mt-5 text-center text-md-start"></div>
+<img class="img-fluid me-4 me-md-3 me-lg-4 rounded-circle" src="{{ profileavatar.avatar.url }}" width="200"
+    alt="Avatar">
+
+{% else %}
+<img class="img-fluid me-4 me-md-3 me-lg-4 rounded-circle" src="{% static 'images/avatar/kamala.webp'%}" width="200"
+    alt="Avatar">
 </div>
+{% endif %}
+
+
+{{ profileavatar.avatar.url }}
+
+{{ media.images.avatars.url }}
+
+
+
 
 {% else %}
 

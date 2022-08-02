@@ -51,6 +51,6 @@ class ContactAdmin(admin.ModelAdmin):
 
 @admin.register(ProfileAvatar)
 class ProfileAvatarAdmin(admin.ModelAdmin):
-    """ Contact Us """
+    """ Profile Avatar """
     list_display = (
-        'user', 'profile_avatar')
+        'user', 'avatar')

@@ -8,8 +8,8 @@
 
 {% if user.is_authenticated %}
 
-<h1> {{ feedback.created_by }}</h1>
-<p>{{ feedback.comment }}</p>
+<h1>Created By: {{ feedback.created_by }}</h1>
+<p>Comment: {{ feedback.comment }}</p>
 
 <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'list-feedback' %}">Back</a>
 

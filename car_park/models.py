@@ -8,12 +8,12 @@ from cloudinary.models import CloudinaryField
 class Car(models.Model):
     """ Model for the Cars """
     user = models.ForeignKey(
-        User, on_delete=models.CASCADE, related_name="owner")
+        User, on_delete=models.CASCADE, related_name="cars")
     is_electric = models.BooleanField(default=False)
     registration_number = models.CharField(max_length=10)
 
     def __str__(self):
-        return f"Car: {self.registration_number}"
+        return str(self.registration_number)
 
     def get_absolute_url(self):
         """ Redirect to List of Feedback """
@@ -30,7 +30,7 @@ class Area(models.Model):
         ordering = ['name']
 
     def __str__(self):
-        return f"Area: {self.name}"
+        return str(self.name)
 
 
 class Parking(models.Model):
@@ -38,12 +38,11 @@ class Parking(models.Model):
     name = models.CharField(max_length=100)
     created_by = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.CASCADE, 
-        related_name="user_parking")
+        related_name="parkings")
     is_electric = models.BooleanField(default=False)
-    recharge_car = models.BooleanField(default=False)
     area = models.ForeignKey(
-        Area, on_delete=models.CASCADE, related_name="area")
-    location_x = models.CharField(max_length=5)
+        Area, on_delete=models.CASCADE, related_name="parkings")
+    location_x = models.IntegerField()
     location_y = models.IntegerField()
     price = models.DecimalField(max_digits=50, decimal_places=2)
 
@@ -56,14 +55,17 @@ class Booking(models.Model):
     name = models.CharField(max_length=100)
     created_by = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.CASCADE,
-        related_name="user_booking")
+        related_name="bookings")
     created_date = models.DateTimeField(auto_now_add=True)
-    car = models.ForeignKey(
-        Car, on_delete=models.CASCADE, related_name="vehicle")
-    parking = models.ForeignKey(
-        Parking, on_delete=models.CASCADE, related_name="slot")
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
+    area = models.ForeignKey(
+        Area, on_delete=models.CASCADE, related_name="bookings")
+    car = models.ForeignKey(
+        Car, on_delete=models.CASCADE, related_name="bookings")
+    recharge_car = models.BooleanField(default=False)
+    parking = models.ForeignKey(
+        Parking, on_delete=models.CASCADE, related_name="bookings")
     price = models.DecimalField(max_digits=50, decimal_places=2)
 
     class Meta:
@@ -78,10 +80,10 @@ class Feedback(models.Model):
     """ Model for Users' Feedback """
     created_by = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.CASCADE,
-        related_name="feedback", default=User)
+        related_name="feedbacks", default=User)
     created_date = models.DateTimeField(auto_now_add=True)
     booking = models.ForeignKey(
-        Booking, null=True, on_delete=models.CASCADE, related_name="book")
+        Booking, null=True, on_delete=models.CASCADE, related_name="feedbacks")
     title = models.CharField(max_length=100)
     rating_stars = models.IntegerField(null=True)
     comment = models.TextField(
@@ -121,5 +123,5 @@ class Contact(models.Model):
 
 class ProfileAvatar(models.Model):
     """ Model for Profile's Avatar """
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profile")
-    avatar = models.ImageField(null=True, blank=True, upload_to="images/avatars/")
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profiles")
+    avatar = CloudinaryField("images/avatars/", null=True, blank=True)

@@ -9,9 +9,13 @@ class BookingAddView(CreateView):
     model = Booking
     template_name = 'booking/booking.html'
     form_class = BookingForm
+    # queryset = Booking.objects.select_related(Parking): filter()
 
+    
     def get_initial(self):
         return {'created_by': self.request.user}
+    
+    
 
 
 class BookingRecapView(DetailView):

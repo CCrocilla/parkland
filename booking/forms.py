@@ -13,14 +13,15 @@ class BookingForm(ModelForm):
         super().__init__(*args, **kwargs)
         self.fields['created_by'].disabled = True
 
-        # if self.instance and self.instance.start_date is not None and self.instance.end_date is not None:
-        #         if self.instance.start_date == self.instance.end_date:
-        #             self.fields["start_date"].disabled = True
-
+    # if self.instance and self.instance.start_date is not None and self.instance.end_date is not None:
+    #         if self.instance.start_date == self.instance.end_date:
+    #             self.fields["start_date"].disabled = True
+    # def clean_start_date For Specific Field
+    
     def clean(self):
         if self.cleaned_data['start_date'] > self.cleaned_data['end_date']:
             logging.error("ERROR: Start Date > End Date")
-            raise ValidationError('Error: Start Date should be greater than the End Date!')
+            raise ValidationError('Error: Start Date is greater than the End Date!')
 
     class Meta:
         model = Booking

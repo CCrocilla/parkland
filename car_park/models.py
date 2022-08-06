@@ -45,6 +45,8 @@ class Parking(models.Model):
     location_x = models.IntegerField()
     location_y = models.IntegerField()
     price = models.DecimalField(max_digits=50, decimal_places=2)
+    # Add Status Available to filter
+    
 
     def __str__(self):
         return str(self.name) + ' - ' + str(self.price)

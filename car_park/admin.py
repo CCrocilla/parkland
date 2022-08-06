@@ -28,7 +28,7 @@ class AreaAdmin(admin.ModelAdmin):
 class BookingAdmin(admin.ModelAdmin):
     """ Booking """
     list_display = (
-        'created_by', 'car', 'parking', 'created_date', 'price')
+        'created_by', 'car', 'parking', 'start_date', 'end_date', 'created_date')
     list_filter = (
         'created_date', 'start_date', 'end_date')
     search_fields = (

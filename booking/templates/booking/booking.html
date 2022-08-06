@@ -25,7 +25,7 @@
     </div>
 
     <div class="card">
-        <img src="{% static 'images/bg-booking.jpg' %}" class="card-img-top" alt="Hero Image">
+        <img src="{% static 'images/bg-booking.jpg' %}" class="card-img-top rounded" alt="Hero Image">
         <div class="card-body">
             <h5 class="card-title">Welcome to the Booking Section!</h5>
             <p class="card-text">Fill in the fields below to Start!</p>
@@ -35,6 +35,7 @@
                 {% csrf_token%}
                 {{ form|crispy }}
 
+                <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
             </form>
             <a href="#" class="btn btn-primary">Next</a>
         </div>

@@ -47,26 +47,24 @@ class Parking(models.Model):
     price = models.DecimalField(max_digits=50, decimal_places=2)
 
     def __str__(self):
-        return f"Parking: {self.name}"
+        return str(self.name) + ' - ' + str(self.price)
 
 
 class Booking(models.Model):
     """ Model for Booking of Parking Slots """
-    name = models.CharField(max_length=100)
+    code = models.CharField(max_length=100)
     created_by = models.ForeignKey(
         User, null=True, blank=True, on_delete=models.CASCADE,
         related_name="bookings")
     created_date = models.DateTimeField(auto_now_add=True)
     start_date = models.DateTimeField()
     end_date = models.DateTimeField()
-    area = models.ForeignKey(
-        Area, on_delete=models.CASCADE, related_name="bookings")
     car = models.ForeignKey(
         Car, on_delete=models.CASCADE, related_name="bookings")
     recharge_car = models.BooleanField(default=False)
     parking = models.ForeignKey(
         Parking, on_delete=models.CASCADE, related_name="bookings")
-    price = models.DecimalField(max_digits=50, decimal_places=2)
+    final_price = models.DecimalField(max_digits=50, decimal_places=2)
 
     class Meta:
         """ Sorting by Create Date """
@@ -74,6 +72,10 @@ class Booking(models.Model):
 
     def __str__(self):
         return str(self.id)
+    
+    def get_absolute_url(self):
+        """ Redirect to List of Feedback """
+        return reverse('booking')
 
 
 class Feedback(models.Model):

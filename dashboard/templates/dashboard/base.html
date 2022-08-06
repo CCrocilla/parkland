@@ -67,11 +67,11 @@
                         <!-------------------------->
                         <!--       Profile        -->
                         <!-------------------------->
-                        <div class="sb-sidenav-menu-heading">My Profile</div>
+                        <!-- <div class="sb-sidenav-menu-heading">My Profile</div> -->
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
-                            Profile
+                            My Profile
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapseLayouts" aria-labelledby="headingOne"
@@ -80,8 +80,8 @@
                                 <a class="nav-link" href="{% url 'edit-profile' %}">Edit Profile</a>
                                 <a class="nav-link" href="{% url 'password' %}">Change Password</a>
                                 <a class="nav-link" href="{% url 'profile-avatar' %}">Upload Avatar</a>
-                                <a class="nav-link" href="{% url 'profile-car' %}">Register Car</a>
-                                <a class="nav-link" href="{% url 'profile-car-list' %}">List Cars</a>
+                                <a class="nav-link" href="{% url 'profile-car' %}">Add Car</a>
+                                <a class="nav-link" href="{% url 'profile-car-list' %}">Car List</a>
                             </nav>
                         </div>
 
@@ -91,21 +91,20 @@
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                             aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
-                            Management
+                            Manage Booking
                             <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                         </a>
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link" href="">
-                                    Manage Book
-                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
-                                </a>
                                 <a class="nav-link" href="{% url 'booking' %}">
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                     Booking
                                 </a>
-
+                                <a class="nav-link" href="">
+                                    Booking List
+                                    <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
+                                </a>
                             </nav>
                         </div>
 
@@ -125,7 +124,7 @@
                                     Add Feedback
                                 </a>
                                 <a class="nav-link" href="{% url 'list-feedback' %}">
-                                    List Feedbacks
+                                    Feedback List
                                 </a>
                             </nav>
                         </div>

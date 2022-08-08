@@ -21,39 +21,33 @@
             <div class="card">
                 <div class="card-body p-4">
                     <div class="d-flex flex-start w-100">
-                        <div class="d-flex flex-start w-100">
-                            <img class="rounded-circle shadow-1-strong me-3"
-                                src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(21).webp" alt="avatar"
-                                width="65" height="65" />
-                            <div class="w-100">
-
-                                <form method="POST">
-                                    <div class="form-radio-hidden">
-                                        {% csrf_token%}
-                                        {{ form|crispy }}
-                                    </div>
-                                    <h5>How much did you rate us?</h5>
-                                    <div class="row">
-                                        <div class="col">
-                                            <div class="rating">
-                                                <input type="radio" id="id_rating_stars_4" name="rating_stars" value="5"
-                                                    required><label for="id_rating_stars_4" title="Excellent">5
-                                                    stars</label>
-                                                <input type="radio" id="id_rating_stars_3" name="rating_stars" value="4"
-                                                    required><label for="id_rating_stars_3" title="Good">4 stars</label>
-                                                <input type="radio" id="id_rating_stars_2" name="rating_stars" value="3"
-                                                    required><label for="id_rating_stars_2" title="OK">3 stars</label>
-                                                <input type="radio" id="id_rating_stars_1" name="rating_stars" value="2"
-                                                    required><label for="id_rating_stars_1" title="Poor">2 stars</label>
-                                                <input type="radio" id="id_rating_stars_0" name="rating_stars" value="1"
-                                                    required><label for="id_rating_stars_0" title="Bad">1 star</label>
-                                            </div>
+                        <div class="w-100">
+                            <form method="POST">
+                                <div class="form-radio-hidden">
+                                    {% csrf_token%}
+                                    {{ form|crispy }}
+                                </div>
+                                <h5>How much did you rate us?</h5>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="rating">
+                                            <input type="radio" id="id_rating_stars_4" name="rating_stars" value="5"
+                                                required><label for="id_rating_stars_4" title="Excellent">5
+                                                stars</label>
+                                            <input type="radio" id="id_rating_stars_3" name="rating_stars" value="4"
+                                                required><label for="id_rating_stars_3" title="Good">4 stars</label>
+                                            <input type="radio" id="id_rating_stars_2" name="rating_stars" value="3"
+                                                required><label for="id_rating_stars_2" title="OK">3 stars</label>
+                                            <input type="radio" id="id_rating_stars_1" name="rating_stars" value="2"
+                                                required><label for="id_rating_stars_1" title="Poor">2 stars</label>
+                                            <input type="radio" id="id_rating_stars_0" name="rating_stars" value="1"
+                                                required><label for="id_rating_stars_0" title="Bad">1 star</label>
                                         </div>
                                     </div>
-                                    <button type="submit"
-                                        class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
-                                </form>
-                            </div>
+                                </div>
+                                <button type="submit"
+                                    class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
+                            </form>
                         </div>
                     </div>
                 </div>

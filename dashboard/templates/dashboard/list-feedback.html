@@ -21,7 +21,7 @@
 
             {% if feedback.created_by.id == user.id %}
 
-            <div class="p-3 mb-2 mt-2 alert alert-dark">
+            <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
                 Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> <br />|
                 Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} | Rating:
                 {{ feedback.rating_stars }}/5 <br />

@@ -122,7 +122,7 @@ class Contact(models.Model):
 
     def __str__(self):
         """ Return First and Last Name """
-        return self.first_name, self.last_name
+        return str(self.first_name) + ' ' + str(self.last_name)
 
 
 class ProfileAvatar(models.Model):

@@ -98,15 +98,15 @@ class ProfileCarForm(ModelForm):
     
     class Meta:
         model = Car
-        fields = ('user', 'is_electric', 'registration_number')
+        fields = ('user', 'registration_number', 'is_electric')
         labels = {
             'user': '',
-            'is_electric': 'Electric Car',
             'registration_number': 'Car Registration Number',
+            'is_electric': 'Electric Car',
         }
 
         widgets = {
             'user': forms.HiddenInput(),
-            'is_electric': forms.CheckboxInput(attrs={'class': 'required checkbox'}),
             'registration_number': forms.TextInput(attrs={'class': 'form-control'}),
+            'is_electric': forms.CheckboxInput(attrs={'class': 'required checkbox'}),
         }

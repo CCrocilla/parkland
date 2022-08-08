@@ -45,6 +45,8 @@ class Parking(models.Model):
     location_x = models.IntegerField()
     location_y = models.IntegerField()
     price = models.DecimalField(max_digits=50, decimal_places=2)
+    # Add Status Available to filter
+    
 
     def __str__(self):
         return str(self.name) + ' - ' + str(self.price)
@@ -120,7 +122,7 @@ class Contact(models.Model):
 
     def __str__(self):
         """ Return First and Last Name """
-        return self.first_name, self.last_name
+        return str(self.first_name) + ' ' + str(self.last_name)
 
 
 class ProfileAvatar(models.Model):

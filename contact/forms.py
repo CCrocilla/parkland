@@ -1,7 +1,31 @@
 from django import forms
+from django.forms import ModelForm
+from car_park.models import Contact
 
 
-class ContactForm(forms.Form):
-    firstname = forms.CharField(label="Enter First Name", max_length=50)
-    lastname = forms.CharField(label="Enter Last Name", max_length=100)
-    email = forms.EmailField(label="Enter Email Address")
+################################
+#         Contact Form         #
+################################
+class ContactForm(ModelForm):
+    """ Form for Users' Contact Us Page """
+    class Meta:
+        model = Contact
+        fields = ('first_name', 'last_name', 'email', 'newsletter', 'body', 'terms')
+
+        labels = {
+                    'first_name': 'First Name',
+                    'last_name': 'Last Name',
+                    'email': 'Email',
+                    'newsletter': 'Newsletter',
+                    'body': 'Text',
+                    'terms': 'Terms & Conditions*',
+                }
+
+        widgets = {
+            'first_name': forms.TextInput(attrs={'class': 'form-control col-md-6'}),
+            'last_name': forms.TextInput(attrs={'class': 'form-control col-md-6'}),
+            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'newsletter': forms.CheckboxInput(attrs={'class': 'checkbox', 'required': 'false'}),
+            'body': forms.Textarea(attrs={'name': 'Text', 'rows': 3, 'cols': 5}),
+            'terms': forms.CheckboxInput(attrs={'class': 'required checkbox'}),
+        }

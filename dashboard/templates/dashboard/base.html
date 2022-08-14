@@ -32,8 +32,19 @@
     <!-- ============================================-->
     <!--                    Navbar                   -->
     <!-- ============================================-->
+    <nav class="sb-topnav navbar navbar-expand sb-sidenav-dark justify-content-end">
+        <!-- Sidebar Toggle-->
+        <button class="d-none btn btn-link btn-sm order-1 order-lg-0 me-4 me-lg-0 text-light text-decoration-none"
+            id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
 
+        <a class="nav-link text-light text-decoration-none" href="{% url 'account_logout' %}">
+            <i class="fas fa-user fa-fw me-2"></i>Logout
+        </a>
+    </nav>
 
+    <!-- ============================================-->
+    <!--                    Sidebar                  -->
+    <!-- ============================================-->
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
@@ -97,11 +108,11 @@
                         <div class="collapse" id="collapsePages" aria-labelledby="headingTwo"
                             data-bs-parent="#sidenavAccordion">
                             <nav class="sb-sidenav-menu-nested nav accordion" id="sidenavAccordionPages">
-                                <a class="nav-link" href="{% url 'booking' %}">
+                                <a class="nav-link" href="{% url 'searchparking' %}">
                                     <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
                                     Booking
                                 </a>
-                                <a class="nav-link" href="">
+                                <a class="nav-link" href="{% url 'booking-list' %}">
                                     Booking List
                                     <div class="sb-sidenav-collapse-arrow"><i class="fas fa-angle-down"></i></div>
                                 </a>
@@ -150,7 +161,7 @@
                         <!--        Logout        -->
                         <!-------------------------->
                         <div class="sb-sidenav-menu-heading d-none">Access</div>
-                        <a class="nav-link" href="{% url 'account_logout' %}">
+                        <a class="nav-link d-none" href="{% url 'account_logout' %}">
                             Logout
                         </a>
 
@@ -213,7 +224,7 @@
     <script src="{% static 'js/scripts.js' %}"></script> -->
     <script src="{% static 'js/popper.min.js' %}" type="application/javascript"></script>
     <script src="{% static 'js/bootstrap.min.js' %}" type="application/javascript"></script>
-    <!-- <script src="{% static 'js/auth.js' %}" type="application/javascript"></script> -->
+    <script src="{% static 'js/bootstrap-messages.js' %}" type="application/javascript"></script>
     <script src="{% static 'js/is.min.js' %}" type="application/javascript"></script>
     <script src="{% static 'js/theme.js' %}" type="application/javascript"></script>
     <script src="https://kit.fontawesome.com/0644654b1f.js" crossorigin="anonymous" type="application/javascript">

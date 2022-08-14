@@ -1,0 +1,54 @@
+{% extends 'dashboard/base.html' %}
+
+{% block extra_title %} - Dashboard{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="text-dark">
+    <h1 class="mt-4">Delete: {{ booking.code }} {{ booking.created_by }}</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Delete your feedback!</li>
+    </ol>
+
+    <div class="row d-flex justify-content-center">
+        <div class="col-md-10 col-lg-8 col-xl-6">
+            <div class="card text-center">
+                <div class="card-header">
+                    {{ booking.code }}
+                </div>
+                <div class="card-body">
+                    <form method="POST">
+                        {% csrf_token%}
+                        <h3 class="card-title">Are you sure?</h3>
+                        <p class="card-text">Click on the Delete Button below to delete your Feedback.</p>
+                        <button type="submit" class="btn btn-lg btn-outline-danger rounded-pill">Delete</button>
+                    </form>
+
+                </div>
+                <div class="card-footer text-muted">
+                    Attention: The process is irreversible!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- </section> -->
+
+{% else %}
+
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+
+{% endif %}
+
+{% endblock %}

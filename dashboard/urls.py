@@ -1,6 +1,8 @@
 from django.urls import path, include
 from django.contrib.auth import views
-from .views import DashboardView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, ProfileCarView, ProfileCarListView, ProfileCarDeleteView, ProfileAvatarView, PasswordChangeProfileView, PasswordSuccess
+from django.conf import settings
+from django.conf.urls.static import static
+from .views import DashboardView, BookingListView, BookingDetailsView, BookingEditView, BookingDeleteView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, ProfileCarView, ProfileCarListView, ProfileCarDeleteView, ProfileAvatarView, PasswordChangeProfileView, PasswordSuccess
 
 
 urlpatterns = [
@@ -18,4 +20,8 @@ urlpatterns = [
     path('profile/<int:pk>/delete',  ProfileCarDeleteView.as_view(), name='profile-car-delete'),
     path('password/', PasswordChangeProfileView.as_view(template_name='dashboard/change-password.html'), name='password'),
     path('password-success', PasswordSuccess, name='password-success'),
-]
+    path('booking/list', BookingListView.as_view(), name='booking-list'),
+    path('booking/<int:pk>/details', BookingDetailsView.as_view(), name='booking-details'),
+    path('booking/<int:pk>/edit', BookingEditView.as_view(), name='booking-edit'),
+    path('booking/<int:pk>/delete', BookingDeleteView.as_view(), name='booking-delete'),
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

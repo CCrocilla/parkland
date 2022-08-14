@@ -1,0 +1,56 @@
+{% extends 'dashboard/base.html' %}
+
+{% block extra_title %} - Dashboard{% endblock %}
+
+{% load static %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<div class="text-dark">
+    <h1 class="mt-4">Booking Manager</h1>
+    <ol class="breadcrumb mb-4">
+        <li class="breadcrumb-item active">Here you can update or delete your bookings!</li>
+    </ol>
+
+    <div class="row d-flex ">
+        <div class="col-12 alert alert-light">
+
+            {% for booking in booking_list %}
+
+            {% if booking.created_by.id == user.id %}
+
+            <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
+                Title: <a href="{% url 'booking-details' booking.pk %}">{{booking.created_by}}</a> <br />|
+                Author: {{ booking.created_by.username }} <br />
+
+                <a class="btn btn-lg btn-outline-primary rounded-pill mt-4"
+                    href="{% url 'booking-edit' booking.pk %}">Edit</a>
+                <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
+                    href="{% url 'booking-delete' booking.pk %}">Delete</a>
+
+            </div>
+
+            {% endif %}
+
+            {% endfor %}
+
+        </div>
+    </div>
+</div>
+
+{% else %}
+
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+
+{% endif %}
+
+{% endblock %}

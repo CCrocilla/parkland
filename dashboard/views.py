@@ -165,3 +165,52 @@ class PasswordChangeProfileView(PasswordChangeView):
 
 def PasswordSuccess(request):
     return render(request, 'dashboard/change-password-success.html', {})
+
+
+################################
+#         Booking Views        #
+################################
+class BookingListView(ListView):
+    """
+    Class to display all the User's Booking
+    """
+    model = Booking
+    template_name = 'dashboard/booking-list.html'
+    ordering = ['-created_date']
+    fields = '__all__'
+
+    def get_booking_auth_user(self):
+        """
+        This should return a list of all the Booking
+        for the authenticated user.
+        """
+        user = self.request.user
+        return Booking.objects.filter(created_by=user)
+
+
+class BookingDetailsView(DetailView):
+    """
+    Class to display single User's Booking
+    """
+    model = Booking
+    queryset = Booking.objects.filter().order_by('-created_date')
+    template_name = 'dashboard/booking-details.html'
+    fields = '__all__'
+
+
+class BookingEditView(UpdateView):
+    """
+    Class to display single User's Booking
+    """
+    model = Booking
+    template_name = 'dashboard/booking-edit.html'
+    fields = '__all__'
+
+
+class BookingDeleteView(DeleteView):
+    """
+    Class to delete Booking
+    """
+    model = Booking
+    template_name = 'dashboard/booking-delete.html'
+    success_url = reverse_lazy('booking-list')

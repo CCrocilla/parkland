@@ -25,7 +25,7 @@
     </div>
 
     <div class="card">
-        <img src="{% static 'images/bg-booking.jpg' %}" class="card-img-top rounded" alt="Hero Image">
+        <!-- <img src="{% static 'images/parkland.jpg' %}" class="card-img-top rounded" alt="Hero Image"> -->
         <div class="card-body">
             <h5 class="card-title">Welcome to the Booking Section!</h5>
             <p class="card-text">Fill in the fields below to Start!</p>
@@ -35,11 +35,51 @@
                 {% csrf_token%}
                 {{ form|crispy }}
 
+                <section>
+                    <div class="row">
+                        <div class="col-11">
+                            <h1>Test Parking:</h1>
+                            <div class="row">
+                                <select class="select form-select" name="parking" id="id_parking" required>
+                                    <option disabled selected>Select Parking</option>
+                                    {% for parking in parking_list %}
+                                    <option value="{{ parking.id }}" class="text-black"> {{ parking.name }} -
+                                        {{ parking.price }} Euro
+                                    </option>
+                                    {% endfor %}
+                                </select>
+                            </div>
+                            <h1>Test Dates:</h1>
+                            <!-- <div id="div_id_start_date" class="mb-3"> <label for="id_start_date"
+                                    class="form-label requiredField">
+                                    Start date<span class="asteriskField">*</span> </label> <input type="date"
+                                    name="start_date" class="form-control dateinput" placeholder="Select a date"
+                                    required="" id="id_start_date" value="{{ start_date }}"> </div>
+
+                            <div id="div_id_end_date" class="mb-3"> <label for="id_end_date"
+                                    class="form-label requiredField">
+                                    End date<span class="asteriskField">*</span> </label> <input type="date"
+                                    name="end_date" class="form-control dateinput" placeholder="Select a date"
+                                    required="" id="id_end_date" value="{{ end_date }}"> </div> -->
+
+                        </div>
+                    </div>
+                </section>
+
+
                 <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
             </form>
-            <a href="#" class="btn btn-primary">Next</a>
+            <!-- <a href="#" class="btn btn-primary">Next</a> -->
         </div>
     </div>
 </section>
+
+<section class="container">
+
+    </div>
+</section>
+
+
+
 
 {% endblock %}

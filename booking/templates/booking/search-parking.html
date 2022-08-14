@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block extra_title %} - Booking{% endblock %}
+
+{% block content %}
+
+<section class="py-8">
+    <!-- Add Image in Backgroud -->
+    <div class="container-lg">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h2 class="fw-bold">Booking Page</h2>
+                <hr class="w-25 mx-auto text-dark" style="height:2px;" />
+            </div>
+        </div>
+        <div class="row justify-content-center">
+            <div class="col-sm-9 col-xl-8 text-center">
+                <p>The best booking Service for your needs!</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="card">
+        <!-- <img src="{% static 'images/parkland.jpg' %}" class="card-img-top rounded" alt="Hero Image"> -->
+        <div class="card-body">
+            <h5 class="card-title">Welcome to the Booking Section!</h5>
+            <p class="card-text">Fill in the fields below to Start!</p>
+
+            <form method=POST>
+
+                {% csrf_token%}
+                {{ form|crispy }}
+
+                <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Search</button>
+            </form>
+
+        </div>
+    </div>
+</section>
+
+{% endblock %}

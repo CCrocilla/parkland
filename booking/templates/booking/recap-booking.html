@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% load crispy_forms_tags %}
+
+{% block extra_title %} - Booking{% endblock %}
+
+{% block content %}
+
+{% if user.is_authenticated %}
+
+<h1>Created By: {{ booking.created_by }}</h1>
+
+
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking' %}">Back</a>
+
+{% else %}
+
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+
+{% endif %}
+
+
+
+{% endblock %}

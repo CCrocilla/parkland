@@ -149,7 +149,8 @@
                 <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
                 <p class="pt-3">The best booking service just for you! </p>
                 <div class="py-3">
-                    <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking' %}">Go to Booking!</a>
+                    <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'searchparking' %}">Go to
+                        Booking!</a>
                 </div>
                 {% else %}
 
@@ -190,9 +191,9 @@
                                             src="{% static 'images/avatar/kamala.webp' %}" width="200"
                                             alt="User Image" />
                                         <div class="w-md-25 my-3">
-                                            <h5 class="mb-0 fw-medium text-white">{{ feedback.rating_stars }}/5</h5>
-                                            <h5 class="mb-0 fw-medium text-white">{{ feedback.created_by }}</h5>
-                                            <p class="fw-normal mb-0">Founder</p>
+                                            <h5 class="fw-medium text-white mb-0">{{ feedback.rating_stars }}/5</h5>
+                                            <h5 class="fw-medium text-white mb-0">{{ feedback.created_by }}</h5>
+                                            <p class="fw-normal mb-0"></p>
                                             <p class="fw-normal mb-0"> {{ feedback.create_date }}</p>
                                         </div>
                                         <div class="w-md-100">

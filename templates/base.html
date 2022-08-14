@@ -28,6 +28,7 @@
     {% endblock %}
 
     {% block corejs %}
+
     {% endblock%}
 </head>
 
@@ -53,7 +54,7 @@
                                 href="{% url 'homepage' %}">Home</a>
                         </li>
                         {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'booking' %}">Booking</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{% url 'searchparking' %}">Booking</a></li>
                         {% endif %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
                         <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
@@ -92,6 +93,9 @@
         </nav>
     </main>
 
+    <!-- ============================================-->
+    <!--                  Main Content               -->
+    <!-- ============================================-->
     <section class="container mb-4">
         {% block content %}
 
@@ -106,65 +110,63 @@
     <footer class="py-6 mb-2 pt-7 bg-primary-gradient">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-lg-4 order-0 order-sm-0 pe-6">
-                    <a class="text-decoration-none" href="#">
-                        <img class="img-fluid me-2" src="" alt="" />
-                        <span class="fw-bold fs-1 text-light">Parkland</span>
-                    </a>
-                    <p class="mt-3 text-white">A great place for your car!</p>
+                <div class="col-4 col-md-4 col-lg mb-3 order-1 order-sm-1">
+                    <span class="fw-bold fs-1 text-light">Parkland</span>
+                    <p class="section-title text-white h5 mb-4">Address<span></span></p>
+                    <p class="text-light"><i class="fa fa-map-marker-alt"></i> Airport Road, Dublin</p>
+                    <p class="text-light"><i class="fa fa-phone-alt"></i> +353 (0) 123456789</p>
+                    <p class="text-light"><i class="fa fa-envelope"></i> parkland@gmail.com</p>
+                    <div class="d-flex pt-2">
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-twitter"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-facebook-f"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-instagram"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                    </div>
                 </div>
-                <div class="col-4 col-md-4 col-lg mb-3 order-2 order-sm-1">
-                    <h6 class="lh-lg fw-bold text-light">Company</h6>
+                <div class="col-4 col-md-4 col-lg mb-3 order-2 order-sm-2">
+                    <h6 class="fw-bold fs-1 text-light">Website</h6>
                     <ul class="list-unstyled mb-md-4 mb-lg-0">
                         <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="{% url 'homepage' %}">Homepage</a>
+                            <a class="text-light text-decoration-none" href="{% url 'homepage' %}">Homepage</a>
                         </li>
                         <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="#!">Feedback</a>
+                            <a class="text-light text-decoration-none" href="#!">Feedback</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="{% url 'booking' %}">Booking</a>
+                            <a class="text-light text-decoration-none" href="{% url 'searchparking' %}">Booking</a>
                         </li>
                         {% endif %}
                         <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="{% url 'contact' %}">Contact Us</a>
+                            <a class="text-light text-decoration-none" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-4 col-md-4 col-lg mb-3 order-3 order-sm-2">
-                    <h6 class="lh-lg fw-bold text-light"> Services </h6>
+                <div class="col-4 col-md-4 col-lg mb-3 order-3 order-sm-3">
+                    <h6 class="fw-bold fs-1 text-light"> Services </h6>
                     <ul class="list-unstyled mb-md-4 mb-lg-0">
-                        <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Bus</a></li>
-                        <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Rent</a></li>
-                        <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Wash</a></li>
-                        <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Coffee</a></li>
-                        <li class="lh-lg"><a class="text-light fs--1 text-decoration-none" href="#!">Green Energy</a>
+                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Bus</a></li>
+                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Rent</a></li>
+                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Wash</a></li>
+                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Coffee</a></li>
+                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Green Energy</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-4 col-md-4 col-lg mb-3 order-1 order-sm-3">
-                    <h6 class="lh-lg fw-bold text-light">Help </h6>
-                    <ul class="list-unstyled mb-md-4 mb-lg-0">
-                        <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="#!">Help center</a>
-                        </li>
-                        <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="#!">Contact support</a>
-                        </li>
-                        <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="#!">Guide</a></li>
-                        <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="#!">Instructions</a>
-                        </li>
-                        <li class="lh-lg">
-                            <a class="text-light fs--1 text-decoration-none" href="#!">How it works</a>
-                        </li>
-                    </ul>
+                <div class="col-4 col-md-4 col-lg mb-3 order-4 order-sm-4">
+                    <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
+                    <p class="text-light">Subscribe to the newsletter for free!</p>
+                    <div class="position-relative w-100 mt-3">
+                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
+                            placeholder="Email" style="height: 48px;">
+                        <button type="button" class="btn shadow-3 position-absolute top-0 end-0 mt-1 me-2"><i
+                                class="fa fa-paper-plane text-primary"></i></button>
+                    </div>
                 </div>
             </div>
         </div>
     </footer>
+
 
 
     <!-- ============================================-->

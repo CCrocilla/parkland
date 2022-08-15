@@ -10,10 +10,18 @@
 
 {% if user.is_authenticated %}
 
-<h1>Created By: {{ booking.created_by }}</h1>
+<h1>Recap Booking </h1>
+<p> Created By: {{ booking.created_by }} </p>
+<p> First Name: {{ booking.created_by.first_name }} </p>
+<p> Last Name: {{ booking.created_by.last_name }} </p>
+<p> Username: {{ booking.created_by.username}} </p>
+<p> Code: {{ booking.code }} </p>
+<p> Registration Number Car {{ booking.car.registration_number }} </p>
+<p> Parking Slot: {{ booking.parking.name }} </p>
 
 
-<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking' %}">Back</a>
+
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'homepage' %}">Back</a>
 
 {% else %}
 

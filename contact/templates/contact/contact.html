@@ -23,10 +23,10 @@
             </h2>
         </div> -->
 
-<section class="py-4 mb-4">
+<section class="py-4 mt-5 mb-4 bg-contact-image rounded-3">
     <div class="container position-relative">
         <div class="row align-items-center justify-content-center">
-            <div class="col-md-7 col-lg-8 text-center text-md-start pt-5 pt-md-9">
+            <div class="col-10 col-md-10 col-lg-8 text-center text-md-start pt-5 pt-md-5 images-text-forms">
                 <div class="section-header">
                     <h2>Contact Us</h2>
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
@@ -39,8 +39,7 @@
                                 onsubmit="Toastify({text: 'This is a toast', duration: 3000 }).showToast();">
                                 {% csrf_token %}
                                 {{ form|crispy }}
-                                <input type="reset" value="Reset Form"
-                                    class="btn btn-lg btn-outline-warning rounded-pill">
+                                <input type="reset" value="Reset" class="btn btn-lg btn-outline-warning rounded-pill">
                                 <button type="submit"
                                     class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
                             </form>

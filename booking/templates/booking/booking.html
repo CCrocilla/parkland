@@ -24,52 +24,59 @@
         </div>
     </div>
 
-    <div class="card">
-        <!-- <img src="{% static 'images/parkland.jpg' %}" class="card-img-top rounded" alt="Hero Image"> -->
-        <div class="card-body">
-            <h5 class="card-title">Welcome to the Booking Section!</h5>
-            <p class="card-text">Fill in the fields below to Start!</p>
+    <div class="container card">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-8">
+                <!-- <img src="{% static 'images/parkland.jpg' %}" class="card-img-top rounded" alt="Hero Image"> -->
+                <div class="card-body">
+                    <form method=POST>
 
-            <form method=POST>
-
-                {% csrf_token%}
-                {{ form|crispy }}
-
-                <section>
-                    <div class="row">
-                        <div class="col-11">
-                            <h1>Test Parking:</h1>
-                            <div class="row">
-                                <select class="select form-select" name="parking" id="id_parking" required>
-                                    <option disabled selected>Select Parking</option>
-                                    {% for parking in parking_list %}
-                                    <option value="{{ parking.id }}" class="text-black"> {{ parking.name }} -
-                                        {{ parking.price }} Euro
-                                    </option>
-                                    {% endfor %}
-                                </select>
+                        <div class="row">
+                            <div id="div_id_start_date" class="mb-3 col-12 col-md-6">
+                                <label for="id_start_date" class="form-label requiredField">Start date
+                                    <span class="asteriskField">*</span>
+                                </label>
+                                <span type="date" name="start_date" class="form-control" id="id_start_date"
+                                    value={{ start_date }}>{{ start_date }}
+                                </span>
                             </div>
-                            <h1>Test Dates:</h1>
-                            <!-- <div id="div_id_start_date" class="mb-3"> <label for="id_start_date"
-                                    class="form-label requiredField">
-                                    Start date<span class="asteriskField">*</span> </label> <input type="date"
-                                    name="start_date" class="form-control dateinput" placeholder="Select a date"
-                                    required="" id="id_start_date" value="{{ start_date }}"> </div>
 
-                            <div id="div_id_end_date" class="mb-3"> <label for="id_end_date"
-                                    class="form-label requiredField">
-                                    End date<span class="asteriskField">*</span> </label> <input type="date"
-                                    name="end_date" class="form-control dateinput" placeholder="Select a date"
-                                    required="" id="id_end_date" value="{{ end_date }}"> </div> -->
-
+                            <div id="div_id_end_date" class="mb-3 col-12 col-md-6">
+                                <label for="id_end_date" class="form-label requiredField">End date
+                                    <span class="asteriskField">*</span>
+                                </label>
+                                <span type="date" name="end_date" class="form-control" id="id_end_date"
+                                    value={{ end_date }}>{{ end_date }}
+                                </span>
+                            </div>
                         </div>
-                    </div>
-                </section>
+
+                        {% csrf_token%}
+                        {{ form|crispy }}
+
+                        <div class="mb-6">
+                            <label for="id_start_date" class="form-label requiredField">Select Parking Slot
+                                <span class="asteriskField">*</span>
+                            </label>
+                            <select class="select form-select" name="parking" id="id_parking" required>
+                                <option disabled selected>Select Parking Slot
+                                    <span class="asteriskField">*</span>
+                                </option>
+                                {% for parking in parking_list %}
+                                <option value="{{ parking.id }}" class="text-black"> {{ parking.name }} -
+                                    {{ parking.price }} Euro
+                                </option>
+                                {% endfor %}
+                            </select>
+                        </div>
 
 
-                <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
-            </form>
-            <!-- <a href="#" class="btn btn-primary">Next</a> -->
+
+                        <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Book</button>
+                    </form>
+                    <!-- <a href="#" class="btn btn-primary">Next</a> -->
+                </div>
+            </div>
         </div>
     </div>
 </section>

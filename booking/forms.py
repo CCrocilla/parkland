@@ -13,7 +13,13 @@ class SearchParkingForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['created_by'].disabled = True
-    
+
+    def clean(self):
+        if self.cleaned_data['start_date'] > self.cleaned_data['end_date']:
+            logging.error("ERROR: Start Date > End Date")
+            logging.error(datetime.datetime.today())
+            raise ValidationError('Error: Start Date is greater than the End Date!')
+
     class Meta:
         model = SearchParking
         fields = "__all__"
@@ -32,27 +38,29 @@ class BookingForm(ModelForm):
         self.fields['created_by'].disabled = True
         self.fields['code'].disabled = True
 
-    # def clean(self):
-    #     if self.cleaned_data['start_date'] > self.cleaned_data['end_date']:
-    #         logging.error("ERROR: Start Date > End Date")
-    #         logging.error(datetime.datetime.today())
-    #         raise ValidationError('Error: Start Date is greater than the End Date!')
-
     class Meta:
         model = Booking
         fields = "__all__"
-        # fields = ('code', 'created_by', 'start_date', 'end_date', 'car', 'recharge_car', 'parking')
+        # fields = (
+            # 'code', 'created_by', 'start_date', 'end_date', 'car', 'recharge_car', 'parking')
 
         widgets = {
             'code': forms.HiddenInput(),
             'created_by': forms.HiddenInput(),
             'start_date': forms.HiddenInput(),
             'end_date': forms.HiddenInput(),
-            # 'start_date': forms.DateInput(format=('%m/%d/%Y'), attrs={'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
-            # 'end_date': forms.DateInput(format=('%m/%d/%Y'), attrs={'class': 'form-control', 'placeholder': 'Select a date', 'type': 'date'}),
+            # 'start_date': forms.DateInput(
+            #     format=('%m/%d/%Y'), attrs={
+            #         'class': 'form-control',
+            #         'placeholder': 'Select a date',
+            #         'type': 'date'
+            #         }),
+            # 'end_date': forms.DateInput(
+            #     format=('%m/%d/%Y'), attrs={
+            #         'class': 'form-control',
+            #         'placeholder': 'Select a date',
+            #         'type': 'date'
+            #         }),
             'recharge_car': forms.CheckboxInput(attrs={'class': 'checkbox'}),
             'parking': forms.HiddenInput(),
         }
-
-
-

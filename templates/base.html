@@ -48,16 +48,21 @@
                     aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
-                <div class="collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0" id="navbarSupportedContent">
+                <div class="menu-all collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
+                    id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
                         <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page"
                                 href="{% url 'homepage' %}">Home</a>
                         </li>
                         {% if user.is_authenticated %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'searchparking' %}">Booking</a></li>
+
                         {% endif %}
                         <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#feedback">Feedback</a></li>
+
+                        {% block extra_nav%}
+                        {% endblock %}
+
 
                         {% if user.is_authenticated %}
                         <!-- Drop-Down Menu for logged users -->
@@ -157,10 +162,13 @@
                     <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
                     <p class="text-light">Subscribe to the newsletter for free!</p>
                     <div class="position-relative w-100 mt-3">
-                        <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
-                            placeholder="Email" style="height: 48px;">
-                        <button type="button" class="btn shadow-3 position-absolute top-0 end-0 mt-1 me-2"><i
-                                class="fa fa-paper-plane text-primary"></i></button>
+                        <form>
+                            <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
+                                placeholder="Email" style="height: 48px;">
+                            <button type="button" class="btn shadow-3 position-absolute top-0 end-0 mt-1 me-2"
+                                onclick="Toastify({text: 'This is a toast', duration: 3000 }).showToast();"><i
+                                    class="fa fa-paper-plane text-primary"></i></button>
+                        </form>
                     </div>
                 </div>
             </div>

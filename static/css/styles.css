@@ -12901,7 +12901,7 @@ body {
 }
 
 .contact .info-item:hover i {
-  background: #fff;
+  background: linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%);
   color: var(--color-primary);
 }
 
@@ -12968,4 +12968,28 @@ section {
 .section-header p {
   margin-bottom: 0;
   color: #6f6f6f;
+}
+
+
+/* Navbar Underline effect */
+.menu-all>ul>li>a:hover {
+  border-bottom: 2px solid #181D31;
+}
+
+
+/* Background Images */
+
+/* Contact Us */
+.bg-contact-image {
+  background: url('../images/bg-contact-us.jpg') no-repeat center center;
+  background-size: cover;
+}
+
+.images-text-forms {
+  height: fit-content;
+  text-align: center;
+  padding: 30px;
+  margin: 40px auto;
+  background-color: rgba(24, 29, 49, 0.9);
+  border-radius: 20px;
 }

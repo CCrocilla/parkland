@@ -8,6 +8,8 @@
 
 {% block content %}
 
+{% if user.is_authenticated %}
+
 <section class="py-8">
     <!-- Add Image in Backgroud -->
     <div class="container-lg">
@@ -54,25 +56,80 @@
                         {% csrf_token%}
                         {{ form|crispy }}
 
-                        <div class="mb-6">
+
+                        <div id="div_id_car" class="mb-3">
+                            <label for="id_car" class="form-label requiredField">Select Your Car
+                                <span class="asteriskField">*</span>
+                            </label>
+                            <select name="car" class="select form-select is-invalid" required="" id="id_car">
+                                <option disabled selected>--------------</option>
+                                {% for car in car_list %}
+                                <option value="{{ car.id }}" class="text-black"> {{ car.registration_number }}
+                                </option>
+                                {% endfor %}
+                            </select>
+                            <!-- <p id="error_1_id_car" class="invalid-feedback"><strong>Select a valid choice. That choice
+                                    is not one of the
+                                    available choices.</strong></p> -->
+                        </div>
+
+                        <div class="mb-3">
                             <label for="id_start_date" class="form-label requiredField">Select Parking Slot
                                 <span class="asteriskField">*</span>
                             </label>
                             <select class="select form-select" name="parking" id="id_parking" required>
-                                <option disabled selected>Select Parking Slot
-                                    <span class="asteriskField">*</span>
-                                </option>
+                                <option disabled selected>--------------</option>
                                 {% for parking in parking_list %}
-                                <option value="{{ parking.id }}" class="text-black"> {{ parking.name }} -
-                                    {{ parking.price }} Euro
+                                <option value="{{ parking.id }}" class="text-black"> {{ parking.name }}
                                 </option>
                                 {% endfor %}
                             </select>
                         </div>
 
+                        <div class="row">
+                            <div id="div_id_final_price" class="mb-3 col-12 col-md-6">
+                                <label for="id_final_price" class="form-label requiredField">Price:
+
+                                </label>
+                                <span type="number" name="final_price" class="col-12" value={{ final_price }}
+                                    id="id_final_price">{{ final_price }} Euro
+                                </span>
+                            </div>
+                        </div>
+                        <!-- <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Book</button> -->
 
 
-                        <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Book</button>
+                        <!-- Button to trigger the confirmation booking modal -->
+                        <button type="button" class="btn btn-lg btn-outline-primary rounded-pill" data-bs-toggle="modal"
+                            data-bs-target="#confirmationModal">
+                            Book
+                        </button>
+
+                        <!-- Booking Confirmation Modal -->
+                        <div class="modal fade" id="confirmationModal" tabindex="-1"
+                            aria-labelledby="confirmationModalLabel" aria-hidden="true">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="confirmationModalLabel">Are you sure?</h5>
+                                        <button type="button" class="btn-close" data-bs-dismiss="modal"
+                                            aria-label="Close"></button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Click on Book again to confirm your booking or Cancel to continue the editing!
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary"
+                                            data-bs-dismiss="modal">Close</button>
+                                        <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Yes
+                                            Book</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+
+
                     </form>
                     <!-- <a href="#" class="btn btn-primary">Next</a> -->
                 </div>
@@ -81,12 +138,17 @@
     </div>
 </section>
 
-<section class="container">
+{% else %}
 
-    </div>
-</section>
+<h1 class="mt-4">Authentication Error!</h1>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+</ol>
+<ol class="breadcrumb mb-4">
+    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+</ol>
+<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 
-
-
+{% endif %}
 
 {% endblock %}

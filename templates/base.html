@@ -34,6 +34,8 @@
 
 <body>
     <main class="main" id="top">
+
+        {% url 'homepage' as home %}
         <!-- ============================================-->
         <!--                  Navbar                     -->
         <!-- ============================================-->
@@ -51,18 +53,25 @@
                 <div class="menu-all collapse navbar-collapse border-top border-lg-0 mt-4 mt-lg-0"
                     id="navbarSupportedContent">
                     <ul class="navbar-nav ms-auto pt-2 pt-lg-0">
-                        <li class="nav-item"><a class="nav-link fw-bold active" aria-current="page"
-                                href="{% url 'homepage' %}">Home</a>
+                        <li class="nav-item"><a class="nav-link {% if request.path == home %}fw-bold active{% endif %}"
+                                aria-current=" page" href="{% url 'homepage' %}">Home</a>
                         </li>
+
                         {% if user.is_authenticated %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'searchparking' %}">Booking</a></li>
+                        <!-- Only Authenticated User can see the Booking Page -->
+                        <li class="nav-item"><a
+                                class="nav-link {% if '/booking/' in request.path %}fw-bold active{% endif %}"
+                                href="{% url 'searchparking' %}">Booking</a></li>
 
                         {% endif %}
-                        <li class="nav-item"><a class="nav-link" href="{% url 'contact' %}">Contact Us</a></li>
+
+                        <li class="nav-item"><a
+                                class="nav-link {% if '/contact/' in request.path %}fw-bold active{% endif %}"
+                                href="{% url 'contact' %}">Contact Us</a></li>
 
                         {% block extra_nav%}
+                        <!-- Extra Link for specific pages -->
                         {% endblock %}
-
 
                         {% if user.is_authenticated %}
                         <!-- Drop-Down Menu for logged users -->

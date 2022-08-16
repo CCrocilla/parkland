@@ -2,12 +2,14 @@
 from django.shortcuts import render, HttpResponseRedirect, reverse
 from django.views import View
 from django.views.generic import CreateView, DetailView
-from car_park.models import Booking, Parking, SearchParking
+from car_park.models import Booking, Parking, SearchParking, Car
 from .forms import BookingForm, SearchParkingForm
 from django.core.serializers.json import DjangoJSONEncoder
 from django.db.models import Q
 import logging
 import json
+
+PARKING_DAILY_COST = 8
 
 
 class SearchParkingView(CreateView):
@@ -45,15 +47,24 @@ class BookingView(View):
         parking_ids = parkings_avail.values_list("id",  flat=True)
         parking_list = Parking.objects.filter(id__in=parking_ids)
 
+        car = Car.objects.filter(user=request.user)
+
+        price = (abs((end_date - start_date).days) + 1) * PARKING_DAILY_COST
+        print(price)
+        
         context = {
             'form': BookingForm({
                 'start_date': start_date,
-                'end_date': end_date
+                'end_date': end_date,
+                'final_price': price,
+                'car': car,
                 }),
             'created_by': self.request.user,
             'parking_list': parking_list,
             'start_date': start_date,
             'end_date': end_date,
+            'final_price': price,
+            'car_list': car,
         }
         return render(request, self.template_name, context)
 
@@ -66,7 +77,7 @@ class BookingView(View):
             booking.code = booking.id
             booking.start_date = request.POST.get('start_date', None)
             booking.end_date = request.POST.get('end_date', None)
-            
+            booking.final_price = request.POST.get('final_price', None)
             booking.save()
 
             url = reverse('recap-booking', args=(booking.pk, ))

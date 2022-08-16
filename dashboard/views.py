@@ -115,8 +115,8 @@ class ProfileAvatarView(CreateView):
         This should return a list of all the avatar
         for the authenticated user.
         """
-        avatar = self.request.user.profileavatar.avatar.url
-        return ProfileAvatar.objects.all()
+        avatar_user = self.request.user
+        return ProfileAvatar.objects.filter(user=avatar_user)
 
 
 class ProfileCarView(CreateView):
@@ -142,7 +142,7 @@ class ProfileCarListView(ListView):
 
     def get_car_user(self):
         """
-        This should return a list of all the feedback
+        This should return a list of all the cars
         for the authenticated user.
         """
         user = self.request.user

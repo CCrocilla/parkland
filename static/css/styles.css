@@ -12981,7 +12981,8 @@ section {
 
 /* Contact Us */
 .bg-contact-image {
-  background: url('../images/bg-contact-us.jpg') no-repeat center center;
+  /* background: url('../images/bg-contact-us.jpg') no-repeat center center; */
+  background: url("{% static 'images/bg-contact-us.jpg' %}") no-repeat center center;
   background-size: cover;
 }
 

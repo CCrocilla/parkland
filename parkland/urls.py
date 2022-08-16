@@ -24,7 +24,6 @@ from car_park.views import HomeView
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', HomeView.as_view(), name='homepage'),
-    path('', HomeView.as_view(), name='homepage'),
     path('accounts/', include('allauth.urls')),
     path('contact/', include('contact.urls')),
     path('booking/', include('booking.urls')),

@@ -18,6 +18,7 @@
 <p> Code: {{ booking.code }} </p>
 <p> Registration Number Car {{ booking.car.registration_number }} </p>
 <p> Parking Slot: {{ booking.parking.name }} </p>
+<p> Price: {{ booking.final_price }} </p>
 
 
 
@@ -35,7 +36,5 @@
 <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 
 {% endif %}
-
-
 
 {% endblock %}

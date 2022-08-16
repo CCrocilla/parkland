@@ -186,9 +186,9 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), ) # all apps can have their respective static content dir in them
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles') # this is where the content is collected after
-STATIC_URL = '/static/' # this is where the content is accesses from web url
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )  # all apps can have their respective static content dir in them
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # this is where the content is collected after
+STATIC_URL = '/static/'  # this is where the content is accesses from web url
 
 # Information for Django to use Cloundinary in order to Store Media and Static.
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'            # NOQA

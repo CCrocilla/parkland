@@ -11,22 +11,22 @@
 <div class="text-dark">
     <h1 class="mt-4">Booking Manager</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Here you can update or delete your bookings!</li>
+        <li class="active">Review the information of your booking or use the Delete them (FREE CANCELLATION)!</li>
     </ol>
 
     <div class="row d-flex ">
-        <div class="col-12 alert alert-light">
+        <div class="col-4 alert alert-light">
 
             {% for booking in booking_list %}
 
             {% if booking.created_by.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
-                Title: <a href="{% url 'booking-details' booking.pk %}">{{booking.created_by}}</a> <br />|
+                Booking Number: <a href="{% url 'booking-details' booking.pk %}">{{booking.code}}</a> <br />|
                 Author: {{ booking.created_by.username }} <br />
 
-                <a class="btn btn-lg btn-outline-primary rounded-pill mt-4"
-                    href="{% url 'booking-edit' booking.pk %}">Edit</a>
+
+
                 <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
                     href="{% url 'booking-delete' booking.pk %}">Delete</a>
 
@@ -44,10 +44,10 @@
 
 <h1 class="mt-4">Authentication Error!</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+    <li class="active">Access reserved only to authenticated user!</li>
 </ol>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+    <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
 <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 

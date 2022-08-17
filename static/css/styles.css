@@ -36,7 +36,7 @@
   --bs-gray-900: #212529;
   --bs-primary: #0d6efd;
   --bs-secondary: #6c757d;
-  --bs-success: #198754;
+  --bs-success: #2B7A0B;
   --bs-info: #0dcaf0;
   --bs-warning: #ffc107;
   --bs-danger: #dc3545;
@@ -44,7 +44,7 @@
   --bs-dark: #212529;
   --bs-primary-rgb: 13, 110, 253;
   --bs-secondary-rgb: 108, 117, 125;
-  --bs-success-rgb: 25, 135, 84;
+  --bs-success-rgb: 43, 122, 11;
   --bs-info-rgb: 13, 202, 240;
   --bs-warning-rgb: 255, 193, 7;
   --bs-danger-rgb: 220, 53, 69;
@@ -12936,7 +12936,7 @@ section {
 }
 
 .sections-bg {
-  background-color: #f6f6f6;
+  background-color: #F6F6F6;
 }
 
 .section-header {
@@ -12981,8 +12981,9 @@ section {
 
 /* Contact Us */
 .bg-contact-image {
-  /* background: url('../images/bg-contact-us.jpg') no-repeat center center; */
-  background: url("{% static 'images/bg-contact-us.jpg' %}") no-repeat center center;
+  /* background-image: url('https://asset.cloudinary.com/ccrocilla-cloud/46b0b8cd9230bf6a7e344c4d997a12bd') no-repeat center center; */
+  /* background-image: url('https://res.cloudinary.com/ccrocilla-cloud/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency//v1660587561/static/images/bg-contact-us.b5e9c2703091.jpg') no-repeat center center; */
+  background: url('/static/images/bg-contact-us.webp') no-repeat center center;
   background-size: cover;
 }
 
@@ -12990,6 +12991,25 @@ section {
   height: fit-content;
   text-align: center;
   padding: 30px;
+  margin: 40px auto;
+  background-color: rgba(24, 29, 49, 0.9);
+  border-radius: 20px;
+}
+
+
+/* Dashboard */
+.sb-sidenav-dark {
+  background-color: #181D31;
+}
+
+small ul li {
+  color: #000000 !important;
+}
+
+/* Delete Modals */
+.delete-modals {
+  text-align: center;
+  padding: 20px;
   margin: 40px auto;
   background-color: rgba(24, 29, 49, 0.9);
   border-radius: 20px;

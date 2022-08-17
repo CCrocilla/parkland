@@ -13,12 +13,24 @@
 <!--               Contact Us Form               -->
 <!-- ============================================-->
 
+{% if messages %}
+
+{% for message in messages %}
+<div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show" role="alert">
+    {{ message }}
+    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+</div>
+{% endfor %}
+
+{% endif %}
+
 <section class="py-4 mt-5 mb-4 bg-contact-image rounded-3">
     <div class="container position-relative">
         <div class="row align-items-center justify-content-center">
             <div class="col-10 col-md-10 col-lg-8 text-center text-md-start pt-5 pt-md-5 images-text-forms">
                 <div class="section-header">
                     <h2 class="text-warning">Contact Us</h2>
+                    <hr class="w-25 mx-auto text-warning" style="height:2px;" />
                     <p class="text-warning">Do you need support? Do you want to subscribe to the newsletter? You are in
                         the right place! Our support Team is here for you! Fill in the form and send us your request!
                         The best Support Team is here for you!</p>

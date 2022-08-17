@@ -9,10 +9,11 @@
 {% block content %}
 
 {% if user.is_authenticated %}
+
 <div class="text-dark">
     <h1 class="mt-4">Welcome to Car Registration Section!</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Please enter the details of your car!</li>
+        <li class="active">Please enter the details of your car!</li>
     </ol>
 
     <div class="row d-flex">
@@ -40,10 +41,10 @@
 
 <h1 class="mt-4">Authentication Error!</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+    <li class="active">Access reserved only to authenticated user!</li>
 </ol>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+    <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
 <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 

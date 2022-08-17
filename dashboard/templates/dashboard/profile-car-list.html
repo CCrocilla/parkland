@@ -9,20 +9,20 @@
 {% if user.is_authenticated %}
 
 <div class="text-dark">
-    <h1 class="mt-4">Car List of {{ user.first_name }} {{ user.last_name }}</h1>
+    <h1 class="mt-4">Car Manager</h1>
     <ol class="breadcrumb mb-4">
-        <li class="breadcrumb-item active">Manage your Car List Here!!!</li>
+        <li class="active">Review your car information or Delete them!!!</li>
     </ol>
 
 
-    <div class="row d-flex ">
-        <div class="col-12 alert alert-light">
+    <div class="row d-flex">
+        <div class="col-4 alert alert-light">
             {% for car in car_list %}
 
             {% if car.user.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
-                Registration Number: <a href="">{{ car.registration_number }}</a> <br />
+                Registration Number: {{ car.registration_number }} <br />
                 Electric Car: {{ car.is_electric }} <br />|
                 Owner: {{ car.user.username }} <br />
 
@@ -42,10 +42,10 @@
 
 <h1 class="mt-4">Authentication Error!</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+    <li class="active">Access reserved only to authenticated user!</li>
 </ol>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+    <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
 <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 

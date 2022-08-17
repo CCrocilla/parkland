@@ -9,19 +9,6 @@
 {% if user.is_authenticated %}
 
 
-<!-- ===============================================-->
-<!--                    Messages                    -->
-<!-- ===============================================-->
-
-{% for message in messages %}
-<div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show" role="alert">
-    {{ message }}
-    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
-</div>
-{% endfor %}
-
-
-
 
 <!-- ===============================================-->
 <!--                Main Content                    -->
@@ -29,9 +16,8 @@
 
 <h1 class="mt-4">My Parkland</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Manage Booking and Settings in one place!</li>
+    <li class="active">Manage Booking and Settings in one place!</li>
 </ol>
-
 
 
 <div class="row">
@@ -76,23 +62,37 @@
         </div>
     </div>
 </div>
-<div class="row d-none">
-    <div class="col-xl-6">
+
+
+<div class="row mt-4">
+    <div class="col-12">
         <div class="card mb-4">
             <div class="card-header">
-                <i class="fas fa-chart-area me-1"></i>
-                Area Chart Example
+                <!-- ===============================================-->
+                <!--                    Messages                    -->
+                <!-- ===============================================-->
+                <h2> Messages Center:</h2>
+
+                {% if messages %}
+
+                {% for message in messages %}
+
+                <div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show"
+                    role="alert">
+                    {{ message }}
+                    <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                </div>
+
+                {% endfor %}
+
+                {% else %}
+
+                <div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show"
+                    role="alert">
+                    <h4>No messages...</h4>
+                </div>
+                {% endif %}
             </div>
-            <div class="card-body"><canvas id="myAreaChart" width="100%" height="40"></canvas></div>
-        </div>
-    </div>
-    <div class="col-xl-6">
-        <div class="card mb-4">
-            <div class="card-header">
-                <i class="fas fa-chart-bar me-1"></i>
-                Bar Chart Example
-            </div>
-            <div class="card-body"><canvas id="myBarChart" width="100%" height="40"></canvas></div>
         </div>
     </div>
 </div>
@@ -101,10 +101,10 @@
 
 <h1 class="mt-4">Authentication Error!</h1>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Access reserved only to authenticated user!</li>
+    <li class="active">Access reserved only to authenticated user!</li>
 </ol>
 <ol class="breadcrumb mb-4">
-    <li class="breadcrumb-item active">Click on the Link below to be redirected to the Login Page!</li>
+    <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
 <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 

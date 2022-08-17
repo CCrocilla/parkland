@@ -1,5 +1,6 @@
 """ Imports """
 from django.shortcuts import render
+from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.contrib.auth.forms import User, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
@@ -23,13 +24,15 @@ class DashboardView(ListView):
 ################################
 #        Feedback Views        #
 ################################
-class AddFeedbackView(CreateView):
+class AddFeedbackView(SuccessMessageMixin, CreateView):
     """
     Class to create Users' Feedback
     """
     model = Feedback
     form_class = FeedbackForm
     template_name = 'dashboard/add-feedback.html'
+    success_url = reverse_lazy('list-feedback')
+    success_message = "Feedback was created successfully!"
 
     def get_initial(self):
         return {'created_by': self.request.user}

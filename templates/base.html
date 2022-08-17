@@ -30,20 +30,19 @@
     {% block corejs %}
 
     {% endblock%}
+
+    {% url 'homepage' as home %}
 </head>
 
 <body>
     <main class="main" id="top">
-
-        {% url 'homepage' as home %}
         <!-- ============================================-->
         <!--                  Navbar                     -->
         <!-- ============================================-->
         <nav class="navbar navbar-expand-lg navbar-light fixed-top py-3" data-navbar-on-scroll="data-navbar-on-scroll">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center fw-bold fs-2" href="{% url 'homepage' %}">
-                    <img class="d-inline-block me-3" src="" alt="" />
-                    <h2 class="display-4">Parkland</h2>
+                    <h2 class="display-4 d-inline-block">Parkland</h2>
                 </a>
                 <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
@@ -85,12 +84,11 @@
                                 {%endif%}
                             </a>
 
-
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                                 <li><a class="dropdown-item" href="{% url 'dashboard' %}">My Parkland</a></li>
                                 <li><a class="dropdown-item" href="{% url 'edit-profile' %}">My Profile</a></li>
-                                <li><a class="dropdown-item" href="{% url 'dashboard' %}">Manage Bookings</a></li>
-                                <li><a class="dropdown-item" href="{% url 'list-feedback' %}">Manage Feedbacks</a></li>
+                                <li><a class="dropdown-item" href="{% url 'booking-list' %}">MyBookings</a></li>
+                                <li><a class="dropdown-item" href="{% url 'list-feedback' %}">My Feedbacks</a></li>
                                 <li>
                                     <hr class="dropdown-divider">
                                 </li>
@@ -116,58 +114,64 @@
         {% endblock %}
     </section>
 
-
     <!-- ============================================-->
     <!--                 Footer                      -->
     <!-- ============================================-->
-
     <footer class="py-6 mb-2 pt-7 bg-primary-gradient">
         <div class="container">
             <div class="row">
-                <div class="col-4 col-md-4 col-lg mb-3 order-1 order-sm-1">
+                <div class="col-12 col-sm-4 col-lg mb-3 order-1 order-sm-1">
                     <span class="fw-bold fs-1 text-light">Parkland</span>
                     <p class="section-title text-white h5 mb-4">Address<span></span></p>
-                    <p class="text-light"><i class="fa fa-map-marker-alt"></i> Airport Road, Dublin</p>
-                    <p class="text-light"><i class="fa fa-phone-alt"></i> +353 (0) 123456789</p>
-                    <p class="text-light"><i class="fa fa-envelope"></i> parkland@gmail.com</p>
+                    <p class="text-light"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Airport Road, Dublin
+                    </p>
+                    <p class="text-light"><i class="fa fa-phone-alt" aria-hidden="true"></i> +353 (0) 123456789</p>
+                    <p class="text-light"><i class="fa fa-envelope" aria-hidden="true"></i> parkland@gmail.com</p>
                     <div class="d-flex pt-2">
-                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-twitter"></i></a>
-                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-facebook-f"></i></a>
-                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-instagram"></i></a>
-                        <a class="btn btn-outline-light btn-social me-2" href=""><i class="fab fa-linkedin-in"></i></a>
+                        <a class="btn btn-outline-light btn-social me-2 py-2" href="https://twitter.com/?lang=en">
+                            <i class="fab fa-twitter" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social me-2 py-2" href="https://www.facebook.com/">
+                            <i class="fab fa-facebook-f" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social me-2 py-2" href="https://www.instagram.com/">
+                            <i class="fab fa-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a class="btn btn-outline-light btn-social me-2 py-2" href="https://ie.linkedin.com/">
+                            <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+                        </a>
                     </div>
                 </div>
-                <div class="col-4 col-md-4 col-lg mb-3 order-2 order-sm-2">
+                <div class="col-6 col-sm-4 col-lg mb-3 order-2 order-sm-2">
                     <h6 class="fw-bold fs-1 text-light">Website</h6>
                     <ul class="list-unstyled mb-md-4 mb-lg-0">
                         <li class="lh-lg">
                             <a class="text-light text-decoration-none" href="{% url 'homepage' %}">Homepage</a>
                         </li>
-                        <li class="lh-lg">
-                            <a class="text-light text-decoration-none" href="#!">Feedback</a>
-                        </li>
+
+                        {% block extra_footer_nav%}
+                        <!-- Extra Link for specific pages -->
+                        {% endblock %}
+
+
                         {% if user.is_authenticated %}
+                        <!-- Only Authenticated User can see the Booking Page -->
                         <li class="lh-lg">
                             <a class="text-light text-decoration-none" href="{% url 'searchparking' %}">Booking</a>
                         </li>
                         {% endif %}
+
                         <li class="lh-lg">
                             <a class="text-light text-decoration-none" href="{% url 'contact' %}">Contact Us</a>
                         </li>
                     </ul>
                 </div>
-                <div class="col-4 col-md-4 col-lg mb-3 order-3 order-sm-3">
-                    <h6 class="fw-bold fs-1 text-light"> Services </h6>
-                    <ul class="list-unstyled mb-md-4 mb-lg-0">
-                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Bus</a></li>
-                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Rent</a></li>
-                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Wash</a></li>
-                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Coffee</a></li>
-                        <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Green Energy</a>
-                        </li>
-                    </ul>
+                <div class="col-6 col-sm-4 col-lg mb-3 order-3 order-sm-3">
+                    {% block extra_footer_services %}
+                    <!-- Extra Link Services for specific pages -->
+                    {% endblock %}
                 </div>
-                <div class="col-4 col-md-4 col-lg mb-3 order-4 order-sm-4">
+                <div class="col-12 col-sm-12 col-lg mb-3 order-4 order-sm-4">
                     <p class="section-title text-white h5 mb-4">Newsletter<span></span></p>
                     <p class="text-light">Subscribe to the newsletter for free!</p>
                     <div class="position-relative w-100 mt-3">
@@ -175,8 +179,9 @@
                             <input class="form-control border-0 rounded-pill w-100 ps-4 pe-5" type="email"
                                 placeholder="Email" style="height: 48px;">
                             <button type="button" class="btn shadow-3 position-absolute top-0 end-0 mt-1 me-2"
-                                onclick="Toastify({text: 'This is a toast', duration: 3000 }).showToast();"><i
-                                    class="fa fa-paper-plane text-primary"></i></button>
+                                onclick="Toastify({text: 'Thanks for your subscription!', duration: 3000 }).showToast();">
+                                <i class="fa fa-paper-plane text-primary" aria-hidden="true"></i>
+                            </button>
                         </form>
                     </div>
                 </div>

@@ -1,6 +1,7 @@
 """ Imports """
-from django.shortcuts import render, HttpResponseRedirect, reverse
+from django.shortcuts import render, HttpResponseRedirect, reverse, redirect
 from django.views import View
+from django.contrib import messages
 from django.views.generic import CreateView, DetailView
 from car_park.models import Booking, Parking, SearchParking, Car
 from .forms import BookingForm, SearchParkingForm
@@ -83,8 +84,8 @@ class BookingView(View):
             url = reverse('recap-booking', args=(booking.pk, ))
             return HttpResponseRedirect(url)
         else:
-            form = self.form_class(request.POST)
-            return render(request, self.template_name, {'form': form})
+            messages.info(request, 'Error: Form not filled in correctly! Please try again!')
+            return redirect('searchparking')
 
 
 class RecapBookingView(DetailView):

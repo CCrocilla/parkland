@@ -12970,20 +12970,17 @@ section {
   color: #6f6f6f;
 }
 
-
 /* Navbar Underline effect */
 .menu-all>ul>li>a:hover {
   border-bottom: 2px solid #181D31;
 }
 
-
 /* Background Images */
-
 /* Contact Us */
 .bg-contact-image {
-  /* background-image: url('https://asset.cloudinary.com/ccrocilla-cloud/46b0b8cd9230bf6a7e344c4d997a12bd') no-repeat center center; */
-  /* background-image: url('https://res.cloudinary.com/ccrocilla-cloud/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency//v1660587561/static/images/bg-contact-us.b5e9c2703091.jpg') no-repeat center center; */
-  background: url('/static/images/bg-contact-us.webp') no-repeat center center;
+  /* background-image: url('https://asset.cloudinary.com/ccrocilla-cloud/244a04b506d7124b62ef50f16f1f0cd0') no-repeat center center; */
+  background-image: url('https://res.cloudinary.com/ccrocilla-cloud/image/upload/c_pad,b_auto:predominant,fl_preserve_transparency//v1660708479/static/images/bg-contact-us.1cb6efc1c46a.jpg') no-repeat center center;
+  /* background-image: url('/static/images/bg-contact-us.webp') no-repeat center center; */
   background-size: cover;
 }
 
@@ -12995,7 +12992,6 @@ section {
   background-color: rgba(24, 29, 49, 0.9);
   border-radius: 20px;
 }
-
 
 /* Dashboard */
 .sb-sidenav-dark {
@@ -13014,3 +13010,6 @@ small ul li {
   background-color: rgba(24, 29, 49, 0.9);
   border-radius: 20px;
 }
+
+
+/* Booking Page */

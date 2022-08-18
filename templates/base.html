@@ -32,6 +32,20 @@
     {% endblock%}
 
     {% url 'homepage' as home %}
+
+    <style>
+        .bg-search-image {
+            /* background-image: url('/static/images/bg-contact-us.webp') no-repeat center center; */
+            background-image: url("{% static 'images/bg-contact-us.webp' %}") no-repeat center center;
+            background-size: cover;
+        }
+
+        .bg-contact-image {
+            /* background-image: url('/static/images/bg-contact-us.webp') no-repeat center center; */
+            background-image: url("{% static 'images/bg-contact-us.webp' %}") no-repeat center center;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>

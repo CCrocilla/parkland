@@ -6,8 +6,15 @@
 
 {% block extra_title %} - Contact Us{% endblock %}
 
-{% block content %}
+<!-- <style>
+    .bg-contact-image { 
+        /* background-image: url('/static/images/bg-contact-us.webp') no-repeat center center; */
+        /* background-image: url("{% static 'images/bg-contact-us.webp' %}") no-repeat center center;
+        background-size: cover;
+    }
+</style> -->
 
+{% block content %}
 
 <!-- ============================================-->
 <!--               Contact Us Form               -->
@@ -24,7 +31,8 @@
 
 {% endif %}
 
-<section class="py-4 mt-5 mb-4 bg-contact-image rounded-3">
+<section class="py-4 mt-5 mb-4 bg-cb-image rounded-3"
+    style="background-image: url('{% static 'images/bg-contact-us.webp' %}');">
     <div class="container position-relative">
         <div class="row align-items-center justify-content-center">
             <div class="col-10 col-md-10 col-lg-8 text-center text-md-start pt-5 pt-md-5 images-text-forms">
@@ -43,9 +51,10 @@
                                 onsubmit="Toastify({text: 'Thanks for your request!', duration: 3000 }).showToast();">
                                 {% csrf_token %}
                                 {{ form|crispy }}
-                                <input type="reset" value="Reset" class="btn btn-lg btn-outline-warning rounded-pill">
+                                <input type="reset" value="Reset"
+                                    class="m-2 btn btn-lg btn-outline-warning rounded-pill">
                                 <button type="submit"
-                                    class="btn btn-lg btn-outline-primary rounded-pill">Submit</button>
+                                    class="m-2 btn btn-lg btn-outline-primary rounded-pill">Submit</button>
                             </form>
                         </div>
                     </div>
@@ -65,9 +74,8 @@
     <div class="container aos-init aos-animate" data-aos="fade-up">
         <div class="section-header">
             <h2>Where are we located?</h2>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the
-                industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and
-                scrambled it to make a type specimen book.</p>
+            <p>Parkland is great! Located close to the Airport and easy to access thanks to the multiple way! Parkland
+                is what you need!</p>
         </div>
         <div class="row gx-lg-0 gy-4 d-flex justify-content-between">
             <div class="col-lg-4">

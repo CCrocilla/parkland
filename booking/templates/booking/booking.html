@@ -23,11 +23,10 @@
 
 {% endif %}
 
-<section class="py-8">
-    <!-- Add Image in Backgroud -->
+<section class="py-4 mt-5 mb-4">
     <div class="container-lg">
-        <div class="row justify-content-center">
-            <div class="col text-center">
+        <div class="row justify-content-center hero-text">
+            <div class="col text-center text-warning">
                 <h2 class="fw-bold">Booking Page</h2>
                 <hr class="w-25 mx-auto text-dark" style="height:2px;" />
             </div>
@@ -39,10 +38,10 @@
         </div>
     </div>
 
-    <div class="container card">
-        <div class="row d-flex justify-content-center align-items-center">
-            <div class="col-8">
-                <!-- <img src="{% static 'images/parkland.jpg' %}" class="card-img-top rounded" alt="Hero Image"> -->
+    <div class="container card card bg-cb-image rounded-3"
+        style="background-image: url({% static 'images/bg-booking.webp' %});">
+        <div class="row py-5 d-flex justify-content-center align-items-center">
+            <div class="col-11 col-md-10 col-lg-8 col-xl-6 images-text-forms">
                 <div class="card-body">
                     <form method=POST>
 
@@ -152,7 +151,8 @@
                                             aria-label="Close"></button>
                                     </div>
                                     <div class="modal-body">
-                                        Click Book again to confirm your booking or Cancel to continue editing!
+                                        <p class="text-dark">Click Book again to confirm your booking or Cancel to
+                                            continue editing!</p>
                                     </div>
                                     <div class="modal-footer">
                                         <button type="button" class="m-2 btn btn-lg btn-outline-warning rounded-pill"

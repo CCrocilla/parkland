@@ -22,7 +22,6 @@ class SearchParkingView(CreateView):
     def get_initial(self):
         return {'created_by': self.request.user}
 
-
 class BookingView(View):
     """ Create Booking """
     model = Booking
@@ -32,7 +31,8 @@ class BookingView(View):
 
     def get(self, request, id):
         """ Function to retrive data for Booking """
-        search = SearchParking.objects.get(id=id)
+        id_search = id
+        search = SearchParking.objects.get(id=id_search)
         start_date = search.start_date
         end_date = search.end_date
 
@@ -73,7 +73,7 @@ class BookingView(View):
         """ Post Function Booking """
         form = self.form_class(request.POST)
         if form.is_valid():
-            booking = form.save(commit=False)
+            booking = form.save()
             booking.created_by = self.request.user
             booking.code = booking.id
             booking.start_date = request.POST.get('start_date', None)

@@ -24,9 +24,10 @@
     <div class="col-xl-3 col-md-6">
 
         <div class="card bg-primary text-white mb-4">
-            <div class="card-body">Active Booking</div>
+            <div class="card-body">Bookings: <span class="ms-2">{{ bookings }}</span></div>
+
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="#">View Details</a>
+                <a class="small text-white stretched-link" href="{% url 'booking-list' %}">View Bookings</a>
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
@@ -34,19 +35,9 @@
 
     <div class="col-xl-3 col-md-6">
         <div class="card bg-success text-white mb-4">
-            <div class="card-body">Parking Slot Booked</div>
+            <div class="card-body">Cars Registered: <span class="ms-2">{{ cars }}</span></div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="#">View Details</a>
-                <div class="small text-white"><i class="fas fa-angle-right"></i></div>
-            </div>
-        </div>
-    </div>
-
-    <div class="col-xl-3 col-md-6">
-        <div class="card bg-warning text-white mb-4">
-            <div class="card-body">Rewards</div>
-            <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="#">View Details</a>
+                <a class="small text-white stretched-link" href="{% url 'profile-car-list' %}">View Cars</a>
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
@@ -54,10 +45,20 @@
 
     <div class="col-xl-3 col-md-6">
         <div class="card bg-danger text-white mb-4">
-            <div class="card-body">Feedback</div>
+            <div class="card-body">Feedback <span class="ms-2">{{ feedbacks }}</span></div>
             <div class="card-footer d-flex align-items-center justify-content-between">
-                <a class="small text-white stretched-link" href="#">View Details</a>
+                <a class="small text-white stretched-link" href="{% url 'list-feedback' %}">View Feedbacks</a>
                 <div class="small text-white"><i class="fas fa-angle-right"></i></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-xl-3 col-md-6">
+        <div class="card bg-warning text-white mb-4">
+            <div class="card-body">Rewards: <span class="ms-2">{{ rewards }}</span> Points</div>
+            <div class="card-footer d-flex align-items-center justify-content-between">
+                <a class="small text-white stretched-link" href="#"></a>
+                <div class="small text-warning"><i class="fas fa-angle-right"></i></div>
             </div>
         </div>
     </div>
@@ -67,12 +68,13 @@
 <div class="row mt-4">
     <div class="col-12">
         <div class="card mb-4">
-            <div class="card-header">
+            <div class="card-header bg-secondary rounded-2">
                 <!-- ===============================================-->
                 <!--                    Messages                    -->
                 <!-- ===============================================-->
-                <h2> Messages Center:</h2>
-
+                <h3 class="text-white"> Messages Center:</h3>
+            </div>
+            <div>
                 {% if messages %}
 
                 {% for message in messages %}
@@ -89,7 +91,7 @@
 
                 <div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show"
                     role="alert">
-                    <h4>No messages...</h4>
+                    <p class="text-dark">No messages...</p>
                 </div>
                 {% endif %}
             </div>

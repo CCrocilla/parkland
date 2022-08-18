@@ -23,8 +23,8 @@
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
                 Registration Number: {{ car.registration_number }} <br />
-                Electric Car: {{ car.is_electric }} <br />|
-                Owner: {{ car.user.username }} <br />
+                <p> Electric Car: {{ car.is_electric }}</p>
+                <p> Owner: {{ car.user.username }} </p>
 
                 <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
                     href="{% url 'profile-car-delete' car.pk %}">Delete</a>

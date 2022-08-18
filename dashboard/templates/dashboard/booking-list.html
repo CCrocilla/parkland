@@ -11,7 +11,9 @@
 <div class="text-dark">
     <h1 class="mt-4">Booking Manager</h1>
     <ol class="breadcrumb mb-4">
-        <li class="active">Review the information of your booking or use the Delete them (FREE CANCELLATION)!</li>
+        <li class="active">Review the information of your booking or use the Delete Button to cancel them (FREE
+            CANCELLATION)!
+        </li>
     </ol>
 
     <div class="row d-flex ">
@@ -22,10 +24,9 @@
             {% if booking.created_by.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
-                Booking Number: <a href="{% url 'booking-details' booking.pk %}">{{booking.code}}</a> <br />|
-                Author: {{ booking.created_by.username }} <br />
-
-
+                <p>Booking Number: <a href="{% url 'booking-details' booking.pk %}">{{booking.code}}</a></p>
+                <p>Created by: {{ booking.created_by.username }} </p>
+                <p>Created date: {{ booking.created_date }} </p>
 
                 <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
                     href="{% url 'booking-delete' booking.pk %}">Delete</a>

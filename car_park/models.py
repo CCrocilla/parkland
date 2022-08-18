@@ -147,5 +147,13 @@ class Contact(models.Model):
 
 class ProfileAvatar(models.Model):
     """ Model for Profile's Avatar """
-    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name="profiles")
-    avatar = CloudinaryField("images/avatars/", null=True, blank=True)
+    user = models.OneToOneField(
+        User,
+        on_delete=models.CASCADE,
+        related_name="user"
+        )
+    avatar = models.ImageField(
+        upload_to='images/avatar/',
+        blank=True,
+        null=True
+        )

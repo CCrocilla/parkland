@@ -9,16 +9,20 @@
 {% if user.is_authenticated %}
 
 <div class="text-dark">
-    <h1 class="mt-4">Booking Number: {{ booking.code }} | Created by:{{ booking.created_by }}</h1>
+    <h1 class="mt-4">Booking Details</h1>
     <ol class="breadcrumb mb-4">
-        <li class="active">Booking Details!</li>
+        <li class="active">Review the information of your booking!</li>
     </ol>
     <div class="row d-flex ">
         <div class="col-12 alert alert-light">
-            <h1>Created By: {{ booking.created_by }}</h1>
-            <p>Booking Code: {{ booking.code }}</p>
 
-            <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking-list' %}">Back</a>
+            <p>Created By: {{ booking.created_by }}</p>
+            <p>Booking Code: {{ booking.code }}</p>
+            <p>Created date: {{ booking.created_date }} </p>
+            <p>Arrival date: {{ booking.start_date }} </p>
+            <p>Departure date: {{ booking.end_date }} </p>
+
+            <a class="mt-5 btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking-list' %}">Back</a>
         </div>
     </div>
 </div>

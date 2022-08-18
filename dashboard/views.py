@@ -1,24 +1,57 @@
 """ Imports """
 from django.shortcuts import render
+from django.views import View
 from django.contrib.messages.views import SuccessMessageMixin
-from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
+from django.views.generic import ListView
+from django.views.generic import DetailView
+from django.views.generic import CreateView
+from django.views.generic import UpdateView
+from django.views.generic import DeleteView
 from django.contrib.auth.forms import User, PasswordChangeForm
 from django.contrib.auth.views import PasswordChangeView
 from django.urls import reverse_lazy
-from car_park.models import Booking, Feedback, Car, ProfileAvatar
-from .forms import FeedbackForm, EditProfileForm, ProfileCarForm, ProfileAvatarForm
+from car_park.models import Booking
+from car_park.models import Feedback
+from car_park.models import Car
+from car_park.models import ProfileAvatar
+from .forms import FeedbackForm
+from .forms import EditProfileForm
+from .forms import ProfileCarForm
+from .forms import ProfileAvatarForm
+
+
+REWARDS_POINT = 100
 
 
 ################################
 #       Dashboard View         #
 ################################
-class DashboardView(ListView):
+class DashboardView(View):
     """
     Class to display Users' Dashboard
     """
     model = Booking
-    queryset = Booking.objects.filter().order_by('-created_date')
     template_name = 'dashboard/dashboard.html'
+    
+    def get(self, request):
+        cars = Car.objects.all().filter(
+            user=request.user).count()
+        
+        bookings = Booking.objects.all().filter(
+            created_by=request.user).count()
+        
+        feedbacks = Feedback.objects.all().filter(
+            created_by=request.user).count()
+        
+        rewards = REWARDS_POINT * bookings
+
+        context = {
+                'cars': cars,
+                'bookings': bookings,
+                'rewards': rewards,
+                'feedbacks': feedbacks,
+            }
+        return render(request, self.template_name, context)
 
 
 ################################
@@ -40,7 +73,7 @@ class AddFeedbackView(SuccessMessageMixin, CreateView):
 
 class ListFeedbackView(ListView):
     """
-    Class to display all the User's Feedback
+    Class to display the User's Feedback
     """
     model = Feedback
     template_name = 'dashboard/list-feedback.html'
@@ -68,7 +101,7 @@ class DetailsFeedbackView(DetailView):
 
 class EditFeedbackView(UpdateView):
     """
-    Class to display single User's Feedback
+    Class to update User's Feedback
     """
     model = Feedback
     template_name = 'dashboard/edit-feedback.html'

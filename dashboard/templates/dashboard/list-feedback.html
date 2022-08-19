@@ -26,17 +26,17 @@
     </ol>
 
     <div class="row d-flex ">
-        <div class="col-12 alert alert-light">
+        <div class="col-12 col-md-10 col-xl-8 col-xxl-6 alert alert-light">
 
             {% for feedback in feedback_list %}
 
             {% if feedback.created_by.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
-                Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> <br />|
+                <h5> Title: <a href="{% url 'details-feedback' feedback.pk %}">{{feedback.title}}</a> </h5><br />|
                 Author: {{ feedback.created_by.username }} - {{ feedback.created_date }} | Rating:
                 {{ feedback.rating_stars }}/5 <br />
-                Comment: {{ feedback.comment|slice:":200" }} <br />
+                Comment: {{ feedback.comment|slice:":200" }}... <br />
 
                 <a class="btn btn-lg btn-outline-primary rounded-pill mt-4"
                     href="{% url 'edit-feedback' feedback.pk %}">Edit</a>

@@ -17,20 +17,20 @@
     </ol>
 
     <div class="row d-flex ">
-        <div class="col-4 alert alert-light">
+        <div class="col-12 col-md-10 col-xl-8 col-xxl-6 alert alert-light">
 
             {% for booking in booking_list %}
 
             {% if booking.created_by.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
-                <p>Booking Number: <a href="{% url 'booking-details' booking.pk %}">{{booking.code}}</a></p>
-                <p>Created by: {{ booking.created_by.username }} </p>
-                <p>Created date: {{ booking.created_date }} </p>
+                <h5>Booking Number: <a href="{% url 'booking-details' booking.pk %}">{{booking.code}}</a></h5>
+                <p>Created by: {{ booking.created_by.username }} | Created date: {{ booking.created_date }} </p>
 
+                <a class="btn btn-lg btn-outline-info rounded-pill mt-4"
+                    href="{% url 'booking-details' booking.pk %}">Details</a>
                 <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
                     href="{% url 'booking-delete' booking.pk %}">Delete</a>
-
             </div>
 
             {% endif %}

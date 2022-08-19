@@ -16,15 +16,21 @@
 
 
     <div class="row d-flex">
-        <div class="col-4 alert alert-light">
+        <div class="col-12 col-md-10 col-xl-8 col-xxl-6 alert alert-light">
             {% for car in car_list %}
 
             {% if car.user.id == user.id %}
 
             <div class="p-3 mb-2 mt-2 alert alert-dark rounded-3">
-                Registration Number: {{ car.registration_number }} <br />
-                <p> Electric Car: {{ car.is_electric }}</p>
-                <p> Owner: {{ car.user.username }} </p>
+                <h5>Car</h5>
+                <p>Registration Number: {{ car.registration_number }} </p>
+                <p> Electric Car:
+                    {% if car.is_electric %}
+                    Yes
+                    {% else %}
+                    No
+                    {% endif %}
+                </p>
 
                 <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
                     href="{% url 'profile-car-delete' car.pk %}">Delete</a>

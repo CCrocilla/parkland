@@ -1,11 +1,14 @@
 """ Imports """
+import datetime
+import logging
 from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
-from car_park.models import Booking, SearchParking
-import datetime
-import logging
+from django.utils import timezone
+from car_park.models import Booking
+from car_park.models import SearchParking
+
 
 
 class SearchParkingForm(ModelForm):
@@ -15,18 +18,28 @@ class SearchParkingForm(ModelForm):
         self.fields['created_by'].disabled = True
 
     def clean(self):
-        if self.cleaned_data['start_date'] > self.cleaned_data['end_date']:
-            logging.error("ERROR: Start Date > End Date")
-            logging.error(datetime.datetime.today())
+        today = timezone.now()
+        start_date = self.cleaned_data['start_date']
+        end_date = self.cleaned_data['end_date']
+        
+        if start_date > end_date:
             raise ValidationError(
-                'Error: Start Date is greater than the End Date!')
-        # elif self.cleaned_data['start_date'] < datetime.datetime.today():
-        #     raise ValidationError(
-        #         'Error: Start Date should be greater than today!')
+                'Error: Start Date cannot be greater than the End Date!')
+        elif start_date < today:
+            raise ValidationError(
+                'Error: Start Date cannot be in the past!')
 
     class Meta:
         model = SearchParking
         fields = "__all__"
+        
+        recharge_ecar = forms.BooleanField(
+            widget=forms.CheckboxInput(
+                attrs={'class': 'checkbox'}), required=False)
+
+        labels = {
+            'recharge_ecar': 'Recharger Electric Car',
+        }
         
         widgets = {
             'created_by': forms.HiddenInput(),
@@ -60,7 +73,7 @@ class BookingForm(ModelForm):
             'start_date': forms.HiddenInput(),
             'end_date': forms.HiddenInput(),
             'car': forms.HiddenInput(),
-            'recharge_car': forms.CheckboxInput(attrs={'class': 'checkbox'}),
+            'recharge_car': forms.HiddenInput(),
             'parking': forms.HiddenInput(),
             'final_price': forms.HiddenInput(),
         }

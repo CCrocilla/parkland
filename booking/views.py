@@ -1,14 +1,20 @@
 """ Imports """
-from django.shortcuts import render, HttpResponseRedirect, reverse, redirect
+from django.shortcuts import render
+from django.shortcuts import HttpResponseRedirect
+from django.shortcuts import reverse
+from django.shortcuts import redirect
 from django.views import View
 from django.contrib import messages
-from django.views.generic import CreateView, DetailView
-from car_park.models import Booking, Parking, SearchParking, Car
-from .forms import BookingForm, SearchParkingForm
-from django.core.serializers.json import DjangoJSONEncoder
+from django.views.generic import CreateView
+from django.views.generic import DetailView
 from django.db.models import Q
-import logging
-import json
+from car_park.models import Booking
+from car_park.models import Parking
+from car_park.models import SearchParking
+from car_park.models import Car
+from .forms import BookingForm
+from .forms import SearchParkingForm
+
 
 PARKING_DAILY_COST = 8
 
@@ -22,6 +28,7 @@ class SearchParkingView(CreateView):
     def get_initial(self):
         return {'created_by': self.request.user}
 
+
 class BookingView(View):
     """ Create Booking """
     model = Booking
@@ -31,18 +38,17 @@ class BookingView(View):
 
     def get(self, request, id):
         """ Function to retrive data for Booking """
-        id_search = id
-        search = SearchParking.objects.get(id=id_search)
+        search = SearchParking.objects.get(id=id)
         start_date = search.start_date
         end_date = search.end_date
+        recharger_ecar = search.recharge_ecar
 
         bookings = Booking.objects.exclude(
             (Q(end_date__lt=start_date) & Q(start_date__lt=start_date)) | (
                 Q(start_date__gt=end_date) & Q(end_date__gt=end_date))
         )
 
-        parkings_all = Parking.objects.all()
-        parkings_avail = parkings_all.values_list(
+        parkings_avail = Parking.objects.all().values_list(
             "id").difference(bookings.values_list("parking"))
 
         parking_ids = parkings_avail.values_list("id",  flat=True)
@@ -84,7 +90,10 @@ class BookingView(View):
             url = reverse('recap-booking', args=(booking.pk, ))
             return HttpResponseRedirect(url)
         else:
-            messages.info(request, 'Error: Form not filled in correctly! Please try again!')
+            messages.info(
+                request,
+                'Error: Form not filled in correctly! Please try again!'
+                )
             return redirect('searchparking')
 
 

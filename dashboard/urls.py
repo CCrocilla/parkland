@@ -2,7 +2,22 @@ from django.urls import path, include
 from django.contrib.auth import views
 from django.conf import settings
 from django.conf.urls.static import static
-from .views import DashboardView, BookingListView, BookingDetailsView, BookingEditView, BookingDeleteView, AddFeedbackView, ListFeedbackView, DetailsFeedbackView, EditFeedbackView, DeleteFeedbackView, EditProfileView, ProfileCarView, ProfileCarListView, ProfileCarDeleteView, ProfileAvatarView, PasswordChangeProfileView, PasswordSuccess
+from .views import DashboardView
+from .views import BookingListView
+from .views import BookingDetailsView
+from .views import BookingDeleteView
+from .views import AddFeedbackView
+from .views import ListFeedbackView
+from .views import DetailsFeedbackView
+from .views import EditFeedbackView
+from .views import DeleteFeedbackView
+from .views import EditProfileView
+from .views import ProfileCarView
+from .views import ProfileCarListView
+from .views import ProfileCarDeleteView
+from .views import ProfileAvatarView
+from .views import PasswordChangeProfileView
+from .views import PasswordSuccess
 
 
 urlpatterns = [

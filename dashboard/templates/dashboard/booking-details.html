@@ -13,19 +13,74 @@
     <ol class="breadcrumb mb-4">
         <li class="active">Review the information of your booking!</li>
     </ol>
-    <div class="row d-flex ">
-        <div class="col-12 alert alert-light">
+    <div class="row ms-0">
 
-            <p>Created By: {{ booking.created_by }}</p>
-            <p>Booking Code: {{ booking.code }}</p>
-            <p>Created date: {{ booking.created_date }} </p>
-            <p>Arrival date: {{ booking.start_date }} </p>
-            <p>Departure date: {{ booking.end_date }} </p>
+        <div class="col-12 col-md-8 col-lg-6 border border-5 rounded-3">
+            <h3 class="mt-3 fw-bold text-dark"> Account Details </h3>
+            <hr class="w-10 text-dark" style="height:2px;" />
+            <div class="row">
+                <div class="col-12">
+                    <label class="form-label mt-2">Created By:</label>
+                    <span class="form-control border-2 fw-bold">
+                        {{ booking.created_by }}
+                    </span>
+                </div>
 
-            <a class="mt-5 btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking-list' %}">Back</a>
+                {% if booking.created_by.first_name and booking.created_by.last_name %}
+                <div class="col-12 col-sm-6">
+                    <label class="form-label mt-2">First Name:</label>
+                    <span class="form-control border-2 fw-bold">
+                        {{ booking.created_by.first_name }}
+                    </span>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <label class="form-label mt-2">Last Name:</label>
+                    <span class="form-control border-2 fw-bold">
+                        {{ booking.created_by.last_name }}
+                    </span>
+                </div>
+                {% endif%}
+            </div>
+
+            <h3 class="mt-5 fw-bold text-dark">Car Details</h3>
+            <hr class="w-10 text-dark" style="height:2px;" />
+            <div>
+                <label class="form-label mt-2">Car Registration Number:</label>
+                <span class="form-control border-2 fw-bold">
+                    {{ booking.car.registration_number }}
+                </span>
+            </div>
+
+
+            <h3 class="mt-5 fw-bold text-dark">Booking Details</h3>
+            <hr class="w-10 text-dark" style="height:2px;" />
+            <div class="row">
+                <div class="col-12 col-sm-6">
+                    <label class="form-label mt-2">Booking Number:</label>
+                    <span class="form-control border-2 fw-bold">
+                        {{ booking.code }}
+                    </span>
+                </div>
+                <div class="col-12 col-sm-6">
+                    <label class="form-label mt-2">Parking Slot:</label>
+                    <span class="form-control border-2 fw-bold">
+                        {{ booking.parking.name }}
+                    </span>
+                </div>
+                <div class="mb-5 col-12">
+                    <label class="form-label mt-2">Price: </label>
+                    <span class="form-control border-2 fw-bold ">
+                        {{ booking.final_price }} Euro
+                    </span>
+                </div>
+            </div>
         </div>
     </div>
 </div>
+
+<a class="mt-5 btn btn-lg btn-outline-primary rounded-pill" href="{% url 'booking-list' %}">Back</a>
+
+
 {% else %}
 
 <h1 class="mt-4">Authentication Error!</h1>

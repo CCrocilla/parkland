@@ -39,7 +39,7 @@
     </div>
 
     <div class="container card card bg-cb-image rounded-3"
-        style="background-image: url({% static 'images/bg-booking.webp' %});">
+        style="background-image: url('https://res.cloudinary.com/ccrocilla-cloud/image/upload/v1/static/images/bg-booking.98de323afa7f.webp')">
         <div class="row py-5 d-flex justify-content-center align-items-center">
             <div class="col-11 col-md-10 col-lg-8 col-xl-6 images-text-forms">
                 <div class="card-body">
@@ -131,9 +131,12 @@
                                 </span>
                             </div>
                         </div>
-                        <!-- <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Book</button> -->
 
                         {% if parking_list and car_list %}
+                        <a class="m-2 btn btn-lg btn-outline-warning rounded-pill" href="{% url 'searchparking' %}">Go
+                            Back
+                        </a>
+
                         <!-- Button to trigger the confirmation booking modal -->
                         <button type="button" class="m-2 btn btn-lg btn-outline-primary rounded-pill"
                             data-bs-toggle="modal" data-bs-target="#confirmationModal">
@@ -144,7 +147,7 @@
                         <div class="modal fade" id="confirmationModal" tabindex="-1"
                             aria-labelledby="confirmationModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content shadow p-3 m-5 rounded-3 border border-5 border-warning">
+                                <div class="modal-content shadow p-3 my-10 rounded-3 border border-5 border-warning">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="confirmationModalLabel">Confirm Booking?</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -154,7 +157,7 @@
                                         <p class="text-dark">Click Book again to confirm your booking or Cancel to
                                             continue editing!</p>
                                     </div>
-                                    <div class="modal-footer">
+                                    <div class="modal-footer justify-content-center">
                                         <button type="button" class="m-2 btn btn-lg btn-outline-warning rounded-pill"
                                             data-bs-dismiss="modal">Cancel
                                         </button>
@@ -166,9 +169,6 @@
                             </div>
                         </div>
 
-                        <a class="m-2 btn btn-lg btn-outline-warning rounded-pill" href="{% url 'searchparking' %}">Go
-                            Back
-                        </a>
                         {% else %}
 
                         <a class="m-2 btn btn-lg btn-outline-warning rounded-pill" href="{% url 'searchparking' %}">Go

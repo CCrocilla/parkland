@@ -122,13 +122,10 @@
                         </div>
 
                         <div class="row">
-                            <div id="div_id_final_price" class="mb-3 col-12 col-md-6">
-                                <label for="id_final_price" class="form-label requiredField">Price:
-
-                                </label>
-                                <span type="number" name="final_price" class="col-12" value={{ final_price }}
-                                    id="id_final_price">{{ final_price }} Euro
-                                </span>
+                            <div id="div_id_final_price" class="mb-3 col-12">
+                                <h3 name="final_price" class="col-12 text-white" id="id_final_price">
+                                    Price: {{ final_price|floatformat:2 }} €
+                                </h3>
                             </div>
                         </div>
 

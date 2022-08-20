@@ -119,7 +119,7 @@ class Booking(models.Model):
     final_price = models.DecimalField(max_digits=50, decimal_places=2)
 
     class Meta:
-        """ Sorting by Create Date """
+        """ Order by Create Date """
         ordering = ['created_date']
 
     def __str__(self):

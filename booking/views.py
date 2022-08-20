@@ -33,7 +33,6 @@ class BookingView(View):
     """ Create Booking """
     model = Booking
     template_name = 'booking/booking.html'
-    queryset = Booking.objects.all()
     form_class = BookingForm
 
     def get(self, request, id):
@@ -43,21 +42,28 @@ class BookingView(View):
         end_date = search.end_date
         recharger_ecar = search.recharge_ecar
 
+        # Return all booking of parking in the range of selected dates
         bookings = Booking.objects.exclude(
             (Q(end_date__lt=start_date) & Q(start_date__lt=start_date)) | (
                 Q(start_date__gt=end_date) & Q(end_date__gt=end_date))
         )
 
+        # Return all available Parking (Remove previous "bookings") - All parking and parking occupied. 
         parkings_avail = Parking.objects.all().values_list(
-            "id").difference(bookings.values_list("parking"))
+            "id", flat=True).difference(bookings.values_list("parking", flat=True))
 
-        parking_ids = parkings_avail.values_list("id",  flat=True)
-        parking_list = Parking.objects.filter(id__in=parking_ids)
-
-        car = Car.objects.filter(user=request.user)
+        # Since used value_list in parking_avail mapping all opbject instead of having 
+        parking_list = Parking.objects.filter(id__in=parkings_avail).order_by("name")
+      
+        if recharger_ecar:
+            car = Car.objects.filter(user=request.user).filter(is_electric=True)
+            parking_list = parking_list.filter(is_electric=True)
+            print("MACCHINA ELETTRICA SI")
+        else:
+            car = Car.objects.filter(user=request.user)
+            print("MACCHINA ELETTRICA NO")
 
         price = (abs((end_date - start_date).days) + 1) * PARKING_DAILY_COST
-        print(price)
         
         context = {
             'form': BookingForm({

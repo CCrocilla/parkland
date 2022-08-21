@@ -32,7 +32,7 @@
                     {% endif %}
                 </p>
 
-                <a class="btn btn-lg btn-outline-danger rounded-pill mt-4"
+                <a class="btn btn-lg btn-minwidth btn-outline-danger rounded-pill mt-4"
                     href="{% url 'profile-car-delete' car.pk %}">Delete</a>
             </div>
 
@@ -53,7 +53,7 @@
 <ol class="breadcrumb mb-4">
     <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
-<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 
 {% endif %}
 

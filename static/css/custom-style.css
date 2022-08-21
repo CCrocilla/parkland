@@ -52,7 +52,7 @@ Navbar Underline effect
 Footer
 --------------------------------------------------------------*/
 .btn-social-icons {
-    min-width: 50px
+    min-width: 45px
 }
 
 /*--------------------------------------------------------------
@@ -104,7 +104,7 @@ Booking Page
 
 }
 
-.btn-large {
+.btn-minwidth {
     min-width: 150px;
 }
 

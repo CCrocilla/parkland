@@ -24,7 +24,7 @@
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form|crispy }}
-                            <button type="submit" class="btn btn-lg btn-outline-primary rounded-pill">Upload</button>
+                            <button type="submit" class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill">Upload</button>
                         </form>
                     </div>
                 </div>
@@ -56,7 +56,7 @@
 <ol class="breadcrumb mb-4">
     <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
-<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 
 {% endif %}
 

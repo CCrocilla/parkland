@@ -22,9 +22,9 @@ if os.path.isfile('env.py'):
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
-# BASE_DIR = Path(__file__).resolve().parent.parent
+BASE_DIR = Path(__file__).resolve().parent.parent
 # Heroku Website
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+# BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 # Templates Directory
 TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
@@ -42,7 +42,6 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True if os.environ.get('DEBUG') == 'True' else False
-# DEBUG = True
 
 X_FRAME_OPTIONS = 'SAMEORIGIN'
 
@@ -84,7 +83,7 @@ CRISPY_ALLOWED_TEMPLATE_PACKS = "bootstrap5"
 CRISPY_TEMPLATE_PACK = "bootstrap5"
 
 
-# Code Institute Project - Boutique Ado 
+# Code Institute Project - Boutique Ado
 ACCOUNT_AUTHENTICATION_METHOD = 'username_email'
 ACCOUNT_EMAIL_REQUIRED = True
 ACCOUNT_EMAIL_VERIFICATION = 'mandatory'
@@ -187,9 +186,12 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
-STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )  # all apps can have their respective static content dir in them
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')  # this is where the content is collected after
-STATIC_URL = '/static/'  # this is where the content is accesses from web url
+# All apps can have their respective static content dir in them
+STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'), )
+# STATIC ROOT is where the content is collected after
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+# STATIC URL this is where the content is accesses from web url
+STATIC_URL = '/static/'
 
 # Information for Django to use Cloundinary in order to Store Media and Static.
 STATICFILES_STORAGE = 'cloudinary_storage.storage.StaticHashedCloudinaryStorage'            # NOQA

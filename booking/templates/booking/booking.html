@@ -153,12 +153,13 @@
                         </div>
 
                         {% if parking_list and car_list %}
-                        <a class="m-2 btn btn-lg btn-outline-warning rounded-pill" href="{% url 'searchparking' %}">Go
+                        <a class="m-2 btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
+                            href="{% url 'searchparking' %}">Go
                             Back
                         </a>
 
                         <!-- Button to trigger the confirmation booking modal -->
-                        <button type="button" class="m-2 btn btn-lg btn-outline-primary rounded-pill"
+                        <button type="button" class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
                             data-bs-toggle="modal" data-bs-target="#confirmationModal">
                             Book
                         </button>
@@ -178,11 +179,12 @@
                                             continue editing!</p>
                                     </div>
                                     <div class="modal-footer justify-content-center">
-                                        <button type="button" class="m-2 btn btn-lg btn-outline-warning rounded-pill"
+                                        <button type="button"
+                                            class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
                                             data-bs-dismiss="modal">Cancel
                                         </button>
                                         <button type="submit"
-                                            class="m-2 btn btn-lg btn-outline-primary rounded-pill">Book
+                                            class="m-2 btn btn-lg btn-minwidth btn-outline-primary rounded-pill">Book
                                         </button>
                                     </div>
                                 </div>
@@ -191,7 +193,8 @@
 
                         {% else %}
 
-                        <a class="m-2 btn btn-lg btn-outline-warning rounded-pill" href="{% url 'searchparking' %}">Go
+                        <a class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
+                            href="{% url 'searchparking' %}">Go
                             Back
                         </a>
 
@@ -212,7 +215,7 @@
 <ol class="breadcrumb mb-4">
     <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
-<a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
 
 {% endif %}
 

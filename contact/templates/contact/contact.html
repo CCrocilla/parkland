@@ -6,14 +6,6 @@
 
 {% block extra_title %} - Contact Us{% endblock %}
 
-<!-- <style>
-    .bg-contact-image { 
-        /* background-image: url('/static/images/bg-contact-us.webp') no-repeat center center; */
-        /* background-image: url("{% static 'images/bg-contact-us.webp' %}") no-repeat center center;
-        background-size: cover;
-    }
-</style> -->
-
 {% block content %}
 
 <!-- ============================================-->
@@ -46,15 +38,19 @@
                 <div class="row d-flex justify-content-center">
                     <div class="col-12">
                         <div class="form-group">
-                            <form method="POST" class=""
-                                onreset="Toastify({text: 'The form has been reset!', duration: 3000 }).showToast();"
-                                onsubmit="Toastify({text: 'Thanks for your request!', duration: 3000 }).showToast();">
+                            <form method="POST">
                                 {% csrf_token %}
                                 {{ form|crispy }}
-                                <input type="reset" value="Reset"
-                                    class="m-2 btn btn-lg btn-outline-warning rounded-pill">
-                                <button type="submit"
-                                    class="m-2 btn btn-lg btn-outline-primary rounded-pill">Submit</button>
+                                <div>
+                                    <a href="{% url 'terms' %}" class="">Terms and Condition</a>
+                                </div>
+
+                                <div class="mt-5">
+                                    <input type="reset" value="Reset"
+                                        class="m-2 btn btn-lg btn-outline-warning rounded-pill">
+                                    <button type="submit" class="m-2 btn btn-lg btn-outline-primary rounded-pill">Submit
+                                    </button>
+                                </div>
                             </form>
                         </div>
                     </div>
@@ -126,6 +122,5 @@
         </div>
     </div>
 </section>
-
 
 {% endblock %}

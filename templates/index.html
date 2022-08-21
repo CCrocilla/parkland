@@ -37,7 +37,7 @@
 </section>
 <section class="py-4 py-md-6 py-lg-7">
     <!-- Add Image in Backgroud -->
-    <div class="container-lg">
+    <div id="services" class="container-lg">
         <div class="row flex-center">
             <div class="col-auto text-center">
                 <h2 class="fw-bold lh-base">Our services</h2>
@@ -52,7 +52,7 @@
             </div>
         </div>
         <div class="row justify-content-center h-100 pt-4 g-4">
-            <div class="col-12 col-md-6 col-lg-4">
+            <div id="bus-services" class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 w-100 shadow rounded-3 p-3 border border-5 border-warning bg-gradient">
                     <div class="text-center text-md-start">
                         <div class=""><img class="img-fluid rounded-2" src="{% static 'images/airport-bus.webp' %}"
@@ -64,7 +64,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div id="wash-services" class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 w-100 shadow rounded-3 p-3 border border-5 border-warning">
                     <div class="text-center text-md-start">
                         <div class=""><img class="img-fluid rounded-2" src="{% static 'images/car-wash.webp' %}"
@@ -76,7 +76,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-md-6 col-lg-4">
+            <div id="coffee-services" class="col-12 col-md-6 col-lg-4">
                 <div class="card h-100 w-100 shadow rounded-3 p-3 border border-5 border-warning">
                     <div class="text-center text-md-start">
                         <div class=""><img class="img-fluid rounded-2" src="{% static 'images/coffee.webp' %}"
@@ -88,10 +88,6 @@
                         </div>
                     </div>
                 </div>
-            </div>
-            <div class="text-center py-4">
-                <button class="btn btn-lg btn-outline-primary bg-gradient rounded-pill" type="submit">Learn more
-                </button>
             </div>
         </div>
     </div>
@@ -106,9 +102,6 @@
                 <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
                 <p class="pt-3">Parkland offers everything that you've always dreamed of without compromise! The
                     Best for you! To us, it is not just work. We take pride in the solutions we deliver</p>
-                <div class="py-3">
-                    <button class="btn btn-lg btn-outline-primary rounded-pill" type="submit">Learn more </button>
-                </div>
             </div>
         </div>
     </div>
@@ -130,8 +123,7 @@
                 <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
                 <p class="pt-3">The best booking service just for you! </p>
                 <div class="py-3">
-                    <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'searchparking' %}">Go to
-                        Booking!</a>
+                    <a class="btn btn-lg btn-outline-primary rounded-pill" href="{% url 'searchparking' %}">Booking!</a>
                 </div>
                 {% else %}
 
@@ -226,7 +218,7 @@
             </div>
         </div>
         <div class="row h-100 justify-content-center">
-            <div class="col-12 col-sm-9 col-md-4 mt-4">
+            <div class="col-12 col-md-6 col-lg-4 mt-4">
                 <div class="card h-100 w-100 shadow rounded-3 p-3 border border-5 border-warning"><img src="" alt="" />
                     <div class="card-body p-4 text-center text-md-start">
                         <h5 class="fw-bold text-dark text-center">New Parking Slot available soon!!!</h5>
@@ -235,7 +227,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-9 col-md-4 mt-4">
+            <div class="col-12 col-md-6 col-lg-4 mt-4">
                 <div class="card h-100 w-100 shadow rounded-3 p-3 border border-5 border-warning"><img src="" alt="" />
                     <div class="card-body p-4 text-center text-md-start">
                         <h5 class="fw-bold text-dark text-center">A new Coffee Shop for you! </h5>
@@ -243,7 +235,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-12 col-sm-9 col-md-4 mt-4">
+            <div class="col-12 col-md-6 col-lg-4 mt-4">
                 <div class="card h-100 w-100 shadow rounded-3 p-3 border border-5 border-warning"><img src="" alt="" />
                     <div class="card-body p-4 text-center text-md-start">
                         <h5 class="fw-bold text-dark text-center">Green Energy Parking!!!</h5>
@@ -278,8 +270,8 @@
 {% block extra_footer_services %}
 <h6 class="fw-bold fs-1 text-light"> Services </h6>
 <ul class="list-unstyled mb-md-4 mb-lg-0">
-    <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Bus</a></li>
-    <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Wash</a></li>
-    <li class="lh-lg"><a class="text-light text-decoration-none" href="#!">Coffee</a></li>
+    <li class="lh-lg"><a class="text-light text-decoration-none" href="#bus-services">Bus</a></li>
+    <li class="lh-lg"><a class="text-light text-decoration-none" href="#wash-services">Wash</a></li>
+    <li class="lh-lg"><a class="text-light text-decoration-none" href="#coffee-services">Coffee</a></li>
 </ul>
 {% endblock %}

@@ -9,16 +9,16 @@ from car_park.models import Feedback, Car, ProfileAvatar
 CHOICES = [
     (1, 'Bad'), (2, 'Poor'), (3, 'OK'), (4, 'Good'), (5, 'Excellent'), ]
 
+
 ################################
 #         Feedback Forms       #
 ################################
-
 class FeedbackForm(ModelForm):
     """ Form for Users' Feedback """
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['created_by'].disabled = True
-    
+
     class Meta:
         model = Feedback
         fields = ('created_by', 'title', 'comment', 'rating_stars')
@@ -31,8 +31,10 @@ class FeedbackForm(ModelForm):
 
         widgets = {
             'created_by': forms.HiddenInput(),
-            'title': forms.TextInput(attrs={'class': 'form-control'}),
-            'comment': forms.Textarea(attrs={'class': 'form-control'}),
+            'title': forms.TextInput(
+                attrs={'class': 'form-control'}),
+            'comment': forms.Textarea(
+                attrs={'class': 'form-control'}),
             'rating_stars': forms.HiddenInput(),
         }
 
@@ -40,12 +42,17 @@ class FeedbackForm(ModelForm):
 ################################
 #         Profile Forms        #
 ################################
-
 class EditProfileForm(UserChangeForm):
     """ Form for User's Profile Edit Page """
     class Meta:
         model = User
-        fields = ('username', 'first_name', 'last_name', 'email', 'date_joined', 'last_login')
+        fields = ('username',
+                  'first_name',
+                  'last_name',
+                  'email',
+                  'date_joined',
+                  'last_login',
+                  'is_active')
         labels = {
             'username': 'Username*',
             'first_name': 'First Name*',
@@ -53,13 +60,18 @@ class EditProfileForm(UserChangeForm):
             'email': 'Email*',
             'date_joined': 'Date Account Creation',
             'last_login': 'Last Login',
+            'is_active': 'Account Active',
         }
 
         widgets = {
-            'username': forms.TextInput(attrs={'class': 'form-control'}),
-            'first_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'last_name': forms.TextInput(attrs={'class': 'form-control'}),
-            'email': forms.EmailInput(attrs={'class': 'form-control'}),
+            'username': forms.TextInput(
+                attrs={'class': 'form-control'}),
+            'first_name': forms.TextInput(
+                attrs={'class': 'form-control'}),
+            'last_name': forms.TextInput(
+                attrs={'class': 'form-control'}),
+            'email': forms.EmailInput(
+                attrs={'class': 'form-control'}),
             'date_joined': forms.DateTimeInput(
                 attrs={
                     'readonly': 'readonly',
@@ -95,7 +107,7 @@ class ProfileCarForm(ModelForm):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.fields['user'].disabled = True
-    
+
     class Meta:
         model = Car
         fields = ('user', 'registration_number', 'is_electric')
@@ -107,6 +119,10 @@ class ProfileCarForm(ModelForm):
 
         widgets = {
             'user': forms.HiddenInput(),
-            'registration_number': forms.TextInput(attrs={'class': 'form-control'}),
-            'is_electric': forms.CheckboxInput(attrs={'class': 'required checkbox'}),
+            'registration_number': forms.TextInput(
+                attrs={'class': 'form-control'}
+                ),
+            'is_electric': forms.CheckboxInput(
+                attrs={'class': 'required checkbox'}
+                ),
         }

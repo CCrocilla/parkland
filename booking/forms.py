@@ -1,14 +1,10 @@
 """ Imports """
-import datetime
-import logging
 from django import forms
 from django.forms import ModelForm
-from django.contrib.auth.models import User
 from django.core.exceptions import ValidationError
 from django.utils import timezone
 from car_park.models import Booking
 from car_park.models import SearchParking
-
 
 
 class SearchParkingForm(ModelForm):
@@ -21,7 +17,7 @@ class SearchParkingForm(ModelForm):
         today = timezone.now()
         start_date = self.cleaned_data['start_date']
         end_date = self.cleaned_data['end_date']
-        
+
         if start_date > end_date:
             raise ValidationError(
                 'Error: Start Date cannot be greater than the End Date!')
@@ -32,7 +28,7 @@ class SearchParkingForm(ModelForm):
     class Meta:
         model = SearchParking
         fields = "__all__"
-        
+
         recharge_ecar = forms.BooleanField(
             widget=forms.CheckboxInput(
                 attrs={'class': 'checkbox'}), required=False)
@@ -40,7 +36,7 @@ class SearchParkingForm(ModelForm):
         labels = {
             'recharge_ecar': 'Recharger Electric Car',
         }
-        
+
         widgets = {
             'created_by': forms.HiddenInput(),
             'start_date': forms.DateInput(format=('%m/%d/%Y'), attrs={

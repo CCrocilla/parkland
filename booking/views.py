@@ -17,6 +17,7 @@ from .forms import SearchParkingForm
 
 
 PARKING_DAILY_COST = 8
+PARKING_DAILY_COST_PLUS = 10
 
 
 class SearchParkingView(CreateView):
@@ -48,23 +49,27 @@ class BookingView(View):
                 Q(start_date__gt=end_date) & Q(end_date__gt=end_date))
         )
 
-        # Return all available Parking (Remove previous "bookings") - All parking and parking occupied. 
+        # Return all available Parking (Remove previous "bookings")
         parkings_avail = Parking.objects.all().values_list(
-            "id", flat=True).difference(bookings.values_list("parking", flat=True))
+            "id", flat=True).difference(bookings.values_list(
+                "parking", flat=True))
 
-        # Since used value_list in parking_avail mapping all opbject instead of having 
-        parking_list = Parking.objects.filter(id__in=parkings_avail).order_by("name")
-      
+        # Since used value_list in parking_avail, mapping all opbject.
+        parking_list = Parking.objects.filter(id__in=parkings_avail
+                                              ).order_by("name")
+
         if recharger_ecar:
-            car = Car.objects.filter(user=request.user).filter(is_electric=True)
+            car = Car.objects.filter(user=request.user
+                                     ).filter(is_electric=True)
             parking_list = parking_list.filter(is_electric=True)
-            print("MACCHINA ELETTRICA SI")
+            price = (abs(
+                (end_date - start_date).days) + 1) * PARKING_DAILY_COST_PLUS
         else:
             car = Car.objects.filter(user=request.user)
-            print("MACCHINA ELETTRICA NO")
+            parking_list = parking_list.filter(is_electric=False)
+            price = (abs(
+                (end_date - start_date).days) + 1) * PARKING_DAILY_COST
 
-        price = (abs((end_date - start_date).days) + 1) * PARKING_DAILY_COST
-        
         context = {
             'form': BookingForm({
                 'start_date': start_date,
@@ -78,6 +83,7 @@ class BookingView(View):
             'end_date': end_date,
             'final_price': price,
             'car_list': car,
+            'recharger_ecar': recharger_ecar,
         }
         return render(request, self.template_name, context)
 
@@ -100,7 +106,7 @@ class BookingView(View):
                 request,
                 'Error: Form not filled in correctly! Please try again!'
                 )
-            return redirect('searchparking')
+            return redirect(request.path)
 
 
 class RecapBookingView(DetailView):
@@ -108,6 +114,6 @@ class RecapBookingView(DetailView):
     model = Booking
     queryset = Booking.objects.all()
     template_name = 'booking/recap-booking.html'
-    
+
     def get_initial(self):
         return {'created_by': self.request.user}

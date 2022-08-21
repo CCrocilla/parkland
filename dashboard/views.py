@@ -32,17 +32,17 @@ class DashboardView(View):
     """
     model = Booking
     template_name = 'dashboard/dashboard.html'
-    
+
     def get(self, request):
         cars = Car.objects.all().filter(
             user=request.user).count()
-        
+
         bookings = Booking.objects.all().filter(
             created_by=request.user).count()
-        
+
         feedbacks = Feedback.objects.all().filter(
             created_by=request.user).count()
-        
+
         rewards = REWARDS_POINT * bookings
 
         context = {
@@ -145,7 +145,7 @@ class ProfileAvatarView(CreateView):
 
     def get_initial(self):
         return {'user': self.request.user}
-    
+
     def get_avatar_user(self):
         """
         This should return a list of all the avatar

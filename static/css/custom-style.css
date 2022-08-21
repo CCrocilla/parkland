@@ -1,0 +1,120 @@
+/*--------------------------------------------------------------
+Sections & Section Header
+--------------------------------------------------------------*/
+section {
+    padding: 60px 0;
+    overflow: hidden;
+}
+
+.sections-bg {
+    background-color: #F6F6F6;
+}
+
+.section-header {
+    text-align: center;
+    padding-bottom: 60px;
+}
+
+.section-header h2 {
+    font-size: 32px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    position: relative;
+}
+
+.section-header h2:after {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 50px;
+    height: 3px;
+    background: var(--color-primary);
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: auto;
+}
+
+.section-header p {
+    margin-bottom: 0;
+    color: #6f6f6f;
+}
+
+/*--------------------------------------------------------------
+Navbar Underline effect
+--------------------------------------------------------------*/
+.menu-all>ul>li>a:hover {
+    border-bottom: 2px solid #181D31;
+}
+
+/*--------------------------------------------------------------
+Footer
+--------------------------------------------------------------*/
+.btn-social-icons {
+    min-width: 50px
+}
+
+/*--------------------------------------------------------------
+Contact Us & Bookings Background Images
+--------------------------------------------------------------*/
+.bg-cb-image {
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.images-text-forms {
+    height: fit-content;
+    text-align: center;
+    color: #FFFFFF;
+    padding: 30px;
+    margin: 40px auto;
+    background-color: rgba(24, 29, 49, 0.9);
+    border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+Dashboard
+--------------------------------------------------------------*/
+.sb-sidenav-dark {
+    background-color: #181D31;
+}
+
+small ul li {
+    color: #000000 !important;
+}
+
+
+.delete-modals {
+    text-align: center;
+    padding: 5px;
+    margin: 20px auto;
+    background-color: rgba(24, 29, 49, 0.2);
+    border-radius: 20px;
+}
+
+/*--------------------------------------------------------------
+Booking Page
+--------------------------------------------------------------*/
+.alert>ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+}
+
+.btn-large {
+    min-width: 150px;
+}
+
+/*--------------------------------------------------------------
+Editing Profile Page
+--------------------------------------------------------------*/
+.ht-check-none #id_is_active+.helptext {
+    display: none;
+}
+
+.ht-check-none #id_password {
+    display: none;
+}

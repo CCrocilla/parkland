@@ -2,8 +2,8 @@ from django.db import models
 # https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
 from django.contrib.auth.models import User
 from django.urls import reverse
-from django.urls import reverse_lazy
-from cloudinary.models import CloudinaryField
+# from django.urls import reverse_lazy
+# from cloudinary.models import CloudinaryField
 
 
 class Car(models.Model):
@@ -82,7 +82,7 @@ class SearchParking(models.Model):
 
     def __str__(self):
         return str(self.id)
-    
+
     def get_absolute_url(self):
         """ Redirect to List of Search Parking """
         return reverse('booking', kwargs={'id': self.id})

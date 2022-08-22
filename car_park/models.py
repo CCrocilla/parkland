@@ -147,7 +147,7 @@ class Feedback(models.Model):
         )
     title = models.CharField(max_length=100)
     rating_stars = models.IntegerField(null=True, blank=False)
-    comment = models.TextField(max_length=100, blank=False, null=False)
+    comment = models.TextField(max_length=650, blank=False, null=False)
 
     class Meta:
         """ Sorting by Create Date """

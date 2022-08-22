@@ -203,9 +203,11 @@
                     <p class="text-light">Subscribe to the newsletter for free!</p>
                     <div class="position-relative w-100 mt-3">
                         <form>
-                            <input id="newsletter-email" class="form-control border-0 rounded-pill w-100 ps-4 pe-5"
-                                type="email" placeholder="Email" style="height: 48px;">
-                            <button type="button" class="btn shadow-3 position-absolute top-0 end-0 mt-1 me-2"
+                            <input id="newsletter-email"
+                                class="form-control border-0 rounded-pill w-100 ps-4 pe-5 newsletter-field" type="email"
+                                placeholder="Email">
+                            <button type="button"
+                                class="btn shadow-3 position-absolute rounded-circle top-0 end-0 mt-1 me-1"
                                 onclick="onSubmitNewsletter()">
                                 <i class=" fa fa-paper-plane text-primary" aria-hidden="true"></i>
                             </button>
@@ -216,13 +218,14 @@
                                         "newsletter-email").value);
                                     if (!isEmail) {
                                         Toastify({
-                                            backgroundColor: "red",
+                                            backgroundColor: "linear-gradient(103deg, rgba(195,34,34,1) 6%, rgba(253,100,45,1) 100%)",
                                             text: 'Invalid Email!',
                                             duration: 3000
                                         }).showToast();
                                         return;
                                     }
                                     Toastify({
+                                        backgroundColor: "linear-gradient(208.18deg, #67C3F3 9.05%, #5A98F2 76.74%)",
                                         type: "success",
                                         text: 'Thanks for your subscription!',
                                         duration: 3000

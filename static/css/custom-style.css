@@ -55,6 +55,10 @@ Footer
     min-width: 45px
 }
 
+.newsletter-field {
+    height: 52px;
+}
+
 /*--------------------------------------------------------------
 Contact Us & Bookings Background Images
 --------------------------------------------------------------*/
@@ -85,6 +89,10 @@ small ul li {
     color: #000000 !important;
 }
 
+.pagination-buttons {
+    min-width: 120px;
+    text-align: center;
+}
 
 .delete-modals {
     text-align: center;

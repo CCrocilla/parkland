@@ -12,16 +12,27 @@
 
 {% if user.is_authenticated %}
 
+
+
 {% if messages %}
 
 {% for message in messages %}
+
+{% if "signed" in message|safe %}
+
+{% else %}
+
 <div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show" role="alert">
     {{ message }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
+
+{% endif %}
+
 {% endfor %}
 
 {% endif %}
+
 
 <section class="py-4 mt-5 mb-4">
     <div class="container-lg">
@@ -168,7 +179,7 @@
                         <div class="modal fade" id="confirmationModal" tabindex="-1"
                             aria-labelledby="confirmationModalLabel" aria-hidden="true">
                             <div class="modal-dialog">
-                                <div class="modal-content shadow p-3 my-10 rounded-3 border border-5 border-warning">
+                                <div class="modal-content p-3 my-10 rounded-3 border border-5 border-warning">
                                     <div class="modal-header">
                                         <h5 class="modal-title" id="confirmationModalLabel">Confirm Booking?</h5>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal"
@@ -180,11 +191,11 @@
                                     </div>
                                     <div class="modal-footer justify-content-center">
                                         <button type="button"
-                                            class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
+                                            class="m-2 btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
                                             data-bs-dismiss="modal">Cancel
                                         </button>
                                         <button type="submit"
-                                            class="m-2 btn btn-lg btn-minwidth btn-outline-primary rounded-pill">Book
+                                            class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill">Book
                                         </button>
                                     </div>
                                 </div>

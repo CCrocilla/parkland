@@ -2,8 +2,6 @@ from django.db import models
 # https://docs.djangoproject.com/en/4.0/ref/contrib/auth/
 from django.contrib.auth.models import User
 from django.urls import reverse
-# from django.urls import reverse_lazy
-# from cloudinary.models import CloudinaryField
 
 
 class Car(models.Model):

@@ -165,13 +165,12 @@
 
                         {% if parking_list and car_list %}
                         <a class="m-2 btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
-                            href="{% url 'searchparking' %}">Go
-                            Back
+                            href="{% url 'searchparking' %}" aria-label="Go to Search Parking">Go Back
                         </a>
 
                         <!-- Button to trigger the confirmation booking modal -->
                         <button type="button" class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
-                            data-bs-toggle="modal" data-bs-target="#confirmationModal">
+                            data-bs-toggle="modal" data-bs-target="#confirmationModal" aria-label="Book Modal">
                             Book
                         </button>
 
@@ -192,10 +191,11 @@
                                     <div class="modal-footer justify-content-center">
                                         <button type="button"
                                             class="m-2 btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
-                                            data-bs-dismiss="modal">Cancel
+                                            data-bs-dismiss="modal" aria-label="Cancel">Cancel
                                         </button>
                                         <button type="submit"
-                                            class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill">Book
+                                            class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
+                                            aria-label="Book Parking">Book
                                         </button>
                                     </div>
                                 </div>
@@ -205,8 +205,7 @@
                         {% else %}
 
                         <a class="m-2 btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
-                            href="{% url 'searchparking' %}">Go
-                            Back
+                            href="{% url 'searchparking' %}" aria-label="Go to Search Parking">Go Back
                         </a>
 
                         {% endif %}
@@ -226,7 +225,8 @@
 <ol class="breadcrumb mb-4">
     <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
-<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}"
+    aria-label="Login">Login</a>
 
 {% endif %}
 

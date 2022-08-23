@@ -23,7 +23,8 @@ class SearchParkingForm(ModelForm):
                 'Error: Start Date cannot be greater than the End Date!')
         elif start_date < today:
             raise ValidationError(
-                'Error: Start Date cannot be in the past!')
+               'Error: Start Date cannot be in the past and must be \
+                   greater than today!')
 
     class Meta:
         model = SearchParking

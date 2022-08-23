@@ -39,9 +39,9 @@
                 Comment: {{ feedback.comment|slice:":200" }}... <br />
 
                 <a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill mt-4"
-                    href="{% url 'edit-feedback' feedback.pk %}">Edit</a>
+                    href="{% url 'edit-feedback' feedback.pk %}" aria-label="Edit">Edit</a>
                 <a class="btn btn-lg btn-minwidth btn-outline-danger rounded-pill mt-4"
-                    href="{% url 'delete-feedback' feedback.pk %}">Delete</a>
+                    href="{% url 'delete-feedback' feedback.pk %}" aria-label="Delete">Delete</a>
 
             </div>
 
@@ -62,7 +62,8 @@
 <ol class="breadcrumb mb-4">
     <li class="active">Click on the Link below to be redirected to the Login Page!</li>
 </ol>
-<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}">Login</a>
+<a class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill" href="{% url 'account_login' %}"
+    aria-label="Login">Login</a>
 
 {% endif %}
 

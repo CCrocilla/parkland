@@ -24,7 +24,8 @@
                         <form method="POST" enctype="multipart/form-data">
                             {% csrf_token %}
                             {{ form|crispy }}
-                            <button type="submit" class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill">Upload</button>
+                            <button type="submit" class="btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
+                                aria-label="Go to Homepage">Upload</button>
                         </form>
                     </div>
                 </div>

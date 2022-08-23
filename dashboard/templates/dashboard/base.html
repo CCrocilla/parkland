@@ -21,8 +21,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500&amp;display=swap"
         rel="stylesheet">
-
-    <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- <link href="{% static 'css/styles.css' %}" rel="stylesheet" type="text/css" /> -->
     <link href="{% static 'css/theme.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/rating-stars.css' %}" rel="stylesheet" type="text/css">
     <link href="{% static 'css/custom-style.css' %}" rel="stylesheet" type="text/css">
@@ -40,10 +41,11 @@
     <!--                    Navbar                   -->
     <!-- ============================================-->
     <nav class="sb-topnav navbar navbar-expand sb-sidenav-dark ">
-        <a class="fs-2 ps-3 text-decoration-none text-white" href="{% url 'homepage' %}">Parkland</a>
+        <a class="fs-2 ps-3 text-decoration-none text-white" href="{% url 'homepage' %}"
+            aria-label="Go to Homepage">Parkland</a>
         <!-- Sidebar Toggle-->
         <button class="fs-2 btn btn-link btn-sm order-0 order-lg-0 mx-3 text-light text-decoration-none d-inline-block"
-            id="sidebarToggle" href="#!"><i class="fas fa-bars"></i></button>
+            id="sidebarToggle" href="#!" aria-label="Open Sidebar"><i class="fas fa-bars"></i></button>
         <ul class="navbar-nav ms-auto me-3">
             <li class="nav-item">
                 <a class="nav-link text-light text-decoration-none" href="{% url 'account_logout' %}">
@@ -213,11 +215,12 @@
     <!--                  JavaScripts                   -->
     <!-- ===============================================-->
 
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" crossorigin="anonymous"> 
-    </script> -->
-
-    <script src="{% static 'js/popper.min.js' %}" type="application/javascript"></script>
-    <script src="{% static 'js/bootstrap.min.js' %}" type="application/javascript"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"
+        integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous">
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js"
+        integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous">
+    </script>
     <script src="{% static 'js/is.min.js' %}" type="application/javascript"></script>
     <script src="{% static 'js/theme.js' %}" type="application/javascript"></script>
     <script src="https://kit.fontawesome.com/0644654b1f.js" crossorigin="anonymous" type="application/javascript">

@@ -9,16 +9,21 @@ https://docs.djangoproject.com/en/4.0/topics/settings/
 For the full list of settings and their values, see
 https://docs.djangoproject.com/en/4.0/ref/settings/
 """
-# Cloudinary Config
-import cloudinary                   # NOQA
-import cloudinary.uploader          # NOQA
-import cloudinary.api               # NOQA
+
 # Settings Config
 from pathlib import Path
 import os
 import dj_database_url
 if os.path.isfile('env.py'):
     import env                      # NOQA
+
+# Cloudinary Config
+import cloudinary                   # NOQA
+
+CLOUDINARY_URL = os.environ.get('CLOUDINARY_URL')
+
+import cloudinary.uploader          # NOQA
+import cloudinary.api               # NOQA
 
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
@@ -143,17 +148,17 @@ WSGI_APPLICATION = 'parkland.wsgi.application'
 # https://docs.djangoproject.com/en/4.0/ref/settings/#databases
 
 
-if os.environ.get('DEBUG') == 'True':
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': BASE_DIR / 'db.sqlite3',
-        }
-    }
-else:
-    DATABASES = {
-        'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
-    }
+# if os.environ.get('DEBUG') == 'True':
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': BASE_DIR / 'db.sqlite3',
+#         }
+#     }
+# else:
+DATABASES = {
+    'default': dj_database_url.parse(os.environ.get('DATABASE_URL'))
+}
 
 # Password validation
 # https://docs.djangoproject.com/en/4.0/ref/settings/#auth-password-validators

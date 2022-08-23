@@ -11,10 +11,10 @@
 
 {% block content %}
 
-<div class="container mt-5 py-5">
+<div class="container mt-2 py-2">
     <div class="row justify-content-center">
         <div class="col-lg-6">
-            <div class="card shadow-lg border-0 rounded-lg mt-5">
+            <div class="card shadow-lg border-0 rounded-lg rounded-3 mt-5">
                 <div class="card-body">
                     <div class="container-fluid">
                         <div class="row mt-5">
@@ -50,7 +50,7 @@
                             <a class="mb-2 py-2 button secondaryAction btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
                                 href="{% url 'account_reset_password' %}"
                                 aria-label="Link Forgot Password">{% trans "Forgot Password?" %}</a>
-                            <a class="mb-2 py-2 button secondaryAction btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
+                            <a class="mb-2 py-2 button secondaryAction btn btn-lg btn-minwidth btn-outline-info rounded-pill"
                                 href="{{ signup_url }}" aria-label="Link Sign Up">Need an account?</a>
                         </div>
                     </div>

@@ -38,8 +38,8 @@
                                     {% endif %}
                                     <div class="d-flex justify-content-center align-items-center">
                                         <button
-                                            class="mb-2 py-2 primaryAction btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
-                                            type="submit">{% trans "Sign In" %}</button>
+                                            class="mb-2 py-2 primaryAction btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
+                                            type="submit" aria-label="Sign In">{% trans "Sign In" %}</button>
                                     </div>
                                 </form>
                             </div>
@@ -47,10 +47,11 @@
                     </div>
                     <div class="card-footer text-center py-3">
                         <div class="medium">
-                            <a class="mb-2 py-2 button secondaryAction btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
-                                href="{% url 'account_reset_password' %}">{% trans "Forgot Password?" %}</a>
                             <a class="mb-2 py-2 button secondaryAction btn btn-lg btn-minwidth btn-outline-primary rounded-pill"
-                                href="{{ signup_url }}">Need an account?</a>
+                                href="{% url 'account_reset_password' %}"
+                                aria-label="Link Forgot Password">{% trans "Forgot Password?" %}</a>
+                            <a class="mb-2 py-2 button secondaryAction btn btn-lg btn-minwidth btn-outline-warning rounded-pill"
+                                href="{{ signup_url }}" aria-label="Link Sign Up">Need an account?</a>
                         </div>
                     </div>
                 </div>

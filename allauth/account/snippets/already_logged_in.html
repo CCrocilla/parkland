@@ -2,4 +2,11 @@
 {% load account %}
 
 {% user_display user as user_display %}
-<p><strong>{% trans "Note" %}:</strong> {% blocktrans %}you are already logged in as {{ user_display }}.{% endblocktrans %}</p>
+<p><strong>{% trans "Note" %}:</strong> {% blocktrans %}you are already logged in as
+    {{ user_display }}.{% endblocktrans %}
+</p>
+
+
+<a class="btn btn-lg btn-minwidth m-2 btn-outline-primary rounded-pill" href="{% url 'homepage' %}"
+    aria-label="Go to Homepage">Go back to Homepage
+</a>

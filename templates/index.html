@@ -148,11 +148,12 @@
 
                 <h2 class="fw-bold lh-base">Booking</h2>
                 <hr class="text-dark mx-auto mx-md-0" style="height:2px;width:50px" />
-                <p class="pt-3">Only Registered user can access! Please log in by clicking <a
-                        href="{% url 'account_login' %}">here</a> or register a new account if you are new <a
-                        href="{% url 'account_signup' %}">here</a></p>
-
+                <p class="pt-3">Only Registered user can access! Please log in by clicking on
+                    <a href="{% url 'account_login' %}">Sign in here</a> or register a new account if you are new on
+                    <a href="{% url 'account_signup' %}">Sign up here</a>
+                </p>
                 {% endif %}
+
             </div>
         </div>
     </div>
@@ -168,17 +169,19 @@
                 {% for feedback in feedback_list %}
                 <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" data-bs-interval="10000">
                     <div class="row h-100">
-                        <div class="col-12">
-                            <div class="card text-white bg-primary-gradient">
+                        <div class="col-10 offset-1">
+                            <div class="card text-white bg-primary-gradient rounded-3">
                                 <div class="card-body p-4 p-md-4">
                                     <h2 class="fw-bold text-white text-center">What our customer are saying:</h2>
                                     <hr class="mx-auto" style="height:2px;width:50px" />
                                     <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
 
                                         <div class="w-md-25 my-3">
-                                            <h5 class="fw-medium text-white mb-0">Created By: {{ feedback.created_by }}
+                                            <h5 class="fw-medium text-white mb-0">Created By:
+                                                {{ feedback.created_by }}
                                             </h5>
-                                            <h5 class="fw-medium text-white mb-0">Rating: {{ feedback.rating_stars }}/5
+                                            <h5 class="fw-medium text-white mb-0">Rating:
+                                                {{ feedback.rating_stars }}/5
                                             </h5>
                                             <hr class="text-white mx-auto mx-md-0" style="height:2px;width:50px" />
                                             <p class="fw-normal mb-0">Date: {{ feedback.created_date }}</p>

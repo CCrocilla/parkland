@@ -4,25 +4,29 @@
 
 ## **Overview**
 
-#### The website offer the possibility to book a parking slots for your car! 
-#### Internet users all around the world, when they travel, uses parking website where they can book a parking slot for their car to go easily to the airport.
-#### The website is intuitive and user-friendly and offers all the services to the user for their cars! The user can register in to the website in few easy steps(entering their First Name, Last Name, Username, Email) and have access to the Services offered! The users can also subscribe to a newsletter to receive regular updates about Parkland as well as provide a feedback about our service that can be reviewed on the main page, report issues or request support!
+#### The website offers car parking facilities and more!
+#### Who doesn’t like travelling? Experimenting new food and culture, learning new languages, for fun or business, travelling enriches us greatly. Parkland offers the opportunity to start your journey stress-free….NO waiting for a TAXI, NO crowded BUS, NO TRAIN...the customers can reach the airport and park the car in all comforts with extra services (coffee, car wash, 24/7 shuttle services) available just at a fingertips.   
+#### The website is intuitive and user-friendly! The users can register to the website with a few easy steps by entering Username and Email and have access to all Parkland great services! The users can also subscribe to a newsletter and receive regular updates as well as provide/review feedback, report issues or request support!
 
 
-<a href="Here will be inserted the Link of the Website" target="_blank" rel="noopener noreferrer"><img src="Here will be inserted the image" alt="Home Page" width="800px"/></a>
-Click in the image above to access the Live Website or [click here!](https://ccrocilla.github.io "Parkland")
+
+<a href="https://parkland.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src="Here will be inserted the image" alt="Home Page" width="800px"/></a>
+Click in the image above to access the Live Website or [click here!](https://parkland.herokuapp.com/ "Parkland")
 
 ## **Project** 
+
 
 ### **User Goal**
 - Easy, Intuitive and User-Friendly Website!
 - Wide compatibility with every Browsers and Devices.
-- A new fast, easy and intuitive way to book car parking slot.
-- Time is precious for our everyone and we save yours offering specific parking slots booking.
-- Large amount of Services offered to the users. 
-- Possibility for the user to share his/her own experience via the Contact Us Page leaving a Feedback visible to the users in the Home Page.
+- A fast, easy and intuitive way to book car parks.
+- Time is precious for everyone and we save yours offering a great booking experience.
+- High variety of Services offered to the users.
+- Possibility to share customer experience via the Dashboard Page.
+- Fellow Customer feedback visible to the users in the Home Page.
 - Newsletter available to receive updates/offers via email.
-- Possibility for the user to report an issue or request assistence/support.
+- Possibility to report an issue or request assistance/support.
+
 
 ---
 
@@ -30,27 +34,28 @@ Click in the image above to access the Live Website or [click here!](https://ccr
 
 ### **User Stories**
 - #### First Time Visitor Goals
-	1. As a First Time visitor of a website dedicated to parking cars, I want to have a visual impact on the Landing Page that will attract my attention.  
-	2. As a First Time Visitor, I want to be able to navigate easely through the website.
-	3. As a First Time Visitor, I want to be able to see the services offered by the parking website.
-	4. As a First Time Visitor, I want to be able to see the prices of the parking. 
-	5. As a First Time Visitor, I want to be able to have clear Instructions on how the parking works.
-	6. As a First Time Visitor, I want to find the website pleasant to the eye, visually intuitive, with catchy colours and images.
+    1. As a First Time visitor of a website dedicated to parking cars, I want to have a visual impact on the Landing Page that will attract my attention.  
+    2. As a First Time Visitor, I want to be able to easily navigate through the website.
+    3. As a First Time Visitor, I want to be able to see the services offered by the parking website.
+    4. As a First Time Visitor, I want to find the website pleasant to the eye, visually intuitive, with catchy colours and images.
 
 - #### Returning Visitor Goals
-	1. As a Returning Visitor, I want to be able to register to the website.
-	2. As a Returning Visitor, I want to be able to book a parking slot.
-	3. As a Returning Visitor, I want to be able to report issue.
-	4. As a Returning Visitor, I want to be able to request assistance.
-	5. As a Returning Visitor, I want to access the website through my social media accounts.
+    1. As a Returning Visitor, I want to be able to register to the website.
+    2. As a Returning Visitor, I want to be able to book a parking slot.
+    3. As a Returning Visitor, I want to be able to see the prices of the parking.
+    4. As a Returning Visitor, I want to be able to report issues.
+    5. As a Returning Visitor, I want to be able to request assistance.
+    6. As a Returning Visitor, I want to access the website through my social media accounts.
 
 - #### Frequent User Goals
-	1. As a Frequent User, I want to see new services.
-	2. As a Frequent User, I want to book car slots.
-	3. As a Frequent User, I want to be able to change my personal registered information(if necessary). 
-	4. As a Frequent User, I want to sign up to the Newsletter in order to receive updates obout Parkland.
-	5. As a Frequent User, I want to report issues.
-	6. As a Frequent User, I want to share a feedback on the website.
+    1. As a Frequent User, I want to see new services.
+    2. As a Frequent User, I want to book car slots.
+    3. As a Frequent User, I want to be able to change my personal registered information (if necessary).
+    4. As frequent User I want to be able to access my personal information via a Dashboard Page.
+    5. As a Frequent User, I want to sign up to the Newsletter to receive updates about Parkland.
+    6. As a Frequent User, I want to report issues.
+    7. As a Frequent User, I want to share a feedback on the website.
+
 
 
 <!-- Use Cases Area -->
@@ -60,13 +65,14 @@ Click in the image above to access the Live Website or [click here!](https://ccr
 <details>
     <summary>Description</summary>
     
-- User can use this website to book a parking slot.
+- User can use this website to book parking.
 - Users should be able to read the Instructions/FAQ.
-- Users should be able to see the services available. 
-- Users should be able to book a parking slot based on type of car.
-- Users should be able to see the feedback leaved by other customers.
+- Users should be able to see/access the available services.
+- Users should be able to book a parking slot based on type of car (electric vs non-electric cars).
+- Users should be able to see other customers feedback.
 - The home page also provides information about the history and rational of the website.
 
+
 </details>
 
 <details>
@@ -80,38 +86,40 @@ Click in the image above to access the Live Website or [click here!](https://ccr
 <details>
     <summary>Pre-Conditions</summary>
 
-User should register into the website to book a parking slot.
-User should register into the website to leave a feedback/report issue/require assistance.
+Users should register into the website to book a parking slot.
+Users should register into the website to leave a feedback.
+
 </details>
 
 <details>
     <summary>Basic Flow</summary>
 
-- The user browses for parking close to the airport and discover the website. The user navigates to the Home Page of the website, and it is  attarcted by the visual impact of the website. 
-- The user see the price and read the instructions/FAQ. 
-- The user see the services available.
-- The user book a parking slot. 
+- The user browses for parking facilities close to the airport and discovers the website. The user navigates to the Home Page, and is attracted by the visual impact of the website.
+- Users with electric cars will have the possibility to book dedicated spots with electric chargers.
+- The user sees the available services.
+- The user books a parking slot.
+
 </details>
 
 <details>
     <summary>Alternative/Exception Flow</summary>
 
 - When the user selects a non-existent page, a 404 Error Page will be prompted guiding the user back to Home Page.
-- If the user is not logged in it is not possible to book a parking slot nor leave feedback/report issue/require assistance.
+- If the user is not logged in, it is not possible to book a parking slot nor leave feedback.
+
 </details>
+<br/>
 
 
-### *_Parking Page_*
+### *_Booking Page_*
 <details>
     <summary>Description</summary>
-    
-- User can use this website to book a parking slot. 
+   
+- Users can use this website to book a parking slot.
 - Users should be able to book a parking slot based on a date range.
-- Users should be able to book a parking slot based on type of car.
+- Users should be able to book a parking slot based on the car’s type.
 - Users should be able to see a recap of the information of the booking.
-- Users should be able to have a double confirmation system for the booking. 
-- Users should be able to pay via website. 
-
+- Users should be able to have a double confirmation system for the booking.
 
 </details>
 
@@ -120,39 +128,39 @@ User should register into the website to leave a feedback/report issue/require a
 
 **System:** Car Parking Website.
 
-**Actors:** User looking for book a parking slot close to the Airport.
+**Actors:** Users looking to book a parking slot close to the Airport.
 </details>
 
 <details>
     <summary>Pre-Conditions</summary>
 
-User should register into the website to book a parking slot.
+Users should register into the website to book a parking slot.
 </details>
 
 <details>
     <summary>Basic Flow</summary>
 
-- The user browses for parking close to the airport and discover the website. The user navigates to the Parking Page of the website, and it is attarcted by the visual impact of the website. 
-- The user selects a date range, pick the type of car, select the parking slot desired and see the price. 
-- The user review the information entered and confirms the booking.
-- The user is redirected to the payment system. 
+- The user browses for parking close to the airport and discovers the website. The user navigates to the Booking Page of the website, and is attracted by the visual impact of the website.
+- The user can select a date range, can choose parking slots depending on the type of owned car (electric/non-electric), select the desired slot and visualise the price.
+- The user can review the information entered and confirm the booking.
+ 
 </details>
 
 <details>
     <summary>Alternative/Exception Flow</summary>
 
 - When the user selects a non-existent page, a 404 Error Page will be prompted guiding the user back to Home Page.
-- If the user is not logged in it is not possible to book a parking slot nor leave feedback/report issue/require assistance.
+- If the user is not logged-in, it is not possible to book a parking slot nor leave feedback.
 </details>
-
+<br/>
 
 
 ### *_Contact Us_*
 <details>
     <summary>Description</summary>
 
-- Users can use this page of the website to provide a general feedback, subscribe for the newsletter, report issues or request assistence.
-- Users can use this page to see the general info of Parkland Company. 
+- Users can subscribe to the newsletter, report issues or request assistance.
+- Users can use this page to see the general info of Parkland Company (including Address, Email address, phone, and a map showing Parkland location).
 </details>
 
 <details>
@@ -160,58 +168,152 @@ User should register into the website to book a parking slot.
 
 **System:** Car Parking Website.
 
-**Actors:** Users that want to report issue, provide feedback, subscribe to a newsletter or request assistence.
+**Actors:** Users who want to report issues, subscribe to a newsletter or request assistance.
 </details>
 
 <details>
     <summary>Pre-Conditions</summary>
-User should register into the website to leave a feedback.
+Users should accept the Terms and Conditions to be able to ask for support/ report issues or for subscribing to the Newsletter.
 </details>
 
 <details>
     <summary>Basic Flow</summary>
 
-- The user browses for quiz and discover the website. The user navigate to the Home Page and then go in the Contact Us Page. 
-- The user fill in the mandatory fields.
-- The user can select using the checkboxes provided what he/she want to do before submitting (provide a general feedback, subscribe for the newsletter, report issues or require assistance).
-- The user will be redirected to the same page and a notification is displayed to the user informing of the Success to provide a clear feedback to the user that the form has been submitted. 
+- The user browses the internet to book a parking space and discovers the website. The user navigates to the Home Page and then goes into the Contact Us Page.
+- The user fills the mandatory fields.
+- The user must accept the Terms and Conditions to subscribe to the news letter and/or report issues/ request support.
+- The user can select the available checkboxes to subscribe for the newsletter.
+- The user submits the form.
+- The user receives a notification indicating that the form has been submitted successfully.
 
 </details>
 
 <details>
     <summary>Alternative/Exception Flow</summary>
 
-- The user can reset the form filled.
+- The user can reset the form.
 - When the user selects a non-existent page, a 404 Error Page will be prompted guiding the user back to Home Page.
 </details>
+<br/>
+
+
+### *_Dashboard_*
+<details>
+    <summary>Description</summary>
+- Users can access the Dashboard page only when they are signed in.
+- Users can access a number of services divided into separate subpages listed as follow:
+1. My Parkland: to access active/past bookings, rewards, to review registered cars and/or be redirected to the feedback subpage (see point 4).
+2. My Profile: to create or edit their personal profile, change their passwords, register a new car and/or list/delete previously registered cars.
+3. My Bookings: to visualise a list of active/past bookings.
+4. My Feedback: to visualise past or add new feedback. Once signed-in the user is presented with the possibility to delete/edit past feedback.
+
+</details>
+
+<details>
+    <summary>System & Actors</summary>
+
+**System:** Car Parking Website.
+
+**Actors:** Users that want to access past/present bookings, rewards, edit or create their profile (including car registration) and/or provide/review feedback.
+</details>
+
+<details>
+    <summary>Pre-Conditions</summary>
+User should register into the website to access the page.
+</details>
+
+<details>
+    <summary>Basic Flow</summary>
+
+- The user browses for parking and discovers the website. The user sign into the website and navigates to the Dashboard Page. The user is presented with a list of possible options to access the bookings/ the feedback or their profile page.
+- The user clicks into the desired subpage.
+- The user is able to perform a list of desired actions of choice.
+
+</details>
+
+<details>
+    <summary>Alternative/Exception Flow</summary>
+
+- When the user selects a non-existent page, a 404 Error Page will be prompted guiding the user back to Home Page.
+</details>
+<br/>
+
+
+### *_Sign In/ Sign UP_*
+<details>
+    <summary>Description</summary>
+
+- Users can subscribe to the website.
+- Users can sign-in to the website.
+
+</details>
+
+<details>
+    <summary>System & Actors</summary>
+
+**System:** Car Parking Website.
+
+**Actors:** Users who want to register/sign-in to the website.
+</details>
+
+<details>
+    <summary>Pre-Conditions</summary>
+Users should be willing to register to the website.
+</details>
+
+<details>
+    <summary>Basic Flow</summary>
+
+- The user browses the internet to book a parking space and discovers the website. The user navigates to the Home Page and then goes into the Sign Up Page.
+- Users subscribe to the website by filling the mandatory fields.
+- Users will receive a confirmation email to their address.
+- Users verify the provided email address.
+- Users sign-in with the chosen username/email and passwords.
+
+
+</details>
+
+<details>
+    <summary>Alternative/Exception Flow</summary>
+
+- The users can click on the Forgot Password Button if they are not able to sign in.
+- The users can click to the Need an Account Button if they need to register.
+- When the user selects a non-existent page, a 404 Error Page will be prompted guiding the user back to Home Page.
+
+</details>
+
 
 
 ---
 
 ## **Design**
 
-#### The webpage has been designed to provide a simple, interractive and intuitive view which is able to offer a ...... 
-#### Every page has a minimalistic structure which however contains all the relevant features in order to provide the user with an intercative, clear and effective experience.  
+#### The webpage has been designed to provide a simple, interactive and intuitive view which is able to offer a pleasant experience to customers looking to book a car park.
+#### Every page has a minimalistic structure which however contains all the relevant features in order to provide the user with an interactive, clear and effective experience.  
 
 - ### **Colour Scheme**
-#### The goal is to use a colour palette that will provide the user with a good and positive impact at a first glance, when opening the website and through the entire navigation experience. 
-#### The list of colors is chosen to be pleasing to the eyes providing an excellent contrast that will allow the user to have prolonged navigation hours without tiring the eyes. 
+#### The goal is to use a colour palette that will provide the user with a good and positive impact at a first glance, when opening the website and through the entire navigation experience.
+#### The list of colors is chosen to be pleasing to the eyes providing an excellent contrast that will allow the user to have prolonged navigation hours without tiring the eyes.
+
 Colour Source: 
   - #### [Adobe Color](https://color.adobe.com/create/color-wheel)
   - #### [Color Hunt](https://colorhunt.co/) 
-#### The main colors are Navy (#181D31) and Beige (#E6DDC4) and those characterize the full website while Orange (#FB743E) is used to make a good contrast in the elements to provide a better view of those elements. 
+#### The main colors are Navy (#181D31), White (#XXXX) and Black for text and background, Cyan (#181D31) with Text White (#XXXX) for the feedback, Orange (#XXXX) and Navy (#181D31) for the cards/ Booking Page.
+#### Navy (#181D31) it has also been used for the background in the Booking and Contact us Forms. These colors are chosen to highlight different components and to make a good contrast providing a better view of those components.
  
 
 - ### **Typography**
-#### Google Fonts has been used to select the fonts for the Website. 
-#### The Main fonts used are: 'XXX' and 'XXX' while the Sans-serif has been set up as fall-back in case the main font is not loaded. 
+#### Google Fonts has been used to select the fonts for the Website.
+#### The Main fonts used is: 'Mulish' while the Sans-serif has been set up as fall-back in case the main font is not loaded.
+
 Source:
   - [Google Fonts](https://fonts.google.com/)
 
 
 - ### **Images and Videos**
 #### Real and effective images have been used to provide a pleasant visual experience to the user.
-#### The developer selected a video for the home page of the websites, the selected video helps in providing a pleasant visual experience to the user.
+#### The developer selected those images from the following source to mimic a full immersive car related content.
+
 Sources:  
   - [Pexels](https://www.pexels.com/)
 
@@ -219,43 +321,130 @@ Sources:
 
 ## **Features**
 - ### *__Structure__*:
-The page has been structured in an easy and user-friendly way with 4 different pages. 
-The Structure of the website and the components used are listed below: 
+The website has been structured in an easy and user-friendly way with 6 main pages. Non-authenticated and authenticated customers are provided with two different page views. The Non-authenticated can visualise and access only the Home Page, Contact Us, Sign-In and Sign-Up pages, while the authenticated customers are also able to access the Booking and the Dashboard pages.
+The Structure of the website and the components used are listed below:
+
 
 - ### *__Home Page__*:
-#### The Home Page shows the logo of the website on the top center of the page and a navigation bar on the top right.
-#### A small underline animation activates when the user mouse hovers on of the elements in the nav bar, highlighting the content. 
-#### The active page is underlined in the navigation bar when selected. 
-#### Depending on the device used (if laptop, desktop, tablet or smartphone) the positions of the nav bar change, creating an hamburger menu that will be displayed on the top right part of the page to adapt the view for a highly responsive rendering. 
-#### Those behaviour are consistent in all pages. 
-#### Following from Logo and the nav bar the user will see a Background Image inside of which there is a text for the user for visual attract purpose.
-#### The Booking Section is under the Hero Image and shows all the basics information that needs to be filled in by the user to book a parking slot.
-#### The Services Section shows all the services offered (Rent, Wash, Coffee, Bus......)
-#### The Feedback Section shows the latest 10 feedbacks leaved by the users.
-#### {WORK IN PROGRESS}
- 
+#### The Home Page shows the logo of the website on the top left and a navigation bar on the top right of the page.
+#### A small underline animation activates when the user mouse hovers on of the elements in the nav bar, highlighting the content.
+#### The active page is in Bold in the navigation bar when selected.
+#### Depending on the device used (if laptop, desktop, tablet or smartphone) the position of the nav bar changes, creating a hamburger menu that will be displayed on the top right part of the page to adapt the view for a highly responsive rendering.
+#### Those behaviour are consistent in all pages.
+#### Following from Logo and the nav bar the user will see a brief description of the website associated with an image on the right side.
+#### The Services Section shows all the services offered (Car Wash, Coffee, Bus Services)
+#### The Booking Section is under the Services Section and offer the possibility to register to the website for non-authenticated user or be redirected into the Booking Page for authenticated users.
+#### This is obtained by using a Django Tag with an if else statement to differentiate the content depending on the type of user (non-authenticated vs authenticated).
+#### The Feedback Section shows the latest 3 feedbacks provided by other users.
+#### The Latest Update Section shows new info about the company or new added services.
+#### The Footer section concludes the Home Page, allowing the users to select the different sections of the website or to access Parkland social media with one click.
+#### The Footer section changes depending on the Pages selected (Home vs other Pages): a Django Tag and an if else statement show/hide the Services and Feedback Sections in the footer.
+
+
 - ### *__Contact Us Page__*:
 #### This page has Header and Footer consistent with the Home Page.
-#### The page is characterized by an image extended as background on top of which there is a form that the user can fill with the following information: Username, Email Address and a Checkboxes (or Radio) Buttons that will allow the user to select:
-- Newsletter (the users can receive the newsletter weekly).
-- Feedback (The user can provide a general feedback on the website).
-- Report Issue (The user can report an issue).
-- Assistance (The user can submit his/her own assistance requests).
-#### A Reset and a Sign In Button are included.
-#### The Reset Button resets the form. 
-#### The user will be redirected to the same page and a notification is displayed to the user informing of the Success to provide a clear feedback to the user that the form has been submitted. 
-#### {WORK IN PROGRESS}
+#### The page is characterized by an image extended as background on top of which there is a form that the user can fill with the following information: First, Last Name, Email Address and a Checkbox that will allow the user to subscribe to a ‘Dummy’ newsletter.
+#### The user needs to accept the Terms & Conditions Check box to being able to move forward.
+#### A Reset and a Submit buttons are included.
+#### The Reset Button resets the form.
+#### The user will be redirected to the same page and a notification is displayed informing the user that the request has been submitted successfully.
+#### Following the form, the page shows a map with Parkland’s location and details (Company Name, Address, Email, Phone Number and Opening Hours). Hoovering the mouse over the company information boxes a small animation highlights the hoovered icon for an effective visual impact.
 
-- ### *__Thank you page__*:
-This page will be triggered when the user clicks on the Submit Button for both the Share and Contact Us Page. 
-The page is characterized by an image extended as background overlaid by a clear message for the user.
-This page is used to let the user know that the data has been inserted correctly.
-The users have also the possibility to click on the highlighted orange text in order to navigate back to the Home Page. 
+
+- ### *__Sign Up/Sign In Page and Authentication Process__*:
+#### This page has Header and Footer consistent with the Home Page.
+#### The authentication module used for Parkland is Allauth (a set of Django applications dealing with account authentication, registration, management, and third-party (social) account authentication) add link.
+#### The pages have been directly imported from Allauth and customized for the needs of Parkland.   
+
+#### In the Sign Up Page, there is a form that the user can fill with the following information: Email Address (with confirmation), Username and Password (with confirmation).
+#### A Reset and a Sign Up buttons are included.
+#### The Reset Button resets the form.
+#### By clicking on the Sign Up Button (if all mandatory fields have been filled-in correctly) the user will be redirected to the verification email page and a real email is sent to the user requesting validation. The user is not allowed to sign-in in parkland until the verification is completed.
+#### If the form is not filled-in correctly, a message appears to the user to request to fill-in the information correctly.
+
+#### In the Sign In Page, there is a form that the user can fill with the following information: Email Address (or Username) and Password.
+#### A Sign in and a Forgot Password are included.
+#### When clicking on Forgot Password the user is redirected to a Password reset form, where the user is prompted to insert the email address to receive an email with the new password.
+#### By clicking on the Sign In Button (if all mandatory fields have been filled-in correctly) the user will be redirected to the Homepage.
+#### If the form is not filled in correctly, the user is not able to access the web pages.
+
+
+- ### *__Booking Page__*:
+#### This page has Header and Footer consistent with the Home Page.
+#### Only Authenticated Users can access the Booking page.
+#### The Booking process is composed of 3 pages, by clinking on the dedicated page of the nav bar, the user is redirected to first booking page.
+#### In here, the user needs to indicate the arrival and the departure dates (Start and End Date) and click on Recharger Electric Car if they need to book a parking slot dedicated to electric cars.
+#### The database will be queried for available parking slot in the selected dates showing only electric cars and dedicated parking slots if the Recharger Electric Car filter is selected.
+#### The users, redirected to the second page, or Car and Parking Selection Page, need to select the pre-filled car registration number (the price charge will be auto populated), and one of the available parking slot.
+#### The car registration number is stored into the database, populated by the user when registering to the website (car registration is a mandatory field). The drop-down car registration is obtained with a database query per user.
+#### When clinking on Book a pop-up will ask the users if they want to keep going and confirm the booking, once doing so the third page of the booking system is open and the users are provided with a recap of the booking info in the UI.
+
+
+- ### *__Dashboard__*:
+#### The Dashboard has been structured in an easy and user-friendly way with 8 main pages divided in 4 Sections (My Parkland, My Profile, My Bookings, My Feedback).
+#### The Dashboard shows the logo of the website on the top left and a Hamburger Menu that toggles the opening and closing of a side nav bar.
+#### All the forms have been realized with Crispy Forms of Django and Crispy bootstrapp (For Details please visit the link: https://pypi.org/project/crispy-bootstrap5/)
+#### The Dashboard shows also the Logout Button on the top right allowing the user to easily exit the website.
+ 
+#### Depending on the device used (laptop, desktop, tablet or smartphone) the sidebar opens and closes automatically allowing the user to select different options from the hamburger menu and/or have a full visual of the page for a highly responsive rendering.
+#### Those behaviours are consistent in all sections of Dashboard.
+#### The Logo and the Sidebar are consistent in all sections.
+
+#### All Dashboard's Sections listed below: 
+
+<details>
+    <summary>My Parkland</summary>
+
+My Parkland summarises in just one page-view and with different cards all user’s information allowing to access Bookings, Registered Cars, Rewards points and provided Feedback. A link “View Details” is present in each card and will redirect the users to the selected list.
+The Function .count() has been used in this section to retrieve the total number of the selected items.
+A Reward Card displays the Customer Points earned depending on the quantity of Bookings (100 points per booking).
+“My Parkland” also includes a Message Center realized using Django messages where all content (like Sign In, Sign Out of the user) is displayed.
+
+</details>
+
+
+<details>
+    <summary>My Profile</summary>
+
+“My Profile” is composed of 4 main sub-section (Edit Profile, Change Password, Add Cars, Cars List) realized using class base views. In Edit Profile (realized using a UpdateView), the users can edit their own profile changing Username, First and Last Name, Email Address and Deactivate the Account (by unchecking the “Account Active” Checkbox).
+
+The user can change the password using the “Change Password” Page. This has been realized using the PasswordChangeView and PasswordChangeForm provided by Django auth views/forms. The pages have been customized to match the color schema and layout of Parkland.
+
+Through “Add Cars” (realized using a CreateView) the users can register a new car and review all the registered cars (Cars List).
+Accessing Cars List triggers a query to the Cars’ database table, filtering and displaying only the cars of the logged-in user.
+The users can also delete the registered cars (the deletion page is realized using a DeleteView). A pop-up is displayed to request user confirmation. In addition, the message highlights the fact that by deleting the cars, the associated bookings will also be deleted.
+
+</details>
+
+
+<details>
+   <summary>My Bookings</summary>
+
+“My Booking” includes the Booking List Page where all the bookings made by the user are listed. In order to realize this page a ListView has been used. Accessing Booking List triggers a queries to the Booking’s database table, filtering and displaying only the bookings of the logged-in user.
+Similarly to other pages, single booking information are summarised in cards. Each card includes the possibility to review the details of the booking using a dedicated Details Button, or delete all information, using Delete (in this case, a pop-up requests users’ confirmation).
+
+</details>
+
+
+<details>
+   <summary>My Feedback</summary>
+
+“My Feedback” includes 2 sub-section (Add Feedback and Feedback List).
+The subsections are consistent in colors and layout with the Sections described above.
+Add Feedback (realized using a CreateView) allows the user to leave a Feedback to Parkland.
+The latest 3 feedback added are displayed in the Homepage.
+In order to realize a better visual impact feedback page a combination between the forms provided by Django and a custom form has been used where each feedback can be rated with a star system (from 1 to 5) for easy-to-use and effective view.
+In the Feedback List for a consistent display setting through the website, the logged-in user feedback are shown in cards.
+The Feedback List has been realized using a ListView. The user can review all information as well as Edit or Delete using dedicated buttons.
+Consistently with all other pages deleting a feedback triggers a pop-up message requesting user’s confirmation.
+
+</details>
+
 
 - ### *__404 Error Page__*:
-For any broken or incorrect links, the 404 Error page will be triggered. Here the user will have an image displayed in the background and above text box that will inform the users that the page is not correct. 
-A hyperlink is present in the text displayed and highlighted in orange in order to allow the user to navigate back to the Home Page.  
- 
+#### For any broken or incorrect links, the 404 Error page will be triggered. Here the user will have an image displayed in the background and above text box that will inform the users that the page is not correct.
+#### A button is present in the text displayed and highlighted in cyan in order to allow the user to navigate back to the Home Page.  
+
 ---
 
 ## **Wireframe**
@@ -533,7 +722,7 @@ Additional tests include checks on different devices using the Toggle Device Emu
 ### Deployment
 
 - ### **Github**
-The repository for the project Sweet & Sour has been created using Github using the following procedures:
+The repository for the project Parkland has been created using Github using the following procedures:
 1. Create a Github account [Github.com](https://github.com/)
 2. In the top left Github Home Page click on the green New Button in order to create a new repository
 3. Select the Template if available (Example: Code-Institute-Org/gitpod-full-template)
@@ -611,115 +800,3 @@ All the Images as well as the Video included in the Home Page have been taken fr
 
 Thank you to the entire Code Institute Team and the Slack Community for their feedback, help and support. 
 
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-----------------------------------------------------------------------------------------------------------------------------------------------------------------------
-
-![CI logo](https://codeinstitute.s3.amazonaws.com/fullstack/ci_logo_small.png)
-
-Welcome CCrocilla,
-
-This is the Code Institute student template for Gitpod. We have preinstalled all of the tools you need to get started. It's perfectly ok to use this template as the basis for your project submissions.
-
-You can safely delete this README.md file, or change it for your own project. Please do read it at least once, though! It contains some important information about Gitpod and the extensions we use. Some of this information has been updated since the video content was created. The last update to this file was: **September 1, 2021**
-
-## Gitpod Reminders
-
-To run a frontend (HTML, CSS, Javascript only) application in Gitpod, in the terminal, type:
-
-`python3 -m http.server`
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-To run a backend Python file, type `python3 app.py`, if your Python file is named `app.py` of course.
-
-A blue button should appear to click: _Make Public_,
-
-Another blue button should appear to click: _Open Browser_.
-
-In Gitpod you have superuser security privileges by default. Therefore you do not need to use the `sudo` (superuser do) command in the bash terminal in any of the lessons.
-
-To log into the Heroku toolbelt CLI:
-
-1. Log in to your Heroku account and go to *Account Settings* in the menu under your avatar.
-2. Scroll down to the *API Key* and click *Reveal*
-3. Copy the key
-4. In Gitpod, from the terminal, run `heroku_config`
-5. Paste in your API key when asked
-
-You can now use the `heroku` CLI program - try running `heroku apps` to confirm it works. This API key is unique and private to you so do not share it. If you accidentally make it public then you can create a new one with _Regenerate API Key_.
-
-------
-
-## Release History
-
-We continually tweak and adjust this template to help give you the best experience. Here is the version history:
-
-**September 1 2021:** Remove `PGHOSTADDR` environment variable.
-
-**July 19 2021:** Remove `font_fix` script now that the terminal font issue is fixed.
-
-**July 2 2021:** Remove extensions that are not available in Open VSX.
-
-**June 30 2021:** Combined the P4 and P5 templates into one file, added the uptime script. See the FAQ at the end of this file.
-
-**June 10 2021:** Added: `font_fix` script and alias to fix the Terminal font issue
-
-**May 10 2021:** Added `heroku_config` script to allow Heroku API key to be stored as an environment variable.
-
-**April 7 2021:** Upgraded the template for VS Code instead of Theia.
-
-**October 21 2020:** Versions of the HTMLHint, Prettier, Bootstrap4 CDN and Auto Close extensions updated. The Python extension needs to stay the same version for now.
-
-**October 08 2020:** Additional large Gitpod files (`core.mongo*` and `core.python*`) are now hidden in the Explorer, and have been added to the `.gitignore` by default.
-
-**September 22 2020:** Gitpod occasionally creates large `core.Microsoft` files. These are now hidden in the Explorer. A `.gitignore` file has been created to make sure these files will not be committed, along with other common files.
-
-**April 16 2020:** The template now automatically installs MySQL instead of relying on the Gitpod MySQL image. The message about a Python linter not being installed has been dealt with, and the set-up files are now hidden in the Gitpod file explorer.
-
-**April 13 2020:** Added the _Prettier_ code beautifier extension instead of the code formatter built-in to Gitpod.
-
-**February 2020:** The initialisation files now _do not_ auto-delete. They will remain in your project. You can safely ignore them. They just make sure that your workspace is configured correctly each time you open it. It will also prevent the Gitpod configuration popup from appearing.
-
-**December 2019:** Added Eventyret's Bootstrap 4 extension. Type `!bscdn` in a HTML file to add the Bootstrap boilerplate. Check out the <a href="https://github.com/Eventyret/vscode-bcdn" target="_blank">README.md file at the official repo</a> for more options.
-
-------
-
-## FAQ about the uptime script
-
-**Why have you added this script?**
-
-It will help us to calculate how many running workspaces there are at any one time, which greatly helps us with cost and capacity planning. It will help us decide on the future direction of our cloud-based IDE strategy.
-
-**How will this affect me?**
-
-For everyday usage of Gitpod, it doesn’t have any effect at all. The script only captures the following data:
-
-- An ID that is randomly generated each time the workspace is started.
-- The current date and time
-- The workspace status of “started” or “running”, which is sent every 5 minutes.
-
-It is not possible for us or anyone else to trace the random ID back to an individual, and no personal data is being captured. It will not slow down the workspace or affect your work.
-
-**So….?**
-
-We want to tell you this so that we are being completely transparent about the data we collect and what we do with it.
-
-**Can I opt out?**
-
-Yes, you can. Since no personally identifiable information is being captured, we'd appreciate it if you let the script run; however if you are unhappy with the idea, simply run the following commands from the terminal window after creating the workspace, and this will remove the uptime script:
-
-```
-pkill uptime.sh
-rm .vscode/uptime.sh
-```
-
-**Anything more?**
-
-Yes! We'd strongly encourage you to look at the source code of the `uptime.sh` file so that you know what it's doing. As future software developers, it will be great practice to see how these shell scripts work.
-
----
-
-Happy coding!

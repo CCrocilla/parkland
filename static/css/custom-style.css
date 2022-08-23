@@ -482,3 +482,15 @@ Dashboard
 .sb-sidenav-light .sb-sidenav-footer {
     background-color: #e9ecef;
 }
+
+.menu-all>ul>li>a {
+    border-bottom: 2px solid transparent;
+}
+
+.form-control {
+    border-radius: 2rem;
+}
+
+.form-check-input[type="checkbox"] {
+    border-radius: 2.5rem;
+}

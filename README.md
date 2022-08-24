@@ -390,15 +390,17 @@ The Structure of the website and the components used are listed below:
 #### Those behaviours are consistent in all sections of Dashboard.
 #### The Logo and the Sidebar are consistent in all sections.
 
-#### All Dashboard's Sections listed below: 
+#### All Dashboard's Sections listed below (Open the accordion for more information): 
 
 <details>
     <summary>My Parkland</summary>
 
-My Parkland summarises in just one page-view and with different cards all user’s information allowing to access Bookings, Registered Cars, Rewards points and provided Feedback. A link “View Details” is present in each card and will redirect the users to the selected list.
-The Function .count() has been used in this section to retrieve the total number of the selected items.
-A Reward Card displays the Customer Points earned depending on the quantity of Bookings (100 points per booking).
-“My Parkland” also includes a Message Center realized using Django messages where all content (like Sign In, Sign Out of the user) is displayed.
+#### My Parkland summarises in just one page-view and with different cards all user’s information allowing to access Bookings, Registered Cars, Rewards points and provided Feedback. A link “View Details” is present in each card and will redirect the users to the selected list.
+
+#### The Function .count() has been used in this section to retrieve the total number of the selected items.
+#### A Reward Card displays the Customer Points earned depending on the quantity of Bookings (100 points per booking).
+
+#### “My Parkland” also includes a Message Center realized using Django messages where all content (like Sign In, Sign Out of the user) is displayed.
 
 </details>
 
@@ -406,13 +408,14 @@ A Reward Card displays the Customer Points earned depending on the quantity of B
 <details>
     <summary>My Profile</summary>
 
-“My Profile” is composed of 4 main sub-section (Edit Profile, Change Password, Add Cars, Cars List) realized using class base views. In Edit Profile (realized using a UpdateView), the users can edit their own profile changing Username, First and Last Name, Email Address and Deactivate the Account (by unchecking the “Account Active” Checkbox).
+#### “My Profile” is composed of 4 main sub-section (Edit Profile, Change Password, Add Cars, Cars List) realized using class base views. In Edit Profile (realized using a UpdateView), the users can edit their own profile changing Username, First and Last Name, Email Address and Deactivate the Account (by unchecking the “Account Active” Checkbox).
 
-The user can change the password using the “Change Password” Page. This has been realized using the PasswordChangeView and PasswordChangeForm provided by Django auth views/forms. The pages have been customized to match the color schema and layout of Parkland.
+#### The user can change the password using the “Change Password” Page. This has been realized using the PasswordChangeView and PasswordChangeForm provided by Django auth views/forms. The pages have been customized to match the color schema and layout of Parkland.
 
-Through “Add Cars” (realized using a CreateView) the users can register a new car and review all the registered cars (Cars List).
-Accessing Cars List triggers a query to the Cars’ database table, filtering and displaying only the cars of the logged-in user.
-The users can also delete the registered cars (the deletion page is realized using a DeleteView). A pop-up is displayed to request user confirmation. In addition, the message highlights the fact that by deleting the cars, the associated bookings will also be deleted.
+#### Through “Add Cars” (realized using a CreateView) the users can register a new car and review all the registered cars (Cars List).
+#### Accessing Cars List triggers a query to the Cars’ database table, filtering and displaying only the cars of the logged-in user.
+
+#### The users can also delete the registered cars (the deletion page is realized using a DeleteView). A pop-up is displayed to request user confirmation. In addition, the message highlights the fact that by deleting the cars, the associated bookings will also be deleted.
 
 </details>
 
@@ -420,8 +423,9 @@ The users can also delete the registered cars (the deletion page is realized usi
 <details>
    <summary>My Bookings</summary>
 
-“My Booking” includes the Booking List Page where all the bookings made by the user are listed. In order to realize this page a ListView has been used. Accessing Booking List triggers a queries to the Booking’s database table, filtering and displaying only the bookings of the logged-in user.
-Similarly to other pages, single booking information are summarised in cards. Each card includes the possibility to review the details of the booking using a dedicated Details Button, or delete all information, using Delete (in this case, a pop-up requests users’ confirmation).
+#### “My Booking” includes the Booking List Page where all the bookings made by the user are listed. In order to realize this page a ListView has been used. Accessing Booking List triggers a queries to the Booking’s database table, filtering and displaying only the bookings of the logged-in user.
+
+#### Similarly to other pages, single booking information are summarised in cards. Each card includes the possibility to review the details of the booking using a dedicated Details Button, or delete all information, using Delete (in this case, a pop-up requests users’ confirmation).
 
 </details>
 
@@ -429,14 +433,17 @@ Similarly to other pages, single booking information are summarised in cards. Ea
 <details>
    <summary>My Feedback</summary>
 
-“My Feedback” includes 2 sub-section (Add Feedback and Feedback List).
-The subsections are consistent in colors and layout with the Sections described above.
-Add Feedback (realized using a CreateView) allows the user to leave a Feedback to Parkland.
-The latest 3 feedback added are displayed in the Homepage.
-In order to realize a better visual impact feedback page a combination between the forms provided by Django and a custom form has been used where each feedback can be rated with a star system (from 1 to 5) for easy-to-use and effective view.
-In the Feedback List for a consistent display setting through the website, the logged-in user feedback are shown in cards.
-The Feedback List has been realized using a ListView. The user can review all information as well as Edit or Delete using dedicated buttons.
-Consistently with all other pages deleting a feedback triggers a pop-up message requesting user’s confirmation.
+#### “My Feedback” includes 2 sub-section (Add Feedback and Feedback List).
+#### The subsections are consistent in colors and layout with the Sections described above.
+
+#### Add Feedback (realized using a CreateView) allows the user to leave a Feedback to Parkland.
+#### The latest 3 feedback added are displayed in the Homepage.
+
+#### In order to realize a better visual impact feedback page a combination between the forms provided by Django and a custom form has been used where each feedback can be rated with a star system (from 1 to 5) for easy-to-use and effective view.
+#### In the Feedback List for a consistent display setting through the website, the logged-in user feedback are shown in cards.
+
+#### The Feedback List has been realized using a ListView. The user can review all information as well as Edit or Delete using dedicated buttons.
+#### Consistently with all other pages deleting a feedback triggers a pop-up message requesting user’s confirmation.
 
 </details>
 
@@ -453,6 +460,10 @@ Consistently with all other pages deleting a feedback triggers a pop-up message 
 
 
 - ## Home Page 
+
+<details>
+    <summary>Home Page Wireframes</summary> 
+
 <details>
     <summary>Click here for Desktop View</summary>  
 <img src="" alt="Desktop View Homepage" width="800px"/>
@@ -468,7 +479,14 @@ Consistently with all other pages deleting a feedback triggers a pop-up message 
 <img src="" alt="Smartphone View Homepage" width="400px"/>
 </details>
 
-- ## Parking Page
+</details>
+
+
+- ## Booking Page
+
+<details>
+    <summary>Booking Page Wireframes</summary> 
+
 <details>
     <summary>Click here for Desktop View</summary>
 <img src="" alt="Desktop View Recipes Page" width="800px"/>
@@ -484,10 +502,16 @@ Consistently with all other pages deleting a feedback triggers a pop-up message 
 <img src="" alt="Smartphone View Recipes Page" width="400px"/>
 </details>
 
+</details>
+
 - ## Contact Us Page
+
+<details>
+    <summary>Contact Us Page Wireframes</summary>
+
 <details>
     <summary>Click here for Desktop View</summary>
-<img src="" alt="Desktop View Contact Us Page" width="800px"/>
+<img src="static/" alt="Desktop View Contact Us Page" width="800px"/>
 </details>
 
 <details>
@@ -498,6 +522,8 @@ Consistently with all other pages deleting a feedback triggers a pop-up message 
 <details>
     <summary>Click here for Smartphone View</summary>
 <img src="" alt="Smartphone View Contact Us Page" width="400px"/>
+</details>
+
 </details>
 
 - ## Thanks You Page
@@ -573,11 +599,21 @@ Consistently with all other pages deleting a feedback triggers a pop-up message 
     - #### Convertio has been used to convert the images in webp exxtension.
 
 - #### Heroku
-    - {{Add Description}}
+    - #### Heroku is a platform as a service (PaaS) and it has been used to run the Parkland website application entirely on the cloud.
+
+- #### Wondershare EdrawMax:
+    - #### Wondershare EdrawMax has been used to create the Database Schema for the website.
+
+- #### Microsoft Whiteboard:
+    - #### This is an infinite, collaborative canvas for effective meetings and engaging learning. Whiteboard was used to summarise the programming steps, the layout and the rationale behind those. Whiteboard has been used together with the Wondershare EdrawMax.
+
 
 ---
 ## **Testing**
-The testing phases have been carried out using the **W3C Javascript Validator**, **W3C CSS Validator** and **W3C Markup Validator**(in all pages). No errors have been identified from the Validators as can be seen in the screenshot below: 
+The testing phases have been carried out using the **PIP8 Python Validator**. No errors have been identified from the Validators as can be seen in the screenshots below:
+
+
+The testing phases have been also carried out using the **W3C Javascript Validator**, **W3C CSS Validator** and **W3C Markup Validator**(in all pages). No errors have been identified from the Validators as can be seen in the screenshot below: 
 
 - **JavaScript**
 
@@ -636,32 +672,32 @@ Below it is possible to taka e look at the result obtained in Lighthouse:
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Homepage</summary>
-<img src="" alt="Lighthouse Desktop Homepage" width="800px"/>
+<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Homepage</summary>
-<img src="" alt="Lighthouse Mobile Homepage" width="800px"/>
+<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Contact Us</summary>
-<img src="" alt="Lighthouse Desktop Contact Us" width="800px"/>
+<img src="static/images/readme/lighthouse/contactus-desktop.webp" alt="Lighthouse Desktop Contact Us" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Contact Us</summary>
-<img src="" alt="Lighthouse Mobile Contact Us" width="800px"/>
+<img src="static/images/readme/lighthouse/contactus-mobile.webp" alt="Lighthouse Mobile Contact Us" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for for Lighthouse Desktop - Sign In/Sign Up</summary>
-<img src="" alt="Lighthouse Desktop Thank you" width="800px"/>
+    <summary>Click here for for Lighthouse Desktop - Sign In</summary>
+<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Desktop Sign In" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for for Lighthouse Mobile - Sign In/Sign Up</summary>
-<img src="" alt="Lighthouse Mobile Thank You" width="800px"/>
+    <summary>Click here for for Lighthouse Mobile - Sign In</summary>
+<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Mobile Sign In" width="800px"/>
 </details>
 
 <details>
@@ -678,25 +714,76 @@ Below it is possible to taka e look at the result obtained in Lighthouse:
 
 - ### **Test Cases**
 
-List of Test Cases perfomed. All the Tests have also been performed in all the Devices and the tests includes also Layout testing. 
+- #### List of Manual Test Cases perfomed. 
+All the Tests have also been performed in all the Devices and the tests includes also Layout testing. 
 
-| Page | Feature | Expected Result | Status | 
+| Page | Feature | Expected Result | Status |
 | --- | --- | --- | --- |
 | Home | Header | Make sure that the Logo and the nav bar are displayed on the top part of the Home Page. | Example: Pass |
+| Home | Header | Make sure that non authenticated users can only access Home, Contact Us, Sign In/Up Pages. |  |
+| Home | Header | Make sure that authenticated user can see/access Home, Booking, Contact Us, My Parkland Dashboard. |  |
 | Home | Header | Make sure that by clicking on the Logo the user is redirected to the Home Page. |  |
-| Home | Header | Make sure that the Background Image is displayed with no overlap with the Logo and Nav Bar. |  |
-| Contact Us | Images | Make sure that the background image is displayed correcly. |  |
-| Contact Us | Form | Make sure all the fields (Username and Email) are editable. |  |
-| Contact Us | Form | Make sure all the fields (Username and Email) are mandatory. |  |
-| Contact Us | Form | Make sure all the checkbox/radio buttons are clickable. |  |
-| Contact Us | Form | Make sure all the Text Area field appear only if the user flags the checkboxes (Feedback, Report Issues). |  |
-| Contact Us | Form | Make sure that the Reset Form Button works and that deletes all the information entered in the form. |  |
-| Contact Us | Form | Make sure that the Submit Button works and that provide a clear message for the user. |  |
-| 404 Error Page | Image | Make sure that the background image is displayed correctly when the user is automatically redirected to the 404 Error Page if trying to displaying a page that does not exist in the website. |  |
-| 404 Error Page | Text | Make sure that the text is displayed in the center of the page. |  |
-| 404 Error Page | Text | Make sure that the user can be redirected back to the Home Page using the Home anchor element present in the text. |  |
+| Home | Parkland Section | Make sure that the Image of Parkland is displayed with no overlap with the Logos, Nav Bar and/or text. |  |
+| Home | Parkland Section | Make sure that the Image of Parkland is displayed on the right and does not overlap with the Text Description on the left. |  |
+| Home | Service Section | Make sure that the Services are displayed with Image on top and text is centered. |  |
+| Home | Services Section | Make sure that only 3 cards are displayed with no overlap between the images and the text included into the cards. |  |
+| Home | Story Section | Make sure that the Image is displayed with no overlap with other sections. |  |
+| Home | Story Section | Make sure that the Image is displayed on the left side while the text is on the right. |  |
+| Home | Booking Section | Make sure that the Image is displayed with no overlap with other sections. |  |
+| Home | Booking Section | Make sure that the Image is displayed on the right while the text is on the left. |  |
+| Home | Booking Section | Make sure that a non authenticated user has the possibility to Sign in and Sign up. |  |
+| Home | Booking Section | Make sure that an Authenticated User can see the Booking button to access the Booking Page. |  |
+| Home | Feedback Section | Make sure that the feedback area displays a carousel with Users’ Feedback.|  |
+| Home | Feedback Section | Make sure that the user can use the arrows to switch between feedbacks. |  |
+| Home | Updates Section | Make sure that the cards with the company updates are displayed correctly.|  |
+| Home | Footer | Make sure that the footer displays the information of the company |  |
+| Home | Footer | Make sure that the footer provides the link to access the social media and when clicking on the icons a new tab is opened |  |
+| Home | Footer | Make sure that the user can sign up with an email address to receive the newsletter.|  |
+| Home | Footer | Make sure that by clicking on the newsletter form button if no email or an invalid email has been entered an error message is displayed to the user. |  |
+| Home | Footer | Make sure that by clicking on the newsletter form button if correct email has been entered a success message notification is displayed to the user |  |
+| Contact Us | Images | Make sure that the background image is displayed correctly. |  |
+| Contact Us | Form | Make sure all the fields (First Name, Last Name, Email, Text) are editable. |  |
+| Contact Us | Form | Make sure all the checkboxes (Newsletter and Terms & Condition) are clickable. |  |
+| Contact Us | Form | Make sure all the fields (First Name, Last Name, Email, Text, Terms & Condition) are mandatory. |  |
+| Contact Us | Form | Make sure that the Reset Form Button works and deletes all the information entered in the form. |  |
+| Contact Us | Form | Make sure that the Submit Button works and provides a clear message to the user. |  |
+| Booking| Page | Make sure that only authenticated user can access and view the content of the Booking Page. |  |
+| Booking | Images | Make sure that the background image is displayed correctly. |  |
+| Booking | Search Form | Make sure all the fields (Start and End Date) are editable and mandatory. |  |
+| Booking | Search Form | Make sure that the Search Button works and redirects the user to the Booking Area. |  |
+| Booking | Booking Form | Make sure that the Start and End date are in read-only mode. |  |
+| Booking | Booking Form | Make sure that the all the fields (Cars, Parking Slot) are editable. |  |
+| Booking | Booking Form | Make sure that the Car field is a Dropdown displaying only the logged-in user’s cars. |  |
+| Booking | Booking Form | Make sure that the Parking field is a Dropdown that display only the available Parking Slots. |  |
+| Booking | Booking Form | Make sure that the Parking and Cars are filtered based on the search made by the user. |  |
+| Booking |Booking Form | Make sure that the price information is auto populated depending on the number of days selected. ||
+| Booking | Booking Form | Make sure that by clicking on the Book Button a modal is opened requesting confirmation to the user. |  |
+| Booking | Booking Form | Make sure that if the form is filled-in correctly and after submission, the user is redirected to the Recap Page. |  |
+| Booking | Recap Page | Make sure that the booking summary information is displayed in the page. ||
+| Dashboard | My Parkland | Make sure that only authenticated user can access and view the content of the My Parkland Page. |  |
+| Dashboard | My Parkland | Make sure that Booking, Cars, Feedback and Rewards Cards are displayed correctly. |  |
+| Dashboard | My Parkland | Make sure that the correct value of Bookings, Cars, Feedback and Rewards is displayed in each card. |  |
+| Dashboard | My Parkland | Make sure that the from the cards it is possible to access the lists of Bookings, Cars and Feedback. |  |
+| Dashboard | My Parkland | Make sure that the any available message is displayed correctly under the messages center.  |  |
+| Dashboard | My Profile | Make sure that the My Profile Section includes the Edit Profile, Change Password, Add Cars and Cars List Sub-Sections. |  |
+| My Profile | Edit Profile | Make sure that by clicking Edit Profile the user is able to access the personal information form. |  |
+| My Profile | Edit Profile | Make sure that in the Edit Profile Form the user can edit only his/her own personal information. |  |
+| My Profile | Change Password | Make sure that by clicking Change Password Sub-Section the user is able to successfully access the Change Password Page. |  |
+| My Profile | Change Password | Make sure that in the Change Password Form the user can change the password associated to his/her account. |  |
+| My Profile | Add Car | Make sure that by clicking Add Car the user is able to access the Add Car Page form. |  |
+| My Profile | Add Car | Make sure that filling-in the form, if the form is valid, the user is redirected to the Car List Page after submitting the form. |  |
+| My Profile | Add Car | Make sure that the user is obliged to fill the mandatory fields correctly. |  |
+| My Profile | Car List | Make sure that by clicking Cars List Sub-Section the user is able to access his/her own personal Car List. |  |
+| My Profile | Car List | Make sure that the user can visualise the information of his/her own registered car. |  |
+| My Profile | Car List | Make sure that the user can click on the Delete button to delete the registered car. |  |
+| My Profile | Car List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. |  |
+| My Profile | Car List | Make sure that the user is informed that by deleting a car the associated booking will be removed too. |  |
+| My Booking | Booking List | Make sure that the by clicking Change Profile Sub-Section the user change the password associated to his/her account. |  |
 
 
+- #### List of Automated Test Cases perfomed:
+8 Automated Tests have been performed in the application. 
+The Automation Testing includes Urls Testing and Views Testing. 
 
 
 ### **Additional Tests**
@@ -732,6 +819,25 @@ The repository for the project Parkland has been created using Github using the 
 7. Once Gitpod Extension has been installed, accessing the repository previously created, click on the Gitpod Button
 8. A new page will be opened and the Workspace will be created
    
+
+- ### **Heroku App**
+Heroku is a platform as a service (PaaS) used to run, operate the Connect 4 application entirely in the cloud using the following procedures:
+1.	Create an Heroku Account [Heroku.com](https://www.heroku.com/)
+2.	In the top right of the “Welcome to Heroku” Screen click on the New drop-down menu
+3.	Click on the Create “New App Button”
+4.	Select an App Name (Example: Connect-four)
+5.	Choose the region: “Europe”
+6.	Click on the Create App Button
+7.	Go in the Settings Tab
+8.	In the Config Vars section click on the Reveal Config Vars Button
+9.	Enter “PORT” in the Key field, “8000” in the Value field and then press Add
+10.	Go in the Buildpacks section and click on the Add Buildpack Button
+11.	Select python and press Save Changes
+12.	Go in the Deploy Tab 
+13.	In the Deployment method section select Github to connect with your repository
+14.	In the App connected to Github section type the name of the repository (Example: parkland) and then press Add
+15.	Go in the Manual section, select the correct branch and click on Deploy Branch
+16.	Click on the View Button as soon as the deploy is finished and you will be redirected to a new page with your application. 
 
 
 - ### **GitHub Pages**
@@ -769,18 +875,27 @@ In order to create a Local Clone follow the steps below:
 ---
 ## **Credits**
 
-Thanks to my Mentor, Narender Singh, for his guide and support in the realization of this project.
-Thanks to the useful reference and suggestions derived from sources listed below, I manage to gain a deeper understanding of how the various elements/components of HTML, CSS and Javascript are used. In addition, continuous trial and error tests provided a useful means to further experiment on the usage of these three programming languages for the creation of the site.
+Thanks to my Mentor, Narender Singh, for his guide and support in the realization of this project, for his availability and for being willing to talk to me on a Sunday night!!
+Thanks to the useful references and suggestions derived from sources listed below, I manage to gain a deeper understanding of how Django works and is used, including the integration with HTML. In addition, continuous trial and error tests provided a useful means to further experiment on the usage of these used programming languages for the creation of the site.
+
 
 - ### Content & Media
-All of the contents on the website are customised and no design frameworks have been used for the realization of the site.
-The idea of the Logo, the Navbar and the Footer were taken from the Love Running Project analysing and customizing their implementation for the created website.
-I explored the writing part of the code and the best practices associated to this using the two sites listed below. Consulting those allowed me to further cement the learning gained during the Code Institute Course.
+The landing Page of the website was initially realised using a bootstrap template. This Template has been gradually updates to meet the need of the website. A Django framework has been used for the realization of the site.
+The content of the application is entirely customised. In order to consolidate the knowledge acquired during the Code Institute Course dedicated to Django (as well as the HTML, CSS and Javascript), I have used the websites listed below studying and focussing on the writing coding procedures and its best practices:
 - [Medium.com](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
 - [Learn.shayhowe.com](https://learn.shayhowe.com/html-css/writing-your-best-code/)
+ADD LINK HERE
+- []()
+- []()
+- []()
+
+The most complex developing portions of the Parkland Website application were:
+-How to make the booking page properly working and the logic associated to it including the filtering on the search page (for Start/End Dates and for Electric Car Recharger) and the interaction between tables into the database to being able to display the correct information
+The following website were inspirational and helped me understanding how to structure the logic on the gravity of the coin entered in the table. I have customized and created my own code taking inspiration from:
 
 
-Listed here the Source of the studies: 
+
+Listed here additional sources of the studies: 
 - [Flexbox - W3School.com](https://www.w3schools.com/css/css3_flexbox.asp)
 - [Css-tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
@@ -798,5 +913,6 @@ Thanks to Kasia Bogucka and Narender Singh for suggesting the use of github wiki
 
 All the Images as well as the Video included in the Home Page have been taken from [Pexels.com](https://www.pexels.com/)
 
+But most of all thanks to my girlfriend Rosi Davi who is always beside me supporting me in this amazing journey!
 Thank you to the entire Code Institute Team and the Slack Community for their feedback, help and support. 
 

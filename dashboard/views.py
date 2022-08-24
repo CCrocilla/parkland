@@ -13,11 +13,9 @@ from django.urls import reverse_lazy
 from car_park.models import Booking
 from car_park.models import Feedback
 from car_park.models import Car
-from car_park.models import ProfileAvatar
 from .forms import FeedbackForm
 from .forms import EditProfileForm
 from .forms import ProfileCarForm
-from .forms import ProfileAvatarForm
 
 
 REWARDS_POINT = 100
@@ -108,13 +106,14 @@ class EditFeedbackView(UpdateView):
     fields = ['title', 'comment']
 
 
-class DeleteFeedbackView(DeleteView):
+class DeleteFeedbackView(SuccessMessageMixin, DeleteView):
     """
     Class to delete Feedback
     """
     model = Feedback
     template_name = 'dashboard/delete-feedback.html'
     success_url = reverse_lazy('list-feedback')
+    success_message = "Feedback deleted successfully!"
 
 
 ################################
@@ -133,29 +132,7 @@ class EditProfileView(UpdateView):
         return self.request.user
 
 
-class ProfileAvatarView(CreateView):
-    """
-    Class to Upload Profile Avatar
-    """
-    model = ProfileAvatar
-    form_class = ProfileAvatarForm
-    template_name = 'dashboard/profile-avatar.html'
-    queryset = ProfileAvatar.objects.all()
-    success_url = reverse_lazy('edit-profile')
-
-    def get_initial(self):
-        return {'user': self.request.user}
-
-    def get_avatar_user(self):
-        """
-        This should return a list of all the avatar
-        for the authenticated user.
-        """
-        avatar_user = self.request.user
-        return ProfileAvatar.objects.filter(user=avatar_user)
-
-
-class ProfileCarView(CreateView):
+class ProfileCarView(SuccessMessageMixin, CreateView):
     """
     Class to create Users' Cars
     """
@@ -163,6 +140,8 @@ class ProfileCarView(CreateView):
     form_class = ProfileCarForm
     template_name = 'dashboard/profile-car.html'
     queryset = Car.objects.all()
+    success_url = reverse_lazy('profile-car-list')
+    success_message = "Car registered successfully!"
 
     def get_initial(self):
         return {'user': self.request.user}
@@ -185,13 +164,14 @@ class ProfileCarListView(ListView):
         return Car.objects.filter(user=user)
 
 
-class ProfileCarDeleteView(DeleteView):
+class ProfileCarDeleteView(SuccessMessageMixin, DeleteView):
     """
     Class to delete Feedback
     """
     model = Car
     template_name = 'dashboard/profile-car-delete.html'
     success_url = reverse_lazy('profile-car-list')
+    success_message = "Car deleted successfully!"
 
 
 class PasswordChangeProfileView(PasswordChangeView):

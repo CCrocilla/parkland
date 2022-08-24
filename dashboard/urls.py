@@ -14,7 +14,6 @@ from .views import EditProfileView
 from .views import ProfileCarView
 from .views import ProfileCarListView
 from .views import ProfileCarDeleteView
-from .views import ProfileAvatarView
 from .views import PasswordChangeProfileView
 from .views import PasswordSuccess
 
@@ -59,11 +58,6 @@ urlpatterns = [
         'profile/edit',
         EditProfileView.as_view(),
         name='edit-profile'
-        ),
-    path(
-        'profile/avatar',
-        ProfileAvatarView.as_view(),
-        name='profile-avatar'
         ),
     path(
         'profile/car',

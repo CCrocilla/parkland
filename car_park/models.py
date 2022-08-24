@@ -116,10 +116,6 @@ class Booking(models.Model):
         )
     final_price = models.DecimalField(max_digits=50, decimal_places=2)
 
-    class Meta:
-        """ Order by Create Date """
-        ordering = ['created_date']
-
     def __str__(self):
         return str(self.id)
 
@@ -179,17 +175,3 @@ class Contact(models.Model):
     def __str__(self):
         """ Return First and Last Name """
         return str(self.first_name) + ' ' + str(self.last_name)
-
-
-class ProfileAvatar(models.Model):
-    """ Model for Profile's Avatar """
-    user = models.OneToOneField(
-        User,
-        on_delete=models.CASCADE,
-        related_name="user"
-        )
-    avatar = models.ImageField(
-        upload_to='images/avatar/',
-        blank=True,
-        null=True
-        )

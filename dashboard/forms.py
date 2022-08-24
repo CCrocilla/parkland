@@ -3,7 +3,8 @@ from django import forms
 from django.forms import ModelForm
 from django.contrib.auth.models import User
 from django.contrib.auth.forms import UserChangeForm
-from car_park.models import Feedback, Car, ProfileAvatar
+from car_park.models import Feedback
+from car_park.models import Car
 
 
 CHOICES = [
@@ -84,21 +85,6 @@ class EditProfileForm(UserChangeForm):
                     'class': 'form-control',
                     'required': 'false'
                     }),
-        }
-
-
-class ProfileAvatarForm(ModelForm):
-    """ Form for Users' Avatar """
-    def __init__(self, *args, **kwargs):
-        super().__init__(*args, **kwargs)
-        self.fields['user'].disabled = True
-
-    class Meta:
-        model = ProfileAvatar
-        fields = ('user', 'avatar')
-        labels = {
-            'user': '',
-            'avatar': 'Upload your Avatar!',
         }
 
 

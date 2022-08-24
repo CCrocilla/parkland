@@ -9,7 +9,6 @@
 {% if user.is_authenticated %}
 
 
-
 <!-- ===============================================-->
 <!--                Main Content                    -->
 <!-- ===============================================-->
@@ -23,7 +22,7 @@
 <div class="row">
     <div class="col-xl-3 col-md-6">
 
-        <div class="card bg-primary text-white mb-4">
+        <div class="card bg-primary text-white mb-4 rounded-3">
             <div class="card-body fs-1">Bookings: <span class="ms-2">{{ bookings }}</span></div>
 
             <div class="card-footer d-flex align-items-center justify-content-between">
@@ -34,7 +33,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <div class="card bg-success text-white mb-4">
+        <div class="card bg-success text-white mb-4 rounded-3">
             <div class="card-body fs-1">Cars: <span class="ms-2">{{ cars }}</span></div>
             <div class="card-footer d-flex align-items-center justify-content-between">
                 <a class="small text-white stretched-link" href="{% url 'profile-car-list' %}">View Cars</a>
@@ -44,7 +43,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <div class="card bg-danger text-white mb-4">
+        <div class="card bg-danger text-white mb-4 rounded-3">
             <div class="card-body fs-1">Feedback: <span class="ms-2">{{ feedbacks }}</span></div>
             <div class="card-footer d-flex align-items-center justify-content-between">
                 <a class="small text-white stretched-link" href="{% url 'list-feedback' %}">View Feedbacks</a>
@@ -54,7 +53,7 @@
     </div>
 
     <div class="col-xl-3 col-md-6">
-        <div class="card bg-warning text-white mb-4">
+        <div class="card bg-warning text-white mb-4 rounded-3">
             <div class="card-body fs-1">Rewards: <span class="ms-2">{{ rewards }}</span>Pt</div>
             <div class="card-footer d-flex align-items-center justify-content-between">
                 <a class="small text-white stretched-link" href="#"></a>
@@ -68,11 +67,11 @@
 <div class="row mt-4">
     <div class="col-12">
         <div class="card mb-4">
-            <div class="card-header bg-secondary rounded-2">
+            <div class="card-header bg-secondary rounded-3">
                 <!-- ===============================================-->
                 <!--                    Messages                    -->
                 <!-- ===============================================-->
-                <h3 class="text-white"> Messages Center:</h3>
+                <h3 class="text-white mb-0"> Messages Center:</h3>
             </div>
             <div>
                 {% if messages %}

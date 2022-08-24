@@ -200,8 +200,10 @@ Users should accept the Terms and Conditions to be able to ask for support/ repo
 ### *_Dashboard_*
 <details>
     <summary>Description</summary>
+
 - Users can access the Dashboard page only when they are signed in.
 - Users can access a number of services divided into separate subpages listed as follow:
+
 1. My Parkland: to access active/past bookings, rewards, to review registered cars and/or be redirected to the feedback subpage (see point 4).
 2. My Profile: to create or edit their personal profile, change their passwords, register a new car and/or list/delete previously registered cars.
 3. My Bookings: to visualise a list of active/past bookings.
@@ -750,6 +752,8 @@ All the Tests have also been performed in all the Devices and the tests includes
 | Booking| Page | Make sure that only authenticated user can access and view the content of the Booking Page. |  |
 | Booking | Images | Make sure that the background image is displayed correctly. |  |
 | Booking | Search Form | Make sure all the fields (Start and End Date) are editable and mandatory. |  |
+| Booking | Search Form | Make sure that the user cannot submit the form if the Start Date is greater than the End Date. |  |
+| Booking | Search Form | Make sure that the user cannot submit the form if the Start Date is less or equal to the current day. |  |
 | Booking | Search Form | Make sure that the Search Button works and redirects the user to the Booking Area. |  |
 | Booking | Booking Form | Make sure that the Start and End date are in read-only mode. |  |
 | Booking | Booking Form | Make sure that the all the fields (Cars, Parking Slot) are editable. |  |
@@ -821,11 +825,11 @@ The repository for the project Parkland has been created using Github using the 
    
 
 - ### **Heroku App**
-Heroku is a platform as a service (PaaS) used to run, operate the Connect 4 application entirely in the cloud using the following procedures:
+Heroku is a platform as a service (PaaS) used to run, operate the Parkland website application entirely in the cloud using the following procedures:
 1.	Create an Heroku Account [Heroku.com](https://www.heroku.com/)
 2.	In the top right of the “Welcome to Heroku” Screen click on the New drop-down menu
 3.	Click on the Create “New App Button”
-4.	Select an App Name (Example: Connect-four)
+4.	Select an App Name (Example: Parkland)
 5.	Choose the region: “Europe”
 6.	Click on the Create App Button
 7.	Go in the Settings Tab

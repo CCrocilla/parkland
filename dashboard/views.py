@@ -1,6 +1,7 @@
 """ Imports """
 from django.shortcuts import render
 from django.views import View
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.messages.views import SuccessMessageMixin
 from django.views.generic import ListView
 from django.views.generic import DetailView
@@ -24,7 +25,7 @@ REWARDS_POINT = 100
 ################################
 #       Dashboard View         #
 ################################
-class DashboardView(View):
+class DashboardView(LoginRequiredMixin, View):
     """
     Class to display Users' Dashboard
     """
@@ -119,7 +120,7 @@ class DeleteFeedbackView(SuccessMessageMixin, DeleteView):
 ################################
 #         Profile Views        #
 ################################
-class EditProfileView(UpdateView):
+class EditProfileView(LoginRequiredMixin, UpdateView):
     """
     Class to Edit Profile Information
     """
@@ -212,15 +213,6 @@ class BookingDetailsView(DetailView):
     model = Booking
     queryset = Booking.objects.filter().order_by('-created_date')
     template_name = 'dashboard/booking-details.html'
-    fields = '__all__'
-
-
-class BookingEditView(UpdateView):
-    """
-    Class to display single User's Booking
-    """
-    model = Booking
-    template_name = 'dashboard/booking-edit.html'
     fields = '__all__'
 
 

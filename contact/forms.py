@@ -17,7 +17,7 @@ class ContactForm(ModelForm):
                     'last_name': 'Last Name',
                     'email': 'Email',
                     'newsletter': 'Newsletter',
-                    'body': 'Text',
+                    'body': 'Message',
                     'terms': 'Terms & Conditions*',
                 }
 
@@ -26,6 +26,6 @@ class ContactForm(ModelForm):
             'last_name': forms.TextInput(attrs={'class': 'form-control col-md-6'}),
             'email': forms.EmailInput(attrs={'class': 'form-control'}),
             'newsletter': forms.CheckboxInput(attrs={'class': 'required checkbox'}),
-            'body': forms.Textarea(attrs={'name': 'Text', 'rows': 3, 'cols': 5}),
-            'terms': forms.CheckboxInput(attrs={'class': 'checkbox', 'required': 'false'}),
+            'body': forms.Textarea(attrs={'rows': 3, 'cols': 5}),
+            'terms': forms.CheckboxInput(attrs={'class': 'checkbox', 'required': 'true'}),
         }

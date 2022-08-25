@@ -511,7 +511,3 @@ Dashboard
 .form-select {
     border-radius: 2rem;
 }
-
-.form-check-input[type="checkbox"] {
-    border-radius: 2.5rem;
-}

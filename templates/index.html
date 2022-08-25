@@ -176,14 +176,14 @@
                                     <div class="d-md-flex align-items-md-center mt-5 text-center text-md-start">
 
                                         <div class="w-md-25 my-3">
-                                            <h5 class="fw-medium text-white mb-0">Created By:
+                                            <h5 class="fw-bold text-white mb-0">
                                                 {{ feedback.created_by }}
                                             </h5>
                                             <h5 class="fw-medium text-white mb-0">Rating:
                                                 {{ feedback.rating_stars }}/5
                                             </h5>
                                             <hr class="text-white mx-auto mx-md-0" style="height:2px;width:50px" />
-                                            <p class="fw-normal mb-0">Date: {{ feedback.created_date }}</p>
+                                            <p class="fw-normal mb-0 small">{{ feedback.created_date }}</p>
                                         </div>
                                         <div class="w-md-100 text-center">
                                             <p class="card-text ms-md-5">“{{ feedback.comment }}”

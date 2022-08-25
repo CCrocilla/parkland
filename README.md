@@ -674,42 +674,194 @@ Below it is possible to taka e look at the result obtained in Lighthouse:
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Homepage</summary>
-<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="800px"/>
+<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Homepage</summary>
-<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="800px"/>
+<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
+</details>
+
+XXXXXXXX TO DO XXXXXXXX
+<details>
+    <summary>Click here for for Lighthouse Desktop - Search Booking</summary>
+<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Search Booking</summary>
+<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Booking</summary>
+<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Booking</summary>
+<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Recap Booking</summary>
+<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Recap Booking</summary>
+<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Contact Us</summary>
-<img src="static/images/readme/lighthouse/contactus-desktop.webp" alt="Lighthouse Desktop Contact Us" width="800px"/>
+<img src="static/images/readme/lighthouse/contactus-desktop.webp" alt="Lighthouse Desktop Contact Us" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Contact Us</summary>
-<img src="static/images/readme/lighthouse/contactus-mobile.webp" alt="Lighthouse Mobile Contact Us" width="800px"/>
+<img src="static/images/readme/lighthouse/contactus-mobile.webp" alt="Lighthouse Mobile Contact Us" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Sign In</summary>
-<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Desktop Sign In" width="800px"/>
+<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Sign In</summary>
-<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Mobile Sign In" width="800px"/>
+<img src="static/images/readme/lighthouse/signup-desktop.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Sign Up</summary>
+<img src="static/images/readme/lighthouse/signup-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Sign Up</summary>
+<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Sign Out</summary>
+<img src="static/images/readme/lighthouse/sign-out-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+XXXXX MISSING PICTURE XXXXXX
+<details>
+    <summary>Click here for for Lighthouse Mobile - Sign Out</summary>
+<img src="static/images/readme/lighthouse/sign-desktop.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Password Reset Desktop</summary>
+<img src="static/images/readme/lighthouse/password-reset-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Password Reset Desktop</summary>
+<img src="static/images/readme/lighthouse/password-reset-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Sign Up</summary>
+<img src="static/images/readme/lighthouse/signup-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Sign Up</summary>
+<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - My Parkland</summary>
+<img src="static/images/readme/lighthouse/myparkland-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - My Parkland</summary>
+<img src="static/images/readme/lighthouse/myparkland-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Edit Profile</summary>
+<img src="static/images/readme/lighthouse/edit-profile-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Edit Profile</summary>
+<img src="static/images/readme/lighthouse/edit-profile-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Change Password Profile</summary>
+<img src="static/images/readme/lighthouse/change-password-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Change Password Profile</summary>
+<img src="static/images/readme/lighthouse/change-password-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Add Car</summary>
+<img src="static/images/readme/lighthouse/add-car-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Add Car</summary>
+<img src="static/images/readme/lighthouse/add-car-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Car List</summary>
+<img src="static/images/readme/lighthouse/car-list-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Car List</summary>
+<img src="static/images/readme/lighthouse/car-list-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Booking List</summary>
+<img src="static/images/readme/lighthouse/booking-list-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Booking List</summary>
+<img src="static/images/readme/lighthouse/booking-list-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Add Feedback</summary>
+<img src="static/images/readme/lighthouse/add-feedback-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Add Feedback</summary>
+<img src="static/images/readme/lighthouse/add-feedback-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Desktop - Feedback List</summary>
+<img src="static/images/readme/lighthouse/add-feedback-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for for Lighthouse Mobile - Feedback List</summary>
+<img src="static/images/readme/lighthouse/add-feedback-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Error 404</summary>
-<img src="" alt="Lighthouse Desktop Error 404" width="800px"/>
+<img src="static/images/readme/lighthouse/error404-desktop.webp" alt="Lighthouse Desktop Error 404" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Error 404</summary>
-<img src="" alt="Lighthouse Mobile Error 404" width="800px"/>
+<img src="static/images/readme/lighthouse/error404-mobile.webp" alt="Lighthouse Mobile Error 404" width="600px"/>
 </details>
 
 
@@ -721,68 +873,86 @@ All the Tests have also been performed in all the Devices and the tests includes
 
 | Page | Feature | Expected Result | Status |
 | --- | --- | --- | --- |
-| Home | Header | Make sure that the Logo and the nav bar are displayed on the top part of the Home Page. | Example: Pass |
-| Home | Header | Make sure that non authenticated users can only access Home, Contact Us, Sign In/Up Pages. |  |
-| Home | Header | Make sure that authenticated user can see/access Home, Booking, Contact Us, My Parkland Dashboard. |  |
-| Home | Header | Make sure that by clicking on the Logo the user is redirected to the Home Page. |  |
-| Home | Parkland Section | Make sure that the Image of Parkland is displayed with no overlap with the Logos, Nav Bar and/or text. |  |
-| Home | Parkland Section | Make sure that the Image of Parkland is displayed on the right and does not overlap with the Text Description on the left. |  |
-| Home | Service Section | Make sure that the Services are displayed with Image on top and text is centered. |  |
-| Home | Services Section | Make sure that only 3 cards are displayed with no overlap between the images and the text included into the cards. |  |
-| Home | Story Section | Make sure that the Image is displayed with no overlap with other sections. |  |
-| Home | Story Section | Make sure that the Image is displayed on the left side while the text is on the right. |  |
-| Home | Booking Section | Make sure that the Image is displayed with no overlap with other sections. |  |
-| Home | Booking Section | Make sure that the Image is displayed on the right while the text is on the left. |  |
-| Home | Booking Section | Make sure that a non authenticated user has the possibility to Sign in and Sign up. |  |
-| Home | Booking Section | Make sure that an Authenticated User can see the Booking button to access the Booking Page. |  |
-| Home | Feedback Section | Make sure that the feedback area displays a carousel with Users’ Feedback.|  |
-| Home | Feedback Section | Make sure that the user can use the arrows to switch between feedbacks. |  |
-| Home | Updates Section | Make sure that the cards with the company updates are displayed correctly.|  |
-| Home | Footer | Make sure that the footer displays the information of the company |  |
-| Home | Footer | Make sure that the footer provides the link to access the social media and when clicking on the icons a new tab is opened |  |
-| Home | Footer | Make sure that the user can sign up with an email address to receive the newsletter.|  |
-| Home | Footer | Make sure that by clicking on the newsletter form button if no email or an invalid email has been entered an error message is displayed to the user. |  |
-| Home | Footer | Make sure that by clicking on the newsletter form button if correct email has been entered a success message notification is displayed to the user |  |
-| Contact Us | Images | Make sure that the background image is displayed correctly. |  |
-| Contact Us | Form | Make sure all the fields (First Name, Last Name, Email, Text) are editable. |  |
-| Contact Us | Form | Make sure all the checkboxes (Newsletter and Terms & Condition) are clickable. |  |
-| Contact Us | Form | Make sure all the fields (First Name, Last Name, Email, Text, Terms & Condition) are mandatory. |  |
-| Contact Us | Form | Make sure that the Reset Form Button works and deletes all the information entered in the form. |  |
-| Contact Us | Form | Make sure that the Submit Button works and provides a clear message to the user. |  |
-| Booking| Page | Make sure that only authenticated user can access and view the content of the Booking Page. |  |
-| Booking | Images | Make sure that the background image is displayed correctly. |  |
-| Booking | Search Form | Make sure all the fields (Start and End Date) are editable and mandatory. |  |
-| Booking | Search Form | Make sure that the user cannot submit the form if the Start Date is greater than the End Date. |  |
-| Booking | Search Form | Make sure that the user cannot submit the form if the Start Date is less or equal to the current day. |  |
-| Booking | Search Form | Make sure that the Search Button works and redirects the user to the Booking Area. |  |
-| Booking | Booking Form | Make sure that the Start and End date are in read-only mode. |  |
-| Booking | Booking Form | Make sure that the all the fields (Cars, Parking Slot) are editable. |  |
-| Booking | Booking Form | Make sure that the Car field is a Dropdown displaying only the logged-in user’s cars. |  |
-| Booking | Booking Form | Make sure that the Parking field is a Dropdown that display only the available Parking Slots. |  |
-| Booking | Booking Form | Make sure that the Parking and Cars are filtered based on the search made by the user. |  |
-| Booking |Booking Form | Make sure that the price information is auto populated depending on the number of days selected. ||
-| Booking | Booking Form | Make sure that by clicking on the Book Button a modal is opened requesting confirmation to the user. |  |
-| Booking | Booking Form | Make sure that if the form is filled-in correctly and after submission, the user is redirected to the Recap Page. |  |
-| Booking | Recap Page | Make sure that the booking summary information is displayed in the page. ||
-| Dashboard | My Parkland | Make sure that only authenticated user can access and view the content of the My Parkland Page. |  |
-| Dashboard | My Parkland | Make sure that Booking, Cars, Feedback and Rewards Cards are displayed correctly. |  |
-| Dashboard | My Parkland | Make sure that the correct value of Bookings, Cars, Feedback and Rewards is displayed in each card. |  |
-| Dashboard | My Parkland | Make sure that the from the cards it is possible to access the lists of Bookings, Cars and Feedback. |  |
-| Dashboard | My Parkland | Make sure that the any available message is displayed correctly under the messages center.  |  |
-| Dashboard | My Profile | Make sure that the My Profile Section includes the Edit Profile, Change Password, Add Cars and Cars List Sub-Sections. |  |
-| My Profile | Edit Profile | Make sure that by clicking Edit Profile the user is able to access the personal information form. |  |
-| My Profile | Edit Profile | Make sure that in the Edit Profile Form the user can edit only his/her own personal information. |  |
-| My Profile | Change Password | Make sure that by clicking Change Password Sub-Section the user is able to successfully access the Change Password Page. |  |
-| My Profile | Change Password | Make sure that in the Change Password Form the user can change the password associated to his/her account. |  |
-| My Profile | Add Car | Make sure that by clicking Add Car the user is able to access the Add Car Page form. |  |
-| My Profile | Add Car | Make sure that filling-in the form, if the form is valid, the user is redirected to the Car List Page after submitting the form. |  |
-| My Profile | Add Car | Make sure that the user is obliged to fill the mandatory fields correctly. |  |
-| My Profile | Car List | Make sure that by clicking Cars List Sub-Section the user is able to access his/her own personal Car List. |  |
-| My Profile | Car List | Make sure that the user can visualise the information of his/her own registered car. |  |
-| My Profile | Car List | Make sure that the user can click on the Delete button to delete the registered car. |  |
-| My Profile | Car List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. |  |
-| My Profile | Car List | Make sure that the user is informed that by deleting a car the associated booking will be removed too. |  |
-| My Booking | Booking List | Make sure that the by clicking Change Profile Sub-Section the user change the password associated to his/her account. |  |
+| Home | Header | Make sure that the Logo and the nav bar are displayed on the top part of the Home Page. | Pass |
+| Home | Header | Make sure that non authenticated users can only access Home, Contact Us, Sign In/Up Pages. | Pass |
+| Home | Header | Make sure that authenticated user can see/access Home, Booking, Contact Us, My Parkland Dashboard. | Pass |
+| Home | Header | Make sure that by clicking on the Logo the user is redirected to the Home Page. | Pass |
+| Home | Parkland Section | Make sure that the Image of Parkland is displayed with no overlap with the Logos, Nav Bar and/or text. | Pass |
+| Home | Parkland Section | Make sure that the Image of Parkland is displayed on the right and does not overlap with the Text Description on the left. | Pass |
+| Home | Service Section | Make sure that the Services are displayed with Image on top and text is centered. | Pass |
+| Home | Services Section | Make sure that only 3 cards are displayed with no overlap between the images and the text included into the cards. | Pass |
+| Home | Story Section | Make sure that the Image is displayed with no overlap with other sections. | Pass |
+| Home | Story Section | Make sure that the Image is displayed on the left side while the text is on the right. | Pass |
+| Home | Booking Section | Make sure that the Image is displayed with no overlap with other sections. | Pass |
+| Home | Booking Section | Make sure that the Image is displayed on the right while the text is on the left. | Pass |
+| Home | Booking Section | Make sure that a non authenticated user has the possibility to Sign in and Sign up. | Pass |
+| Home | Booking Section | Make sure that an Authenticated User can see the Booking button to access the Booking Page. | Pass |
+| Home | Feedback Section | Make sure that the feedback area displays a carousel with Users’ Feedback.| Pass |
+| Home | Feedback Section | Make sure that the user can use the arrows to switch between feedbacks. | Pass |
+| Home | Updates Section | Make sure that the cards with the company updates are displayed correctly.| Pass |
+| Home | Footer | Make sure that the footer displays the information of the company | Pass |
+| Home | Footer | Make sure that the footer provides the link to access the social media and when clicking on the icons a new tab is opened | Pass |
+| Home | Footer | Make sure that the user can sign up with an email address to receive the newsletter.| Pass |
+| Home | Footer | Make sure that by clicking on the newsletter form button if no email or an invalid email has been entered an error message is displayed to the user. | Pass |
+| Home | Footer | Make sure that by clicking on the newsletter form button if correct email has been entered a success message notification is displayed to the user | Pass |
+| Contact Us | Images | Make sure that the background image is displayed correctly. | Pass |
+| Contact Us | Form | Make sure all the fields (First Name, Last Name, Email, Text) are editable. | Pass |
+| Contact Us | Form | Make sure all the checkboxes (Newsletter and Terms & Condition) are clickable. | Pass |
+| Contact Us | Form | Make sure all the fields (First Name, Last Name, Email, Text, Terms & Condition) are mandatory. | Pass |
+| Contact Us | Form | Make sure that the Reset Form Button works and deletes all the information entered in the form. | Pass |
+| Contact Us | Form | Make sure that the Submit Button works and provides a clear message to the user. | Pass |
+| Booking| Page | Make sure that only authenticated user can access and view the content of the Booking Page. | Pass |
+| Booking | Images | Make sure that the background image is displayed correctly. | Pass |
+| Booking | Search Form | Make sure all the fields (Start and End Date) are editable and mandatory. | Pass |
+| Booking | Search Form | Make sure that the user cannot submit the form if the Start Date is greater than the End Date. | Pass |
+| Booking | Search Form | Make sure that the user cannot submit the form if the Start Date is less or equal to the current day. | Pass |
+| Booking | Search Form | Make sure that the Search Button works and redirects the user to the Booking Area. | Pass |
+| Booking | Booking Form | Make sure that the Start and End date are in read-only mode. | Pass |
+| Booking | Booking Form | Make sure that the all the fields (Cars, Parking Slot) are editable. | Pass |
+| Booking | Booking Form | Make sure that the Car field is a Dropdown displaying only the logged-in user’s cars. | Pass |
+| Booking | Booking Form | Make sure that the Parking field is a Dropdown that display only the available Parking Slots. | Pass |
+| Booking | Booking Form | Make sure that the Parking and Cars are filtered based on the search made by the user. | Pass |
+| Booking |Booking Form | Make sure that the price information is auto populated depending on the number of days selected. | Pass |
+| Booking | Booking Form | Make sure that by clicking on the Book Button a modal is opened requesting confirmation to the user. | Pass |
+| Booking | Booking Form | Make sure that if the form is filled-in correctly and after submission, the user is redirected to the Recap Page. | Pass |
+| Booking | Recap Page | Make sure that the booking summary information is displayed in the page. | Pass |
+| Dashboard | My Parkland | Make sure that only authenticated user can access and view the content of the My Parkland Page. | Pass |
+| Dashboard | My Parkland | Make sure that Booking, Cars, Feedback and Rewards Cards are displayed correctly. | Pass |
+| Dashboard | My Parkland | Make sure that the correct value of Bookings, Cars, Feedback and Rewards is displayed in each card. | Pass |
+| Dashboard | My Parkland | Make sure that the from the cards it is possible to access the lists of Bookings, Cars and Feedback. | Pass |
+| Dashboard | My Parkland | Make sure that the any available message is displayed correctly under the messages center.  | Pass |
+| Dashboard | My Profile | Make sure that the My Profile Section includes the Edit Profile, Change Password, Add Cars and Cars List Sub-Sections. | Pass |
+| My Profile | Edit Profile | Make sure that by clicking Edit Profile the user is able to access the personal information form. | Pass |
+| My Profile | Edit Profile | Make sure that in the Edit Profile Form the user can edit only his/her own personal information. | Pass |
+| My Profile | Change Password | Make sure that by clicking Change Password Sub-Section the user is able to successfully access the Change Password Page. | Pass |
+| My Profile | Change Password | Make sure that in the Change Password Form the user can change the password associated to his/her account. | Pass |
+| My Profile | Add Car | Make sure that by clicking Add Car the user is able to access the Add Car Page form. | Pass |
+| My Profile | Add Car | Make sure that filling-in the form, if the form is valid, the user is redirected to the Car List Page after submitting the form. | Pass |
+| My Profile | Add Car | Make sure that the user is obliged to fill the mandatory fields correctly. | Pass |
+| My Profile | Car List | Make sure that by clicking Cars List Sub-Section the user is able to access his/her own personal Car List. | Pass |
+| My Profile | Car List | Make sure that the user can visualise the information of his/her own registered car. | Pass |
+| My Profile | Car List | Make sure that the user can click on the Delete button to delete the registered car. | Pass |
+| My Profile | Car List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. | Pass |
+| My Profile | Car List | Make sure that the user is informed that by deleting a car the associated booking will be removed too. | Pass |
+| My Booking | Booking List | Make sure that by clicking Bookings List Sub-Section the user is able to access the Bookings List. | Pass |
+| My Profile | Booking List | Make sure that the user can visualise the information of his/her own Bookings. | Pass |
+| My Profile | Booking List | Make sure that the user can click on the Delete button to delete the Booking selected. | Pass |
+| My Profile | Booking List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. | Pass |
+| My Profile | Booking List | Make sure that a Details button is diaplayed. | Pass |
+| My Profile | Booking List | Make sure that the user can see the booking details by clicking on the Details button. | Pass |
+| My Profile | Add Feedback | Make sure that by clicking Add Feedback the user is able to access the Add Feedback Page form. | Pass |
+| My Profile | Add Feedback | Make sure that filling-in the form, if the form is valid, the user is redirected to the Feedback List Page after submitting the form. | Pass |
+| My Profile | Add Feedback | Make sure that after the redirec to the Feedback List Page a Message is displayed to the user confirming the creation of the Feedback. | Pass |
+| My Profile | Add Feedback | Make sure that the user is obliged to fill the mandatory fields correctly. | Pass |
+| My Profile | Feedback List | Make sure that by clicking Feedback List Sub-Section the user is able to access his/her own personal Feedback List. | Pass |
+| My Profile | Feedback List | Make sure that the user can visualise the information of his/her own left Feedback. | Pass |
+| My Profile | Feedback List | Make sure that a Delete button is present and that the user can click on the Delete button to delete the feedback entered. | Pass |
+| My Profile | Feedback List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. | Pass |
+| My Profile | Feedback List | Make sure that after confirmation the user is redirected to the Feedback List and a message confirm that deletion of the Feedback id displayed. | Pass |
+| My Profile | Feedback List | Make sure that and Edit button is displayed. | Pass |
+| My Profile | Feedback List | Make sure that by clcking on the Edit button the user can update the information of a previous entered Feeback. | Pass |
+| My Profile | Feedback List | Make sure that every page is responsive and that no overlap are presents. | Pass |
+
 
 
 - #### List of Automated Test Cases perfomed:

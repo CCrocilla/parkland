@@ -44,8 +44,8 @@
         <a class="fs-2 ps-3 text-decoration-none text-white" href="{% url 'homepage' %}"
             aria-label="Go to Homepage">Parkland</a>
         <!-- Sidebar Toggle-->
-        <button class="fs-2 btn btn-link btn-sm order-0 order-lg-0 mx-3 text-light text-decoration-none d-inline-block"
-            id="sidebarToggle" href="#!" aria-label="Open Sidebar"><i class="fas fa-bars"></i></button>
+        <a class="fs-2 btn btn-link btn-sm order-0 order-lg-0 mx-3 text-light text-decoration-none d-inline-block"
+            id="sidebarToggle" href="#!" aria-label="Open Sidebar"><i class="fas fa-bars"></i></a>
         <ul class="navbar-nav ms-auto me-3">
             <li class="nav-item">
                 <a class="nav-link text-light text-decoration-none" href="{% url 'account_logout' %}">
@@ -55,18 +55,18 @@
         </ul>
     </nav>
 
-    <!-- ============================================-->
+    <!-- ============================================ -->
     <!--                    Sidebar                  -->
-    <!-- ============================================-->
+    <!-- ============================================ -->
     <div id="layoutSidenav">
         <div id="layoutSidenav_nav">
             <nav class="sb-sidenav accordion sb-sidenav-dark" id="sidenavAccordion">
                 <div class="sb-sidenav-menu">
                     <div class="nav">
 
-                        <!-------------------------->
-                        <!--    Webiste Links     -->
-                        <!-------------------------->
+                        <!-- ============================== -->
+                        <!--         Webiste Links          -->
+                        <!-- ============================== -->
                         <div class="sb-sidenav-menu-heading">Website</div>
                         <a class="nav-link" href="{% url 'homepage' %}">
                             <div class="sb-nav-link-icon"><i class="fas fa-columns"></i></div>
@@ -84,19 +84,18 @@
                             Booking
                         </a>
 
-                        <!-------------------------->
-                        <!--      Dashboard       -->
-                        <!-------------------------->
+                        <!-- ============================== -->
+                        <!--            Dashboard           -->
+                        <!-- ============================== -->
                         <div class="sb-sidenav-menu-heading">Dashboard</div>
                         <a class="nav-link" href="{% url 'dashboard' %}">
                             <div class="sb-nav-link-icon"><i class="fas fa-tachometer-alt"></i></div>
                             My Parkland
                         </a>
 
-                        <!-------------------------->
-                        <!--       Profile        -->
-                        <!-------------------------->
-                        <!-- <div class="sb-sidenav-menu-heading">My Profile</div> -->
+                        <!-- ============================== -->
+                        <!--             Profile            -->
+                        <!-- ============================== -->
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseLayouts" aria-expanded="false" aria-controls="collapseLayouts">
                             <div class="sb-nav-link-icon"><i class="fas fa-user"></i></div>
@@ -113,9 +112,9 @@
                             </nav>
                         </div>
 
-                        <!-------------------------->
-                        <!--      Management      -->
-                        <!-------------------------->
+                        <!-- ============================== -->
+                        <!--           Management           -->
+                        <!-- ============================== -->
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse" data-bs-target="#collapsePages"
                             aria-expanded="false" aria-controls="collapsePages">
                             <div class="sb-nav-link-icon"><i class="fas fa-tasks"></i></div>
@@ -131,9 +130,9 @@
                             </nav>
                         </div>
 
-                        <!-------------------------->
-                        <!--    Feedback Core     -->
-                        <!-------------------------->
+                        <!-- ============================== -->
+                        <!--          Feedback Core         -->
+                        <!-- ============================== -->
                         <a class="nav-link collapsed" href="#" data-bs-toggle="collapse"
                             data-bs-target="#collapseFeedback" aria-expanded="false" aria-controls="collapseFeedback">
                             <div class="sb-nav-link-icon"><i class="fas fa-book-open"></i></div>
@@ -151,14 +150,6 @@
                                 </a>
                             </nav>
                         </div>
-
-                        <!-------------------------->
-                        <!--        Logout        -->
-                        <!-------------------------->
-                        <div class="sb-sidenav-menu-heading d-none">Access</div>
-                        <a class="nav-link d-none" href="{% url 'account_logout' %}">
-                            Logout
-                        </a>
 
                         {% endif %}
 

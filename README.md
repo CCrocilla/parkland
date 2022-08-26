@@ -300,7 +300,7 @@ Users should be willing to register to the website.
 Colour Source: 
   - #### [Adobe Color](https://color.adobe.com/create/color-wheel)
   - #### [Color Hunt](https://colorhunt.co/) 
-#### The main colors are Navy (#181D31), White (#XXXX) and Black for text and background, Cyan (#181D31) with Text White (#XXXX) for the feedback, Orange (#XXXX) and Navy (#181D31) for the cards/ Booking Page.
+#### The main colors are Navy (#181D31), White (#FFFFFF) and Black (#1F1534) for text and background, Cyan (#181D31) with Text White (#FFFFFF) for the feedback, Orange (FF9900) and Navy (#181D31) for the cards/ Booking Page.
 #### Navy (#181D31) it has also been used for the background in the Booking and Contact us Forms. These colors are chosen to highlight different components and to make a good contrast providing a better view of those components.
  
 
@@ -570,7 +570,7 @@ The Structure of the website and the components used are listed below:
  - HTML5
  - CSS3
  - JAVASCRIPT
- - PYTHON
+ - PYTHON + DJANGO
 
 #### Only custom HTML, CSS, JavaScript, Python Code has been used.
 
@@ -620,59 +620,224 @@ The Structure of the website and the components used are listed below:
 ## **Testing**
 The testing phases have been carried out using the **PIP8 Python Validator**. No errors have been identified from the Validators as can be seen in the screenshots below:
 
+- **Python**
+
+<details>
+    <summary>PIP8 Python Validator</summary>
+
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Parkland [urls.py]</summary>
+<img src="static/images/readme/validation-pip8/parkland-url.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Parkland [settings.py]</summary>
+<img src="static/images/readme/validation-pip8/parkland-settings.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Car Park [models.py]</summary>
+<img src="static/images/readme/validation-pip8/car-park-models.py.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Car Park [admin.py]</summary>
+<img src="static/images/readme/validation-pip8/car-park-admin.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Car Park [views.py]</summary>
+<img src="static/images/readme/validation-pip8/car-park-views.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Booking [urls.py]</summary>
+<img src="static/images/readme/validation-pip8/booking-url.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Booking [views.py]</summary>
+<img src="static/images/readme/validation-pip8/booking-views.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Booking [forms.py]</summary>
+<img src="static/images/readme/validation-pip8/booking-forms.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Contact [urls.py]</summary>
+<img src="static/images/readme/validation-pip8/contact-url.py.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Contact [views.py]</summary>
+<img src="static/images/readme/validation-pip8/contact-views.py.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Contact [forms.py]</summary>
+<img src="static/images/readme/validation-pip8/contact-form.py.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Dashboard [urls.py]</summary>
+<img src="static/images/readme/validation-pip8/dashboard-url.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Dashboard [views.py]</summary>
+<img src="static/images/readme/validation-pip8/dashboard-views.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for PIP8 Python Validator - Dashboard [forms.py]</summary>
+<img src="static/images/readme/validation-pip8/dashboard-forms.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+
+</details>
 
 The testing phases have been also carried out using the **W3C Javascript Validator**, **W3C CSS Validator** and **W3C Markup Validator**(in all pages). No errors have been identified from the Validators as can be seen in the screenshot below: 
 
 - **JavaScript**
 
 <details>
-    <summary>Click here for W3C Javascript Validator</summary>
-<img src="" alt="W3C Javascript Validator - Home Page" width="800"/>
+    <summary>Click here for W3C Javascript Validator - Script.js</summary>
+<img src="static/images/readme/validation-js/js-script.js.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
 </details>
+
+<details>
+    <summary>Click here for W3C Javascript Validator - Tooltip.js</summary>
+<img src="static/images/readme/validation-js/js-tooltip.js.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Javascript Validator - Toastify.js</summary>
+<img src="static/images/readme/validation-js/js.toastify.js.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
+</details>
+
 
 - **CSS**
 
 <details>
-    <summary>Click here for W3C CSS Validator</summary>
-<img src="" alt="W3C Markup Validator - Home Page" width="800"/>
+    <summary>Click here for W3C CSS Validator - Custom-style.css</summary>
+<img src="static/images/readme/validation-css/css-custom-style.webp" alt="W3C Markup Validator - Home Page" width="800"/>
 </details>
 
 <details>
-    <summary>Click here for W3C CSS Validator - Warning</summary>
-<img src="" alt="W3C Markup Validator - Home Page" width="800"/>
+    <summary>Click here for W3C CSS Validator - Rating-stars.css</summary>
+<img src="static/images/readme/validation-css/css-rating-stars.webp" alt="W3C Markup Validator - Home Page" width="800"/>
 </details>
+
 
 - **HTML**
 
 <details>
     <summary>Click here for W3C Markup Validator - Home Page</summary>
-<img src="" alt="W3C Markup Validator - Home Page" width="800px"/>
+<img src="static/images/readme/validation-html/html-homepage.webp" alt="W3C Markup Validator - Home Page" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for W3C Markup Validator - Parking Page</summary>
-<img src="" alt="W3C Markup Validator - Home Page" width="800px"/>
+    <summary>Click here for W3C Markup Validator - Search Page [Booking]</summary>
+<img src="static/images/readme/validation-html/html-searching.webp" alt="W3C Markup Validator - Search Page" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Booking Page [Booking]</summary>
+<img src="static/images/readme/validation-html/html-booking.webp" alt="W3C Markup Validator - Booking Page" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Booking Recap Page [Booking]</summary>
+<img src="static/images/readme/validation-html/html-booking-recap.webp" alt="W3C Markup Validator - Booking Recap Page" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for W3C Markup Validator - Contact Us</summary>
-<img src="" alt="W3C Markup Validator - Contact Us" width="800px"/>
+<img src="static/images/readme/validation-html/html-contact.webp" alt="W3C Markup Validator - Contact Us" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for W3C Markup Validator - Sign In/Sign Up</summary>
-<img src="" alt="W3C Markup Validator - Contact Us" width="800px"/>
+    <summary>Click here for W3C Markup Validator - Sign In</summary>
+<img src="static/images/readme/validation-html/html-signin.webp" alt="W3C Markup Validator - Sign In" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for W3C Markup Validator - Thank You</summary>
-<img src="" alt="W3C Markup Validator - Thank You" width="800px"/>
+    <summary>Click here for W3C Markup Validator - Sign Up</summary>
+<img src="static/images/readme/validation-html/html-signup.webp" alt="W3C Markup Validator - Sign Up" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for W3C Markup Validator - Error 404</summary>
-<img src="" alt="W3C Markup Validator - Error 404" width="800px"/>
+    <summary>Click here for W3C Markup Validator - Sign Out</summary>
+<img src="static/images/readme/validation-html/html-signout.webp" alt="W3C Markup Validator - Sign Out" width="800px"/>
 </details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Dashboard</summary>
+<img src="static/images/readme/validation-html/html-dashboard.webp" alt="W3C Markup Validator - Dashboard" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Edit Profile</summary>
+<img src="static/images/readme/validation-html/html-profile-edit.webp" alt="W3C Markup Validator - Edit Profile" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Change Password</summary>
+<img src="static/images/readme/validation-html/html-profile-changepassword.webp" alt="W3C Markup Validator - Change Password" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Add Car</summary>
+<img src="static/images/readme/validation-html/html-car-add.webp" alt="W3C Markup Validator - Add Car" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Car List</summary>
+<img src="static/images/readme/validation-html/html-car-list.webp" alt="W3C Markup Validator - Add Car" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Car Delete</summary>
+<img src="static/images/readme/validation-html/html-car-delete.webp" alt="W3C Markup Validator - Add Car" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Booking List</summary>
+<img src="static/images/readme/validation-html/html-booking-list.webp" alt="W3C Markup Validator - Add Car" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Booking Delete</summary>
+<img src="static/images/readme/validation-html/html-booking-delete.webp" alt="W3C Markup Validator - Add Car" width="800px"/>
+</details>
+
+
+<details>
+    <summary>Click here for W3C Markup Validator - Add Feedback</summary>
+<img src="static/images/readme/validation-html/html-feedback-add.webp" alt="W3C Markup Validator - Thank You" width="800px"/>
+</details>
+
+
+<details>
+    <summary>Click here for W3C Markup Validator - Edit Feedback</summary>
+<img src="static/images/readme/validation-html/html-feedback-edit.webp" alt="W3C Markup Validator - Error 404" width="800px"/>
+</details>
+
+
+<details>
+    <summary>Click here for W3C Markup Validator - Details Feedback</summary>
+<img src="static/images/readme/validation-html/html-feedback-details.webp" alt="W3C Markup Validator - Error 404" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for W3C Markup Validator - Delete Feedback</summary>
+<img src="static/images/readme/validation-html/html-feedback-delete.webp" alt="W3C Markup Validator - Error 404" width="800px"/>
+</details>
+
+
 
 
 - ### **Lighthouse Validator**
@@ -688,35 +853,34 @@ Below it is possible to taka e look at the result obtained in Lighthouse:
 <img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
-XXXXXXXX TO DO XXXXXXXX
 <details>
     <summary>Click here for for Lighthouse Desktop - Search Booking</summary>
-<img src="static/images/readme/lighthouse/" alt="Lighthouse Desktop Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/search-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Search Booking</summary>
-<img src="static/images/readme/lighthouse/" alt="Lighthouse Mobile Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/search-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Booking</summary>
-<img src="static/images/readme/lighthouse/" alt="Lighthouse Desktop Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/booking-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Booking</summary>
-<img src="static/images/readme/lighthouse/" alt="Lighthouse Mobile Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/booking-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Recap Booking</summary>
-<img src="static/images/readme/lighthouse/" alt="Lighthouse Desktop Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/booking-recap-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Recap Booking</summary>
-<img src="static/images/readme/lighthouse/" alt="Lighthouse Mobile Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/booking-recap-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>

@@ -10,7 +10,8 @@
 
 
 
-<a href="https://parkland.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src="Here will be inserted the image" alt="Home Page" width="800px"/></a>
+<a href="https://parkland.herokuapp.com/" target="_blank" rel="noopener noreferrer"><img src="static/images/readme/amiresponsive/amiresponsive.webp" alt="Home Page" width="800px"/></a>
+<br/>
 Click in the image above to access the Live Website or [click here!](https://parkland.herokuapp.com/ "Parkland")
 
 ## **Project** 
@@ -322,6 +323,16 @@ Sources:
 --- 
 
 ## **Features**
+
+- ### *__Database Schema__*:
+The database schema has been realize using the Software Wondershare EdrawMax and rappresent the database sctucture of Parkland: 
+
+<details>
+    <summary>Click here for the Database Schema </summary>  
+<img src="static/images/readme/database-schema/database-schema.webp" alt="Database Schema" width="800px"/>
+</details>
+
+
 - ### *__Structure__*:
 The website has been structured in an easy and user-friendly way with 6 main pages. Non-authenticated and authenticated customers are provided with two different page views. The Non-authenticated can visualise and access only the Home Page, Contact Us, Sign-In and Sign-Up pages, while the authenticated customers are also able to access the Booking and the Dashboard pages.
 The Structure of the website and the components used are listed below:
@@ -467,41 +478,76 @@ The Structure of the website and the components used are listed below:
     <summary>Home Page Wireframes</summary> 
 
 <details>
-    <summary>Click here for Desktop View</summary>  
-<img src="" alt="Desktop View Homepage" width="800px"/>
+    <summary>Click here for Desktop View - Anonymous </summary>  
+<img src="static/images/readme/wireframes/homepage-desktop-anonymous.webp" alt="Desktop View Homepage" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Desktop View - Authenticated </summary>  
+<img src="static/images/readme/wireframes/homepage-desktop-authenticated.webp" alt="Desktop View Homepage" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for Tablet View</summary>
-<img src="" alt="Tablet View Homepage" width="600px"/>
+<img src="static/images/readme/wireframes/homepage-tablet.webp" alt="Tablet View Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for Smartphone View</summary>
-<img src="" alt="Smartphone View Homepage" width="400px"/>
+<img src="static/images/readme/wireframes/homepage-smartphone.webp" alt="Smartphone View Homepage" width="400px"/>
 </details>
 
 </details>
 
 
-- ## Booking Page
+- ## Booking Pages
 
 <details>
-    <summary>Booking Page Wireframes</summary> 
+    <summary>Booking Pages Wireframes</summary> 
 
 <details>
-    <summary>Click here for Desktop View</summary>
-<img src="" alt="Desktop View Recipes Page" width="800px"/>
+    <summary>Click here for Desktop View - Searching</summary>
+<img src="static/images/readme/wireframes/search-desktop.webp" alt="Desktop View Searching Page" width="800px"/>
 </details>
 
 <details>
-    <summary>Click here for Tablet View</summary>
-<img src="" alt="Tablet View Recipes Page" width="600px"/>
+    <summary>Click here for Tablet View  - Searching</summary>
+<img src="static/images/readme/wireframes/search-tablet.webp" alt="Tablet View Searching Page" width="600px"/>
 </details>
 
 <details>
-    <summary>Click here for Smartphone View</summary>
-<img src="" alt="Smartphone View Recipes Page" width="400px"/>
+    <summary>Click here for Smartphone View  - Searching</summary>
+<img src="static/images/readme/wireframes/search-smartphone.webp" alt="Smartphone View Searching Page" width="400px"/>
+</details>
+
+<details>
+    <summary>Click here for Desktop View - Booking</summary>
+<img src="static/images/readme/wireframes/booking-desktop.webp" alt="Desktop View Booking Page" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View  - Booking</summary>
+<img src="static/images/readme/wireframes/booking-tablet.webp" alt="Tablet View Booking Page" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View  - Booking</summary>
+<img src="static/images/readme/wireframes/booking-smartphone.webp" alt="Smartphone View Booking Page" width="400px"/>
+</details>
+
+<details>
+    <summary>Click here for Desktop View - Booking Recap</summary>
+<img src="static/images/readme/wireframes/booking-recap-desktop.webp" alt="Desktop View Booking Recap Page" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View  - Booking Recap</summary>
+<img src="static/images/readme/wireframes/booking-recap-tablet.webp" alt="Tablet View Booking Recap Page" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View  - Booking Recap</summary>
+<img src="static/images/readme/wireframes/booking-recap-smartphone.webp" alt="Smartphone View Booking Recap Page" width="400px"/>
 </details>
 
 </details>
@@ -513,53 +559,198 @@ The Structure of the website and the components used are listed below:
 
 <details>
     <summary>Click here for Desktop View</summary>
-<img src="static/" alt="Desktop View Contact Us Page" width="800px"/>
+<img src="static/images/readme/wireframes/contact-us-desktop.webp" alt="Desktop View Contact Us Page" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for Tablet View</summary>
-<img src="" alt="Tablet View Contact Us Page" width="600px"/>
+<img src="static/images/readme/wireframes/contact-us-tablet.webp" alt="Tablet View Contact Us Page" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for Smartphone View</summary>
-<img src="" alt="Smartphone View Contact Us Page" width="400px"/>
+<img src="static/images/readme/wireframes/contact-us-smartphone.webp" alt="Smartphone View Contact Us Page" width="400px"/>
 </details>
 
 </details>
 
-- ## Thanks You Page
+- ## Dashboard
+
+
+
+<details>
+    <summary>Dashboard Pages Wireframes</summary>
+
+- ### My Parkland
+<details>
+    <summary>My Parkland Section Wireframes</summary>
+
 <details>
     <summary>Click here for Desktop View</summary>
-<img src="" alt="Desktop View Thank You Page" width="800px"/>
+<img src="static/images/readme/wireframes/myparkland-desktop.webp" alt="Desktop View Parkland Section" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for Tablet View</summary>
-<img src="" alt="Tablet View Thank You Page" width="600px"/>
+<img src="static/images/readme/wireframes/myparkland-tablet.webp" alt="Tablet View Parkland Section" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for Smartphone View</summary>
-<img src="" alt="Smartphone View Thank You Page" width="400px"/>
+<img src="static/images/readme/wireframes/myparkland-smartphone.webp" alt="Smartphone View Parkland Section" width="400px"/>
+</details>
+
+</details>
+
+
+- ### My Profile
+<details>
+    <summary>My Profile Section Wireframes</summary>
+
+<details>
+    <summary>Click here for Desktop View - Edit Profile Sub-Section</summary>
+<img src="static/images/readme/wireframes/profile-edit-desktop.webp" alt="Desktop View Edit Profile Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Edit Profile Sub-Section</summary>
+<img src="static/images/readme/wireframes/profile-edit-tablet.webp" alt="Tablet View Edit Profile Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Edit Profile Sub-Section</summary>
+<img src="static/images/readme/wireframes/profile-edit-smartphone.webp" alt="Smartphone View Edit Profile Sub-Section" width="400px"/>
+</details>
+
+<details>
+    <summary>Click here for Desktop View - Change Profile Sub-Section</summary>
+<img src="static/images/readme/wireframes/profile-change-password-desktop.webp" alt="Desktop View Change Profile Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Change Profile Sub-Section</summary>
+<img src="static/images/readme/wireframes/profile-change-password-tablet.webp" alt="Tablet View Change Profile Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Change Profile Sub-Section</summary>
+<img src="static/images/readme/wireframes/profile-change-password-smartphone.webp" alt="Smartphone View Change Profile Sub-Section" width="400px"/>
+</details>
+
+
+<details>
+    <summary>Click here for Desktop View - Add Car Sub-Section</summary>
+<img src="static/images/readme/wireframes/add-car-desktop.webp" alt="Desktop View Add Car Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Add Car Sub-Section</summary>
+<img src="static/images/readme/wireframes/add-car-tablet.webp" alt="Tablet View Add Car Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Add Car Sub-Section</summary>
+<img src="static/images/readme/wireframes/add-car-smartphone.webp" alt="Smartphone View Add Car Sub-Section" width="400px"/>
+</details>
+
+<details>
+    <summary>Click here for Desktop View - Car List Sub-Section</summary>
+<img src="static/images/readme/wireframes/car-list-desktop.webp" alt="Desktop View Car List Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Car List Sub-Section</summary>
+<img src="static/images/readme/wireframes/car-list-tablet.webp" alt="Tablet View Car List Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Car List Sub-Section</summary>
+<img src="static/images/readme/wireframes/car-list-smartphone.webp" alt="Smartphone View Car List Sub-Section" width="400px"/>
+</details>
+
+</details>
+
+- ### My Booking
+<details>
+    <summary>My Booking Section Wireframes</summary>
+
+<details>
+    <summary>Click here for Desktop View - Booking List Sub-Section</summary>
+<img src="static/images/readme/wireframes/booking-list-desktop.webp" alt="Desktop View Booking List Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Booking List Sub-Section</summary>
+<img src="static/images/readme/wireframes/booking-list-tablet%20.webp.webp" alt="Tablet View Booking List Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Booking List Sub-Section</summary>
+<img src="static/images/readme/wireframes/booking-list-smartphone.webp" alt="Smartphone View Booking List Sub-Section" width="400px"/>
+</details>
+
+</details>
+
+- ### My Feedback
+<details>
+    <summary>My Feedback Section Wireframes</summary>
+
+<details>
+    <summary>Click here for Desktop View - Add Feedback Sub-Section</summary>
+<img src="static/images/readme/wireframes/feedback-desktop.webp" alt="Desktop View Add Feedback Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Add Feedback Sub-Section</summary>
+<img src="static/images/readme/wireframes/feedback-tablet.webp" alt="Tablet View Add Feedback Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Add Feedback Sub-Section</summary>
+<img src="static/images/readme/wireframes/feedback-smartphone.webp" alt="Smartphone Add FeedbackList Sub-Section" width="400px"/>
+</details>
+
+<details>
+    <summary>Click here for Desktop View - Feedback List Sub-Section</summary>
+<img src="static/images/readme/wireframes/feedback-list-desktop.webp" alt="Desktop View Feedback List Sub-Section" width="800px"/>
+</details>
+
+<details>
+    <summary>Click here for Tablet View - Feedback List Sub-Section</summary>
+<img src="static/images/readme/wireframes/feedback-list-tablet.webp" alt="Tablet View Feedback List Sub-Section" width="600px"/>
+</details>
+
+<details>
+    <summary>Click here for Smartphone View - Feedback List Sub-Section</summary>
+<img src="static/images/readme/wireframes/feedback-list-smartphone.webp" alt="Smartphone View Feedback List Sub-Section" width="400px"/>
+</details>
+
+</details>
+
 </details>
 
 - ## 404 Error Page
+
+<details>
+    <summary>My Feedback Section Wireframes</summary>
+    
 <details>
     <summary>Click here for Desktop View</summary>
-<img src="" alt="Desktop View Error 404 Page" width="800px"/>
+<img src="static/images/readme/wireframes/error404-desktop.webp" alt="Desktop View Error 404 Page" width="800px"/>
 </details>
 
 <details>
     <summary>Click here for Tablet View</summary>
-<img src="" alt="Tablet View  Error 404 Page" width="600px"/>
+<img src="static/images/readme/wireframes/error404-tablet.webp" alt="Tablet View  Error 404 Page" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for Smartphone View</summary>
-<img src="" alt="Smartphone View Error 404 Page" width="400px"/>
+<img src="static/images/readme/wireframes/error404-smartphone.webp" alt="Smartphone View Error 404 Page" width="400px"/>
 </details>
 
+
+</details>
 ---
 
 ## **Technologies Used**
@@ -603,8 +794,8 @@ The Structure of the website and the components used are listed below:
 - #### Heroku
     - #### Heroku is a platform as a service (PaaS) and it has been used to run the Parkland website application entirely on the cloud.
 
-- PostgreSQL 
-    - Database 
+- #### PostgreSQL 
+    - #### Database 
 
 - #### Wondershare EdrawMax:
     - #### Wondershare EdrawMax has been used to create the Database Schema for the website.
@@ -612,8 +803,8 @@ The Structure of the website and the components used are listed below:
 - #### Microsoft Whiteboard:
     - #### This is an infinite, collaborative canvas for effective meetings and engaging learning. Whiteboard was used to summarise the programming steps, the layout and the rationale behind those. Whiteboard has been used together with the Wondershare EdrawMax.
 
-- Cloudinary
-    - Static Files
+- #### Cloudinary
+    - #### Static Files
 
 
 ---
@@ -704,6 +895,9 @@ The testing phases have been also carried out using the **W3C Javascript Validat
 - **JavaScript**
 
 <details>
+    <summary>W3C Javascript Validator</summary>
+
+<details>
     <summary>Click here for W3C Javascript Validator - Script.js</summary>
 <img src="static/images/readme/validation-js/js-script.js.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
 </details>
@@ -718,8 +912,12 @@ The testing phases have been also carried out using the **W3C Javascript Validat
 <img src="static/images/readme/validation-js/js.toastify.js.webp" alt="W3C Javascript Validator - Home Page" width="800"/>
 </details>
 
+</details>
 
 - **CSS**
+
+<details>
+    <summary>W3C CSS Validator</summary>
 
 <details>
     <summary>Click here for W3C CSS Validator - Custom-style.css</summary>
@@ -731,8 +929,12 @@ The testing phases have been also carried out using the **W3C Javascript Validat
 <img src="static/images/readme/validation-css/css-rating-stars.webp" alt="W3C Markup Validator - Home Page" width="800"/>
 </details>
 
+</details>
 
 - **HTML**
+
+<details>
+    <summary>W3C Markup Validator</summary>
 
 <details>
     <summary>Click here for W3C Markup Validator - Home Page</summary>
@@ -814,18 +1016,15 @@ The testing phases have been also carried out using the **W3C Javascript Validat
 <img src="static/images/readme/validation-html/html-booking-delete.webp" alt="W3C Markup Validator - Add Car" width="800px"/>
 </details>
 
-
 <details>
     <summary>Click here for W3C Markup Validator - Add Feedback</summary>
 <img src="static/images/readme/validation-html/html-feedback-add.webp" alt="W3C Markup Validator - Thank You" width="800px"/>
 </details>
 
-
 <details>
     <summary>Click here for W3C Markup Validator - Edit Feedback</summary>
 <img src="static/images/readme/validation-html/html-feedback-edit.webp" alt="W3C Markup Validator - Error 404" width="800px"/>
 </details>
-
 
 <details>
     <summary>Click here for W3C Markup Validator - Details Feedback</summary>
@@ -837,7 +1036,7 @@ The testing phases have been also carried out using the **W3C Javascript Validat
 <img src="static/images/readme/validation-html/html-feedback-delete.webp" alt="W3C Markup Validator - Error 404" width="800px"/>
 </details>
 
-
+</details>
 
 
 - ### **Lighthouse Validator**
@@ -1116,7 +1315,9 @@ All the Tests have also been performed in all the Devices and the tests includes
 
 - #### List of Automated Test Cases perfomed:
 8 Automated Tests have been performed in the application. 
-The Automation Testing includes Urls Testing and Views Testing. 
+The Automation Testing includes Urls Testing and Views Testing and have been included in the folder tests.
+The urls tests focus on testing the 
+
 
 
 ### **Additional Tests**
@@ -1217,22 +1418,35 @@ The landing Page of the website was initially realised using a bootstrap templat
 The content of the application is entirely customised. In order to consolidate the knowledge acquired during the Code Institute Course dedicated to Django (as well as the HTML, CSS and Javascript), I have used the websites listed below studying and focussing on the writing coding procedures and its best practices:
 - [Medium.com](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
 - [Learn.shayhowe.com](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-ADD LINK HERE
+Additional studies for a better understanding of django have been carried out using the following source and video tutorials: 
 - []()
 - []()
 - []()
+
+Messages has been implemented in Parkland and here the link source for the studies: 
+
+
 
 The most complex developing portions of the Parkland Website application were:
--How to make the booking page properly working and the logic associated to it including the filtering on the search page (for Start/End Dates and for Electric Car Recharger) and the interaction between tables into the database to being able to display the correct information
+- How to make the booking page properly working 
+- The logic associated to it including the filtering on the search page (for Start/End Dates and for Electric Car Recharger) and the interaction between tables into the database to being able to display the correct information.
 The following website were inspirational and helped me understanding how to structure the logic on the gravity of the coin entered in the table. I have customized and created my own code taking inspiration from:
-
+- [Djangoproject.com - Making queries](https://docs.djangoproject.com/en/4.1/topics/db/queries/)
+- [Thanks to Codemy.com - Youtube Video Fetch Data](https://www.youtube.com/watch?v=H3joYTIRqKk&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy&index=6)
 
 
 Listed here additional sources of the studies: 
+- [Javatpoint.com - Django Tutorial](https://www.javatpoint.com/django-tutorial)
+- [Django-rest-framework.org - Django Views](https://www.django-rest-framework.org/api-guide/views/)
 - [Flexbox - W3School.com](https://www.w3schools.com/css/css3_flexbox.asp)
 - [Css-tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 - [Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
+
+Listed here the source of studies for the automation testing: 
+- [Djangoproject.com - Testing Overview](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
+- [Djangoproject.com - Testing tools](https://docs.djangoproject.com/en/dev/topics/testing/tools/)
+- [Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
 
 - [Favicon.io](https://favicon.io/) was used to include the favicon in the website.
 

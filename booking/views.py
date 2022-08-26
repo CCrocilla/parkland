@@ -1,5 +1,6 @@
 """ Imports """
 from django.shortcuts import render
+from django.contrib.auth.mixins import LoginRequiredMixin
 from django.shortcuts import HttpResponseRedirect
 from django.shortcuts import reverse
 from django.shortcuts import redirect
@@ -30,7 +31,7 @@ class SearchParkingView(CreateView):
         return {'created_by': self.request.user}
 
 
-class BookingView(View):
+class BookingView(LoginRequiredMixin, View):
     """ Create Booking """
     model = Booking
     template_name = 'booking/booking.html'

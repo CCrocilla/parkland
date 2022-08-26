@@ -168,7 +168,7 @@
                 {% for feedback in feedback_list %}
                 <div class="carousel-item {% if forloop.counter == 1 %}active{% endif %}" data-bs-interval="10000">
                     <div class="row h-100">
-                        <div class="col-10 offset-1">
+                        <div class="col-12">
                             <div class="card text-white bg-primary-gradient rounded-3">
                                 <div class="card-body p-4 p-md-4">
                                     <h2 class="fw-bold text-white text-center">What our customer are saying:</h2>
@@ -291,7 +291,7 @@
 <!--           Footer Additional Services            -->
 <!-- =============================================== -->
 {% block extra_footer_services %}
-<h6 class="fw-bold fs-1 text-light"> Services </h6>
+<p class="section-title text-white h5 fw-bold fs-1 text-light"> Services </p>
 <ul class="list-unstyled mb-md-4 mb-lg-0">
     <li class="lh-lg"><a class="text-light text-decoration-none" href="#bus-services">Bus</a></li>
     <li class="lh-lg"><a class="text-light text-decoration-none" href="#wash-services">Wash</a></li>

@@ -7,7 +7,6 @@ from .models import Feedback
 from .models import Contact
 
 
-# admin.site.register(Car)
 @admin.register(Car)
 class CarAdmin(admin.ModelAdmin):
     """ Cars """

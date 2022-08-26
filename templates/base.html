@@ -136,14 +136,14 @@
     <footer class="py-6 mb-2 pt-7 bg-primary-gradient">
         <div class="container">
             <div class="row">
-                <div class="col-12 col-sm-6 col-lg mb-3 order-1 order-sm-1">
+                <div class="col-12 col-sm-4 col-lg mb-3 order-1 order-sm-1">
                     <span class="fw-bold fs-1 text-light">Parkland</span>
                     <p class="section-title text-white h5 mb-4">Address<span></span></p>
                     <p class="text-light"><i class="fa fa-map-marker-alt" aria-hidden="true"></i> Airport Road, Dublin
                     </p>
                     <p class="text-light"><i class="fa fa-phone-alt" aria-hidden="true"></i> +353 (0) 123456789</p>
                     <p class="text-light"><i class="fa fa-envelope" aria-hidden="true"></i> parkland@gmail.com</p>
-                    <div class="d-flex pt-2 mb-4">
+                    <div class="d-flex pt-2">
                         <a class="btn btn-social-icons btn-outline-light btn-social me-2 py-2"
                             href="https://twitter.com/?lang=en" target="_blank" rel="noopener"
                             aria-label="Visit our Twitter Page (This link opens in a new tab)">
@@ -166,7 +166,7 @@
                         </a>
                     </div>
                 </div>
-                <div class="col-6 col-sm-6 col-lg mb-3 order-2 order-sm-2">
+                <div class="col-6 col-sm-4 col-lg mb-3 order-2 order-sm-2">
                     <p class="section-title text-white h5 fw-bold fs-1 text-light">Website</p>
                     <ul class="list-unstyled mb-md-4 mb-lg-0">
                         <li class="lh-lg">
@@ -190,7 +190,11 @@
                         </li>
                     </ul>
                 </div>
-
+                <div class="col-6 col-sm-4 col-lg mb-3 order-3 order-sm-3">
+                    {% block extra_footer_services %}
+                    <!-- Extra Link Services for specific pages -->
+                    {% endblock %}
+                </div>
                 <div class="col-12 col-sm-12 col-lg mb-3 order-4 order-sm-4">
                     <p class="section-title text-white h5">Newsletter<span></span></p>
                     <p class="text-light">Subscribe to the newsletter for free!</p>

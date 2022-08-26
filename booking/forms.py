@@ -42,12 +42,10 @@ class SearchParkingForm(ModelForm):
             'created_by': forms.HiddenInput(),
             'start_date': forms.DateInput(format=('%m/%d/%Y'), attrs={
                 'class': 'form-control',
-                'placeholder': 'Select a date',
                 'type': 'date'
                 }),
             'end_date': forms.DateInput(format=('%m/%d/%Y'), attrs={
                 'class': 'form-control',
-                'placeholder': 'Select a date',
                 'type': 'date'
                 }),
         }

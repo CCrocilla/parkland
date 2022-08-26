@@ -195,7 +195,6 @@ class BookingListView(ListView):
     template_name = 'dashboard/booking-list.html'
     ordering = ['-created_date']
     fields = '__all__'
-    paginate_by = 2
 
     def get_booking_auth_user(self):
         """

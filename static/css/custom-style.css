@@ -1,3 +1,10 @@
+:root {
+    --color-primary: #F6F6F6;
+    --color-secondary: #888888;
+    --color-danger: #D89E00;
+    --color-backup: #FAFAFA;
+}
+
 /*--------------------------------------------------------------
 Sections & Section Header
 --------------------------------------------------------------*/
@@ -69,16 +76,6 @@ Placeholders
     /* Firefox */
 }
 
-:-ms-input-placeholder {
-    /* Internet Explorer 10-11 */
-    color: #5B5A5E;
-}
-
-::-ms-input-placeholder {
-    /* Microsoft Edge */
-    color: #5B5A5E;
-}
-
 /*--------------------------------------------------------------
 Contact Us & Bookings Background Images
 --------------------------------------------------------------*/
@@ -128,7 +125,7 @@ Contact Us & Bookings Background Images
     float: left;
     width: 44px;
     height: 44px;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.4);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -153,17 +150,6 @@ Contact Us & Bookings Background Images
 .contact .info-item:hover i {
     background: rgba(24, 29, 49, 0.9);
     color: var(--color-danger);
-}
-
-
-@-webkit-keyframes animate-loading {
-    0% {
-        transform: rotate(0deg);
-    }
-
-    100% {
-        transform: rotate(360deg);
-    }
 }
 
 @keyframes animate-loading {

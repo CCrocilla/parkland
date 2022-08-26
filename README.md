@@ -603,11 +603,17 @@ The Structure of the website and the components used are listed below:
 - #### Heroku
     - #### Heroku is a platform as a service (PaaS) and it has been used to run the Parkland website application entirely on the cloud.
 
+- PostgreSQL 
+    - Database 
+
 - #### Wondershare EdrawMax:
     - #### Wondershare EdrawMax has been used to create the Database Schema for the website.
 
 - #### Microsoft Whiteboard:
     - #### This is an infinite, collaborative canvas for effective meetings and engaging learning. Whiteboard was used to summarise the programming steps, the layout and the rationale behind those. Whiteboard has been used together with the Wondershare EdrawMax.
+
+- Cloudinary
+    - Static Files
 
 
 ---
@@ -685,32 +691,32 @@ Below it is possible to taka e look at the result obtained in Lighthouse:
 XXXXXXXX TO DO XXXXXXXX
 <details>
     <summary>Click here for for Lighthouse Desktop - Search Booking</summary>
-<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Search Booking</summary>
-<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Booking</summary>
-<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Booking</summary>
-<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Desktop - Recap Booking</summary>
-<img src="static/images/readme/lighthouse/homepage-desktop.webp" alt="Lighthouse Desktop Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/" alt="Lighthouse Desktop Homepage" width="600px"/>
 </details>
 
 <details>
     <summary>Click here for for Lighthouse Mobile - Recap Booking</summary>
-<img src="static/images/readme/lighthouse/homepage-mobile.webp" alt="Lighthouse Mobile Homepage" width="600px"/>
+<img src="static/images/readme/lighthouse/" alt="Lighthouse Mobile Homepage" width="600px"/>
 </details>
 
 <details>
@@ -748,10 +754,9 @@ XXXXXXXX TO DO XXXXXXXX
 <img src="static/images/readme/lighthouse/sign-out-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
 </details>
 
-XXXXX MISSING PICTURE XXXXXX
 <details>
     <summary>Click here for for Lighthouse Mobile - Sign Out</summary>
-<img src="static/images/readme/lighthouse/sign-desktop.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
+<img src="static/images/readme/lighthouse/sign-out-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
 </details>
 
 <details>
@@ -762,16 +767,6 @@ XXXXX MISSING PICTURE XXXXXX
 <details>
     <summary>Click here for for Lighthouse Mobile - Password Reset Desktop</summary>
 <img src="static/images/readme/lighthouse/password-reset-mobile.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
-</details>
-
-<details>
-    <summary>Click here for for Lighthouse Desktop - Sign Up</summary>
-<img src="static/images/readme/lighthouse/signup-desktop.webp" alt="Lighthouse Desktop Sign In" width="600px"/>
-</details>
-
-<details>
-    <summary>Click here for for Lighthouse Mobile - Sign Up</summary>
-<img src="static/images/readme/lighthouse/signin-desktop.webp" alt="Lighthouse Mobile Sign In" width="600px"/>
 </details>
 
 <details>

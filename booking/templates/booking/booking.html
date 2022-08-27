@@ -13,7 +13,9 @@
 {% if user.is_authenticated %}
 
 
-
+<!-- ======================= -->
+<!--         Messages        -->
+<!-- ======================= -->
 {% if messages %}
 
 {% for message in messages %}
@@ -22,7 +24,7 @@
 
 {% else %}
 
-<div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show" role="alert">
+<div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-3 fade show" role="alert">
     {{ message }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
@@ -32,7 +34,9 @@
 {% endfor %}
 
 {% endif %}
-
+<!-- ======================= -->
+<!--       End Messages      -->
+<!-- ======================= -->
 
 <section class="py-4 mt-5 mb-4">
     <div class="container-lg">
@@ -115,12 +119,12 @@
                         </div>
 
                         <div class="mb-3">
-
-                            {% if parking_list %}
-
                             <label for="parking_select" class="form-label requiredField">Select Parking Slot
                                 <span class="asteriskField">*</span>
                             </label>
+
+                            {% if parking_list %}
+
                             <select id="parking_select" class="select form-select" name="parking" required="">
 
                                 <option disabled selected value="">-------------</option>

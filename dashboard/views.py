@@ -120,7 +120,7 @@ class DeleteFeedbackView(SuccessMessageMixin, DeleteView):
 ################################
 #         Profile Views        #
 ################################
-class EditProfileView(LoginRequiredMixin, UpdateView):
+class EditProfileView(LoginRequiredMixin, SuccessMessageMixin, UpdateView):
     """
     Class to Edit Profile Information
     """
@@ -128,6 +128,7 @@ class EditProfileView(LoginRequiredMixin, UpdateView):
     form_class = EditProfileForm
     template_name = 'dashboard/edit-profile.html'
     success_url = reverse_lazy('dashboard')
+    success_message = "Profile updated successfully!"
 
     def get_object(self):
         return self.request.user
@@ -215,10 +216,11 @@ class BookingDetailsView(DetailView):
     fields = '__all__'
 
 
-class BookingDeleteView(DeleteView):
+class BookingDeleteView(SuccessMessageMixin, DeleteView):
     """
     Class to delete Booking
     """
     model = Booking
     template_name = 'dashboard/booking-delete.html'
     success_url = reverse_lazy('booking-list')
+    success_message = "Booking deleted successfully!"

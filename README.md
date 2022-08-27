@@ -57,11 +57,9 @@ Click in the image above to access the Live Website or [click here!](https://par
     6. As a Frequent User, I want to report issues.
     7. As a Frequent User, I want to share a feedback on the website.
 
-For all the User Stories please refer to the following link: 
-https://github.com/CCrocilla/parkland/projects/1
-
-Here the link for the Epic: 
-https://github.com/CCrocilla/parkland/milestones
+For the User Stories and the Epics please refer to the following links:
+- [User Stories](https://github.com/CCrocilla/parkland/projects/1)
+- [Epics](https://github.com/CCrocilla/parkland/milestones)
 
 <!-- Use Cases Area -->
 ### **Use Cases**
@@ -70,7 +68,7 @@ https://github.com/CCrocilla/parkland/milestones
 <details>
     <summary>Description</summary>
     
-- User can use this website to book parking.
+- Users can use this website to book parking.
 - Users should be able to read the Instructions/FAQ.
 - Users should be able to see/access the available services.
 - Users should be able to book a parking slot based on type of car (electric vs non-electric cars).
@@ -85,7 +83,7 @@ https://github.com/CCrocilla/parkland/milestones
 
 **System:** Car Parking Website.
 
-**Actors:** User looking for book a parking slot close to the Airport.
+**Actors:** User looking to book a parking slot close to the Airport.
 </details>
 
 <details>
@@ -311,7 +309,7 @@ Colour Source:
 
 - ### **Typography**
 #### Google Fonts has been used to select the fonts for the Website.
-#### The Main fonts used is: 'Mulish' while the Sans-serif has been set up as fall-back in case the main font is not loaded.
+#### The Main font used is 'Mulish' while the Sans-serif has been set up as fall-back in case the main font is not loaded.
 
 Source:
   - [Google Fonts](https://fonts.google.com/)
@@ -329,7 +327,7 @@ Sources:
 ## **Features**
 
 - ### *__Database Schema__*:
-#### The database schema has been realize using the Software Wondershare EdrawMax and rappresent the database sctucture of Parkland: 
+#### The database schema, representing the structure and organization of Parkland database, has been realized using the Software Wondershare EdrawMax defining the primary and foreign key between tables for optimal definition of parents and child tables. A representation of the used schema can be visualised below. 
 
 <details>
     <summary>Click here for the Database Schema </summary>  
@@ -340,11 +338,11 @@ Sources:
 - ### *__Structure__*:
 #### The website has been structured in an easy and user-friendly way with 6 main pages. Non-authenticated and authenticated customers are provided with two different page views. The Non-authenticated can visualise and access only the Home Page, Contact Us, Sign-In and Sign-Up pages, while the authenticated customers are also able to access the Booking and the Dashboard pages.
 
-The project has been realize creating a single app for each Page:
-- Car Park App is the main app where the modals are stored. 
+#### The project has been realize creating a single app for each Page:
+- Car Park is the main app storing the modals.
 - Contact App contains the views, urls and forms file for the Contact Us Page
 - Booking App containd the views, urls and forms files for the Booking Page. 
-- Dashboard App include the views, urls and forms for all the Dashboard Sections (My Parkland, My Profile, My Booking and My Feedback)
+- Dashboard App includes the views, urls and forms for all the Dashboard Sections (My Parkland, My Profile, My Booking and My Feedback)
 
 #### The Structure of the website and the components used are listed below:
 
@@ -407,7 +405,7 @@ The project has been realize creating a single app for each Page:
 - ### *__Dashboard__*:
 #### The Dashboard has been structured in an easy and user-friendly way with 8 main pages divided in 4 Sections (My Parkland, My Profile, My Bookings, My Feedback).
 #### The Dashboard shows the logo of the website on the top left and a Hamburger Menu that toggles the opening and closing of a side nav bar.
-#### All the forms have been realized with Crispy Forms of Django and Crispy bootstrapp (For Details please visit the link: https://pypi.org/project/crispy-bootstrap5/)
+#### All the forms have been realized with Crispy Forms of Django and Crispy bootstrapp (Details can be found in the following link: https://pypi.org/project/crispy-bootstrap5/)
 #### The Dashboard shows also the Logout Button on the top right allowing the user to easily exit the website.
  
 #### Depending on the device used (laptop, desktop, tablet or smartphone) the sidebar opens and closes automatically allowing the user to select different options from the hamburger menu and/or have a full visual of the page for a highly responsive rendering.
@@ -782,7 +780,7 @@ The project has been realize creating a single app for each Page:
 #### Django Framework has been used.
 
 - #### Google Fonts: 
-    - #### Google fonts were used to import the font into the style.css file which is used on all pages throughout the project.
+    - #### Google fonts were used for the font in all pages throughout the project.
 
 - #### Font Awesome:
     - #### Font Awesome was used on all pages throughout the website to add icons for aesthetic and UX purposes.
@@ -803,13 +801,13 @@ The project has been realize creating a single app for each Page:
     - #### Convertio has been used to convert the images in webp exxtension.
 
 - #### Heroku
-    - #### Heroku is a platform as a service (PaaS) and it has been used to run the Parkland website application entirely on the cloud.
+    - #### Heroku is a Platform as a Service (PaaS) and it has been used to run the Parkland website application entirely on the cloud.
 
 - #### PostgreSQL 
-    -  PostgreSQL is a powerful, open source object-relational database system and it has been used for the Parkland Project.
-
+    -  #### PostgreSQL is a powerful, open source object-relational database system and it has been used for the Parkland Project. 
+  
 - #### Bootstrap 5
-    -  Bootstrap is a framework for building responsive, mobile-first sites, with jsDelivr and a template starter page and it has been used in Parkland.
+    -  #### Bootstrap is a framework for building responsive, mobile-first, sites with jsDelivr and a template starter page used in Parkland. 
 
 - #### Wondershare EdrawMax:
     - #### Wondershare EdrawMax has been used to create the Database Schema for the website.
@@ -818,7 +816,7 @@ The project has been realize creating a single app for each Page:
     - #### This is an infinite, collaborative canvas for effective meetings and engaging learning. Whiteboard was used to summarise the programming steps, the layout and the rationale behind those. Whiteboard has been used together with the Wondershare EdrawMax.
 
 - #### Cloudinary
-    - Cloudinary is an end-to-end image and video management solution for websites and mobile apps and it has been used to store all all the static files. 
+    - #### Cloudinary is an end-to-end image and video management solution for websites and mobile apps and it has been used to store all all the static files. 
 
 
 ---
@@ -1308,40 +1306,34 @@ All the Tests have also been performed in all the Devices and the tests includes
 | My Profile | Car List | Make sure that the user is informed that by deleting a car the associated booking will be removed too. | Pass |
 | My Booking | Booking List | Make sure that by clicking Bookings List Sub-Section the user is able to access the Bookings List. | Pass |
 | My Profile | Booking List | Make sure that the user can visualise the information of his/her own Bookings. | Pass |
-| My Profile | Booking List | Make sure that the user can click on the Delete button to delete the Booking selected. | Pass |
-| My Profile | Booking List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. | Pass |
+| My Profile | Booking List | Make sure that the user can click on the Delete button to delete the selected bookings. | Pass |
+| My Profile | Booking List | Make sure that by clicking on the Delete Button a modal, requesting confirmation to the user, is opened. | Pass |
 | My Profile | Booking List | Make sure that a Details button is diaplayed. | Pass |
 | My Profile | Booking List | Make sure that the user can see the booking details by clicking on the Details button. | Pass |
 | My Profile | Add Feedback | Make sure that by clicking Add Feedback the user is able to access the Add Feedback Page form. | Pass |
-| My Profile | Add Feedback | Make sure that filling-in the form, if the form is valid, the user is redirected to the Feedback List Page after submitting the form. | Pass |
-| My Profile | Add Feedback | Make sure that after the redirec to the Feedback List Page a Message is displayed to the user confirming the creation of the Feedback. | Pass |
+| My Profile | Add Feedback | Make sure that after filling-in the form, the user is redirected to the Feedback List Page if the form is valid. | Pass |
+| My Profile | Add Feedback | Make sure that after the redirect to the Feedback List Page a Message is displayed to the user confirming the creation of the Feedback. | Pass |
 | My Profile | Add Feedback | Make sure that the user is obliged to fill the mandatory fields correctly. | Pass |
 | My Profile | Feedback List | Make sure that by clicking Feedback List Sub-Section the user is able to access his/her own personal Feedback List. | Pass |
-| My Profile | Feedback List | Make sure that the user can visualise the information of his/her own left Feedback. | Pass |
-| My Profile | Feedback List | Make sure that a Delete button is present and that the user can click on the Delete button to delete the feedback entered. | Pass |
+| My Profile | Feedback List | Make sure that the user can visualise the information of his/her own Feedback. | Pass |
+| My Profile | Feedback List | Make sure that a Delete button is present and that the user can click on the Delete button to delete the entered feedback. | Pass |
 | My Profile | Feedback List | Make sure that by clicking on the Delete Button a modal requesting confirmation to the user in opened. | Pass |
 | My Profile | Feedback List | Make sure that after confirmation the user is redirected to the Feedback List and a message confirm that deletion of the Feedback id displayed. | Pass |
-| My Profile | Feedback List | Make sure that and Edit button is displayed. | Pass |
-| My Profile | Feedback List | Make sure that by clcking on the Edit button the user can update the information of a previous entered Feeback. | Pass |
+| My Profile | Feedback List | Make sure that an Edit button is displayed. | Pass |
+| My Profile | Feedback List | Make sure that by clicking on the Edit button the user can update the information of a previous entered Feedback. | Pass |
 | My Profile | Feedback List | Make sure that every page is responsive and that no overlap are presents. | Pass |
 
 
-
 - #### List of Automated Test Cases perfomed:
-The Automation testing is the process of testing software (as well as other tech products) to ensure it meets the requirements. 
-In Parkland have been designed 8 Automated Tests. 
+#### The Automation testing is the process of testing the software (as well as other tech products) to ensure it meets the requirements. In Parkland 10 Automated Tests have been designed and run, all with positive final results. 
 
-10 Automation Tests have been run in the Parkland Project and all gave positive results. 
-The Tests run have been included in the tests folder and have been divided by type allowing a better visualization of the tests carried out. See below for further details: 
+#### The Tests have been included in the tests folder and have been divided by type allowing a better visualization of the tests carried out. See below for further details:
 
-- Urls Automation Testing
-The urls tests aim to ensure that all the urls in the application are functioning correctly calling the matched View. 
+- Urls Automation Testing: The urls tests aim to ensure that all the urls in the application are functioning correctly calling the matched View.
 
-- Views Automation Testing
-The aim of the Views Automation Testing is to ensure that once the views are called they return a status code 200 meaning that the View is working correctly. 
+- Views Automation Testing: The aim of the Views Automation Testing is to ensure that once the views are called they return a status code 200 meaning that the View is working correctly.
 
-- Forms Automation Testing
-The aim of the Forms Automation Testing is to ensure that filling in the form (or trying to send an empty form) it does allow to send it only if all the information are populated correctly or don't allow to proceed in case the form is not filled in correctly.
+- Forms Automation Testing: The aim of the Forms Automation Testing is to ensure that when filling-in the form (or when trying to send an empty form), only if all the information is populated correctly the form is sent, otherwise it is not possible to proceed. 
 
 
 ### **Additional Tests**
@@ -1361,26 +1353,19 @@ Additional tests include checks on different devices using the Toggle Device Emu
 
 ### Future Implementation
 - Listed here the future implementation:
-  - Soft Delete Feature
-  The information (for data consistency and data integrity) should not be hard deleted from the database.
+  - Soft Delete Feature: The information (for data consistency and data integrity) should not be hard deleted from the database.
 
-  - Payent System
-  The user will be allowed to pay directly via website. 
+  - Payment System: The user will be allowed to pay directly via website.
 
-  - Avatar profile
-  The user will be able to upload an avatar image for his/her own profile and will be diplayed in the Feedback Section of the Landing Page. 
+  - Avatar profile: The user will be able to upload an avatar image for his/her own profile. This will be displayed in the Feedback Section of the Landing Page. 
 
-  - Selection Car Type
-  Include a range of additional information of the car of the user (Drop-down selection of Car Model and Type, Car's Color)
+  - Selection Car Type: Include a range of additional car information (Drop-down selection of Car Model and Type, Car's Colour)
 
-  - Interactive Map Booking
-  Realization of an interactive map where the user can click on the parking slot that want to book for a better user experience.
+  - Interactive Map Booking: Realization of an interactive map where the user can click on the desired parking slot for a better user experience.
  
-  - Admin Sections
-  Dedicated Admin Section in Dashboard that will allow the Admin to Create New Parking Slot, New Areas, Create Updates that will go in the Landing Page directly via UI. 
+  - Admin Sections: Dedicated Admin Section in Dashboard that will allow the Admin to Create New Parking Slot, New Areas, Updates that will go in the Landing Page directly via UI.
 
-  - Pagination
-  Feedback, Booking and Car's List should have Pagination. 
+  - Pagination: Feedback, Booking and Car's List should have Pagination.
 
 
 ## **Development** 
@@ -1453,16 +1438,16 @@ In order to create a Local Clone follow the steps below:
 ---
 ## **Credits**
 
-Thanks to my Mentor, Narender Singh, for his guide and support in the realization of this project, for his availability and for being willing to talk to me on a Sunday night!!
-Thanks to the useful references and suggestions derived from sources listed below, I manage to gain a deeper understanding of how Django works and is used, including the integration with HTML. In addition, continuous trial and error tests provided a useful means to further experiment on the usage of these used programming languages for the creation of the site.
+#### Thanks to my Mentor, Narender Singh, for his guide and support in the realization of this project, for his availability and for being willing to talk to me on a Sunday night!!
+#### Thanks to the useful references and suggestions derived from sources listed below, I manage to gain a deeper understanding of how Django works and is used, including the integration with HTML. In addition, continuous trial and error tests provided a useful means to further experiment on the usage of these used programming languages for the creation of the site.
 
 
 - ### Content & Media
-The landing Page of the website was initially realised using a bootstrap template. This Template has been gradually updates to meet the need of the website. A Django framework has been used for the realization of the site.
-The content of the application is entirely customised. In order to consolidate the knowledge acquired during the Code Institute Course dedicated to Django (as well as the HTML, CSS and Javascript), I have used the websites listed below studying and focussing on the writing coding procedures and its best practices:
+#### The landing Page of the website was initially realised using a bootstrap template. This Template has been gradually updated to meet the need of the website. A Django framework has been used for the realization of the site. The content of the application is entirely customised. In order to consolidate the knowledge acquired during the Code Institute Course dedicated to Django (as well as the HTML, CSS and Javascript), I have used the websites listed below studying and focussing on the writing coding procedures and its best practices:
 - [Medium.com](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
 - [Learn.shayhowe.com](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-Additional studies for a better understanding of django have been carried out using the following source and video tutorials:
+
+#### Additional studies for a better understanding of Django have been carried out using the following source and video tutorials:
 - [W3School - Django](https://www.w3schools.com/django/) 
 - [Javatpoint.com - Django Tutorial](https://www.javatpoint.com/django-tutorial)
 - [Django-rest-framework.org - Django Views](https://www.django-rest-framework.org/api-guide/views/)
@@ -1472,14 +1457,15 @@ Additional studies for a better understanding of django have been carried out us
 - [Djangoproject.com - Creating Forms from Models](https://docs.djangoproject.com/en/dev/topics/forms/modelforms/#controlling-which-fields-are-used-with-fields-and-exclude)
 
 
-Messages Framework has been implemented in Parkland and here the link source for the studies: 
+#### Messages Framework has been implemented in Parkland and here is the link source for the studies:
 - [Djangoproject.com - Messages](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/)
 
 
-The most complex developing portions of the Parkland Website application were:
-- How to make the booking page properly working 
-- The logic associated to it including the filtering on the search page (for Start/End Dates and for Electric Car Recharger) and the interaction between tables into the database to being able to display the correct information.
-The following website were inspirational and helped me understanding how to structure the logic on the gravity of the coin entered in the table. I have customized and created my own code taking inspiration from:
+#### The most complex developing portions of the Parkland Website application were:
+- The booking page and how to make it work properly
+- The logic associated to it including the filtering on the search page (for Start/End Dates and for Electric Car Recharger)
+- The interaction between tables into the database to being able to display the correct information on the front-end. 
+#### The following website were inspirational and helped me understanding how to structure the logic on the gravity of the coin entered in the table. I have customized and created my own code taking inspiration from:
 - [Djangoproject.com - Making queries](https://docs.djangoproject.com/en/4.1/topics/db/queries/)
 - [pythonguides.com](https://pythonguides.com/python-django-filter/)
 - [Thanks to StackOverflow and the Comunity - Difference Queryset](https://stackoverflow.com/questions/5945912/how-to-get-the-difference-of-two-querysets-in-django)
@@ -1487,18 +1473,18 @@ The following website were inspirational and helped me understanding how to stru
 - [Books.agiliq.com - How to use Q](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html)
 
 
-Listed here additional sources of the studies: 
+#### Listed here additional sources of the studies: 
 
 - [Developer.mozilla.org - Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
 - [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
-- [Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+- [Developer.mozilla.org - Flexbox](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
 
 
-Template:
+#### Source for the Template of the Landing Page:
 - [Thanks to Themewagon for the Bootstrap 5 Template](https://themewagon.com/)
 
 
-Listed here the source of studies for the automation testing: 
+#### Listed here the source of studies for the automation testing: 
 - [Djangoproject.com - Testing Overview](https://docs.djangoproject.com/en/4.1/topics/testing/overview/)
 - [Djangoproject.com - Testing tools](https://docs.djangoproject.com/en/dev/topics/testing/tools/)
 - [Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Testing)
@@ -1506,15 +1492,15 @@ Listed here the source of studies for the automation testing:
 - [Favicon.io](https://favicon.io/) was used to include the favicon in the website.
 
 
-For the realization of the 404 error page I found a guide on how to create the file here: 
+#### For the realization of the 404 error page I found a guide on how to create the file here: 
 - [Levelup.gitconnected.com](https://levelup.gitconnected.com/django-customize-404-error-page-72c6b6277317)
 
-Thanks to Kasia Bogucka and Narender Singh for suggesting the use of github wiki site to create the Markdown file. They have also provided the link for the Sample Readme of Code Institute.
+#### Thanks to Kasia Bogucka and Narender Singh for suggesting the use of github wiki site to create the Markdown file. They have also provided the link for the Sample Readme of Code Institute.
 - [Sample Readme File - Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
 - [Markdown - Cheatsheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet)
 
-All the Images as well as the Video included in the Home Page have been taken from [Pexels.com](https://www.pexels.com/)
+#### All the Images as well as the Video included in the Home Page have been taken from [Pexels.com](https://www.pexels.com/)
 
-But most of all thanks to my girlfriend Rosi Davi who is always supporting me in this amazing journey!
-Thank you to the entire Code Institute Team and the Slack Community for their feedback, help and support. 
+#### But most of all thanks to my girlfriend Rosi Davi who is always supporting me in this amazing journey!
+#### Thank you to the entire Code Institute Team and the Slack Community for their feedback, help and support. 
 

@@ -8,10 +8,9 @@
 
 {% block content %}
 
-<!-- ============================================-->
-<!--               Contact Us Form               -->
-<!-- ============================================-->
-
+<!-- ======================= -->
+<!--         Messages        -->
+<!-- ======================= -->
 {% if messages %}
 
 {% for message in messages %}
@@ -20,7 +19,7 @@
 
 {% else %}
 
-<div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-2 fade show" role="alert">
+<div id="msg" class="alert alert-{{ message.tags }} alert-dismissible mt-3 rounded-3 fade show" role="alert">
     {{ message }}
     <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
 </div>
@@ -29,7 +28,13 @@
 {% endfor %}
 
 {% endif %}
+<!-- ======================= -->
+<!--       End Messages      -->
+<!-- ======================= -->
 
+<!-- ============================================-->
+<!--               Contact Us Form               -->
+<!-- ============================================-->
 <section class="py-4 mt-8 mb-4 bg-cb-image rounded-3"
     style="background-image: url('https://res.cloudinary.com/ccrocilla-cloud/image/upload/v1/static/images/bg-contact-us.1cb6efc1c46a.webp');">
     <div class="container position-relative">

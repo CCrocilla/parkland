@@ -57,7 +57,11 @@ Click in the image above to access the Live Website or [click here!](https://par
     6. As a Frequent User, I want to report issues.
     7. As a Frequent User, I want to share a feedback on the website.
 
+For all the User Stories please refer to the following link: 
+https://github.com/CCrocilla/parkland/projects/1
 
+Here the link for the Epic: 
+https://github.com/CCrocilla/parkland/milestones
 
 <!-- Use Cases Area -->
 ### **Use Cases**
@@ -325,7 +329,7 @@ Sources:
 ## **Features**
 
 - ### *__Database Schema__*:
-The database schema has been realize using the Software Wondershare EdrawMax and rappresent the database sctucture of Parkland: 
+#### The database schema has been realize using the Software Wondershare EdrawMax and rappresent the database sctucture of Parkland: 
 
 <details>
     <summary>Click here for the Database Schema </summary>  
@@ -334,8 +338,15 @@ The database schema has been realize using the Software Wondershare EdrawMax and
 
 
 - ### *__Structure__*:
-The website has been structured in an easy and user-friendly way with 6 main pages. Non-authenticated and authenticated customers are provided with two different page views. The Non-authenticated can visualise and access only the Home Page, Contact Us, Sign-In and Sign-Up pages, while the authenticated customers are also able to access the Booking and the Dashboard pages.
-The Structure of the website and the components used are listed below:
+#### The website has been structured in an easy and user-friendly way with 6 main pages. Non-authenticated and authenticated customers are provided with two different page views. The Non-authenticated can visualise and access only the Home Page, Contact Us, Sign-In and Sign-Up pages, while the authenticated customers are also able to access the Booking and the Dashboard pages.
+
+The project has been realize creating a single app for each Page:
+- Car Park App is the main app where the modals are stored. 
+- Contact App contains the views, urls and forms file for the Contact Us Page
+- Booking App containd the views, urls and forms files for the Booking Page. 
+- Dashboard App include the views, urls and forms for all the Dashboard Sections (My Parkland, My Profile, My Booking and My Feedback)
+
+#### The Structure of the website and the components used are listed below:
 
 
 - ### *__Home Page__*:
@@ -795,7 +806,10 @@ The Structure of the website and the components used are listed below:
     - #### Heroku is a platform as a service (PaaS) and it has been used to run the Parkland website application entirely on the cloud.
 
 - #### PostgreSQL 
-    - #### Database 
+    -  PostgreSQL is a powerful, open source object-relational database system and it has been used for the Parkland Project.
+
+- #### Bootstrap 5
+    -  Bootstrap is a framework for building responsive, mobile-first sites, with jsDelivr and a template starter page and it has been used in Parkland.
 
 - #### Wondershare EdrawMax:
     - #### Wondershare EdrawMax has been used to create the Database Schema for the website.
@@ -804,7 +818,7 @@ The Structure of the website and the components used are listed below:
     - #### This is an infinite, collaborative canvas for effective meetings and engaging learning. Whiteboard was used to summarise the programming steps, the layout and the rationale behind those. Whiteboard has been used together with the Wondershare EdrawMax.
 
 - #### Cloudinary
-    - #### Static Files
+    - Cloudinary is an end-to-end image and video management solution for websites and mobile apps and it has been used to store all all the static files. 
 
 
 ---
@@ -1314,10 +1328,20 @@ All the Tests have also been performed in all the Devices and the tests includes
 
 
 - #### List of Automated Test Cases perfomed:
-8 Automated Tests have been performed in the application. 
-The Automation Testing includes Urls Testing and Views Testing and have been included in the folder tests.
-The urls tests focus on testing the 
+The Automation testing is the process of testing software (as well as other tech products) to ensure it meets the requirements. 
+In Parkland have been designed 8 Automated Tests. 
 
+10 Automation Tests have been run in the Parkland Project and all gave positive results. 
+The Tests run have been included in the tests folder and have been divided by type allowing a better visualization of the tests carried out. See below for further details: 
+
+- Urls Automation Testing
+The urls tests aim to ensure that all the urls in the application are functioning correctly calling the matched View. 
+
+- Views Automation Testing
+The aim of the Views Automation Testing is to ensure that once the views are called they return a status code 200 meaning that the View is working correctly. 
+
+- Forms Automation Testing
+The aim of the Forms Automation Testing is to ensure that filling in the form (or trying to send an empty form) it does allow to send it only if all the information are populated correctly or don't allow to proceed in case the form is not filled in correctly.
 
 
 ### **Additional Tests**
@@ -1336,8 +1360,28 @@ Additional tests include checks on different devices using the Toggle Device Emu
 
 
 ### Future Implementation
-- List here the possible future implementation
----
+- Listed here the future implementation:
+  - Soft Delete Feature
+  The information (for data consistency and data integrity) should not be hard deleted from the database.
+
+  - Payent System
+  The user will be allowed to pay directly via website. 
+
+  - Avatar profile
+  The user will be able to upload an avatar image for his/her own profile and will be diplayed in the Feedback Section of the Landing Page. 
+
+  - Selection Car Type
+  Include a range of additional information of the car of the user (Drop-down selection of Car Model and Type, Car's Color)
+
+  - Interactive Map Booking
+  Realization of an interactive map where the user can click on the parking slot that want to book for a better user experience.
+ 
+  - Admin Sections
+  Dedicated Admin Section in Dashboard that will allow the Admin to Create New Parking Slot, New Areas, Create Updates that will go in the Landing Page directly via UI. 
+
+  - Pagination
+  Feedback, Booking and Car's List should have Pagination. 
+
 
 ## **Development** 
 ### Deployment
@@ -1418,13 +1462,18 @@ The landing Page of the website was initially realised using a bootstrap templat
 The content of the application is entirely customised. In order to consolidate the knowledge acquired during the Code Institute Course dedicated to Django (as well as the HTML, CSS and Javascript), I have used the websites listed below studying and focussing on the writing coding procedures and its best practices:
 - [Medium.com](https://medium.com/@inceptiondj.info/html-css-coding-best-practice-fadb9870a00f)
 - [Learn.shayhowe.com](https://learn.shayhowe.com/html-css/writing-your-best-code/)
-Additional studies for a better understanding of django have been carried out using the following source and video tutorials: 
-- []()
-- []()
-- []()
+Additional studies for a better understanding of django have been carried out using the following source and video tutorials:
+- [W3School - Django](https://www.w3schools.com/django/) 
+- [Javatpoint.com - Django Tutorial](https://www.javatpoint.com/django-tutorial)
+- [Django-rest-framework.org - Django Views](https://www.django-rest-framework.org/api-guide/views/)
+- [pythonguides.com](https://pythonguides.com/python-django-filter/)
+- [Thanks to Codemy.com for the Django Tutorial](https://www.youtube.com/watch?v=B40bteAMM_M)
+- [Thanks to CodingEntrepreneurs - Youtube Video Function Based View to Class Based View](https://www.youtube.com/watch?v=SNXn76SI1Ks)
+- [Djangoproject.com - Creating Forms from Models](https://docs.djangoproject.com/en/dev/topics/forms/modelforms/#controlling-which-fields-are-used-with-fields-and-exclude)
 
-Messages has been implemented in Parkland and here the link source for the studies: 
 
+Messages Framework has been implemented in Parkland and here the link source for the studies: 
+- [Djangoproject.com - Messages](https://docs.djangoproject.com/en/4.1/ref/contrib/messages/)
 
 
 The most complex developing portions of the Parkland Website application were:
@@ -1432,15 +1481,21 @@ The most complex developing portions of the Parkland Website application were:
 - The logic associated to it including the filtering on the search page (for Start/End Dates and for Electric Car Recharger) and the interaction between tables into the database to being able to display the correct information.
 The following website were inspirational and helped me understanding how to structure the logic on the gravity of the coin entered in the table. I have customized and created my own code taking inspiration from:
 - [Djangoproject.com - Making queries](https://docs.djangoproject.com/en/4.1/topics/db/queries/)
+- [pythonguides.com](https://pythonguides.com/python-django-filter/)
+- [Thanks to StackOverflow and the Comunity - Difference Queryset](https://stackoverflow.com/questions/5945912/how-to-get-the-difference-of-two-querysets-in-django)
 - [Thanks to Codemy.com - Youtube Video Fetch Data](https://www.youtube.com/watch?v=H3joYTIRqKk&list=PLCC34OHNcOtqW9BJmgQPPzUpJ8hl49AGy&index=6)
+- [Books.agiliq.com - How to use Q](https://books.agiliq.com/projects/django-orm-cookbook/en/latest/query_relatedtool.html)
 
 
 Listed here additional sources of the studies: 
-- [Javatpoint.com - Django Tutorial](https://www.javatpoint.com/django-tutorial)
-- [Django-rest-framework.org - Django Views](https://www.django-rest-framework.org/api-guide/views/)
-- [Flexbox - W3School.com](https://www.w3schools.com/css/css3_flexbox.asp)
-- [Css-tricks.com](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
+
+- [Developer.mozilla.org - Django](https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django)
+- [Bootstrap 5](https://getbootstrap.com/docs/5.0/getting-started/introduction/)
 - [Developer.mozilla.org](https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Flexible_Box_Layout/Basic_Concepts_of_Flexbox)
+
+
+Template:
+- [Thanks to Themewagon for the Bootstrap 5 Template](https://themewagon.com/)
 
 
 Listed here the source of studies for the automation testing: 
@@ -1452,7 +1507,7 @@ Listed here the source of studies for the automation testing:
 
 
 For the realization of the 404 error page I found a guide on how to create the file here: 
-- [Docs Github](https://docs.github.com/en/pages/getting-started-with-github-pages/creating-a-custom-404-page-for-your-github-pages-site)
+- [Levelup.gitconnected.com](https://levelup.gitconnected.com/django-customize-404-error-page-72c6b6277317)
 
 Thanks to Kasia Bogucka and Narender Singh for suggesting the use of github wiki site to create the Markdown file. They have also provided the link for the Sample Readme of Code Institute.
 - [Sample Readme File - Code Institute](https://github.com/Code-Institute-Solutions/SampleREADME)
@@ -1460,6 +1515,6 @@ Thanks to Kasia Bogucka and Narender Singh for suggesting the use of github wiki
 
 All the Images as well as the Video included in the Home Page have been taken from [Pexels.com](https://www.pexels.com/)
 
-But most of all thanks to my girlfriend Rosi Davi who is always beside me supporting me in this amazing journey!
+But most of all thanks to my girlfriend Rosi Davi who is always supporting me in this amazing journey!
 Thank you to the entire Code Institute Team and the Slack Community for their feedback, help and support. 
 
